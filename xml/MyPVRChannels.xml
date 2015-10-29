@@ -36,11 +36,11 @@
 			</include>
 			<include name="PVRInfo" condition="StringCompare(Skin.AspectRatio,16:9)">
 				<param name="panel-width" value="1530"/>
-				<param name="textbox-width" value="1170"/>
+				<param name="textbox-width" value="1160"/>
 			</include>
 			<include name="PVRInfo" condition="StringCompare(Skin.AspectRatio,4:3)">
 				<param name="panel-width" value="1090"/>
-				<param name="textbox-width" value="730"/>
+				<param name="textbox-width" value="720"/>
 			</include>
 		</control>
 		<include>ScrollBarCommons</include>
