@@ -186,9 +186,9 @@
 						<description>Rating</description>
 						<posx>115</posx>
 						<posy>8</posy>
-						<width>125</width>
+						<width>256</width>
 						<height>32</height>
-						<texture fallback="rating/rating0.png">$INFO[Player.StarRating,rating/]</texture>
+						<texture fallback="rating/0.png">$INFO[MusicPlayer.UserRating,rating/,.png]</texture>
 					</control>
 				</control>
 				<control type="group">

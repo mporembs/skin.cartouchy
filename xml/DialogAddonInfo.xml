@@ -160,29 +160,9 @@
 					<scroll>true</scroll>
 				</control>
 				<control type="label">
-					<description>Rating txt</description>
-					<posx>200</posx>
-					<posy>90</posy>
-					<width>200</width>
-					<height>25</height>
-					<label>$LOCALIZE[563]:</label>
-					<align>right</align>
-					<aligny>center</aligny>
-					<font>font20_title</font>
-				</control>
-				<control type="image">
-					<description>Rating value</description>
-					<posx>208</posx>
-					<posy>88</posy>
-					<width>170</width>
-					<height>34</height>
-					<aspectratio align="left">keep</aspectratio>
-					<texture>$INFO[ListItem.Property(Addon.StarRating),rating/]</texture>
-				</control>
-				<control type="label">
 					<description>Summary txt</description>
 					<posx>200</posx>
-					<posy>120</posy>
+					<posy>90</posy>
 					<width>200</width>
 					<height>25</height>
 					<label>$LOCALIZE[20037]:</label>
@@ -193,7 +173,7 @@
 				<control type="fadelabel">
 					<description>Summary Value</description>
 					<posx>210</posx>
-					<posy>120</posy>
+					<posy>90</posy>
 					<width>1020</width>
 					<height>25</height>
 					<label fallback="416">$INFO[ListItem.Property(Addon.Summary)]</label>
@@ -206,7 +186,7 @@
 				<control type="label">
 					<description>Disclaimer txt</description>
 					<posx>200</posx>
-					<posy>150</posy>
+					<posy>120</posy>
 					<width>200</width>
 					<height>25</height>
 					<label>$LOCALIZE[24052]:</label>
@@ -219,9 +199,9 @@
 				<control type="textbox">
 					<description>Disclaimer</description>
 					<posx>210</posx>
-					<posy>148</posy>
+					<posy>117</posy>
 					<width>1020</width>
-					<height>58</height>
+					<height>88</height>
 					<font>font20</font>
 					<label fallback="231">$INFO[ListItem.Property(Addon.Disclaimer)]</label>
 					<textcolor>selected</textcolor>
@@ -231,7 +211,7 @@
 				<control type="label">
 					<description>Broken label</description>
 					<posx>200</posx>
-					<posy>150</posy>
+					<posy>120</posy>
 					<width>200</width>
 					<height>25</height>
 					<font>font20_title</font>
@@ -245,9 +225,9 @@
 				<control type="textbox">
 					<description>Reason label</description>
 					<posx>210</posx>
-					<posy>148</posy>
+					<posy>117</posy>
 					<width>1020</width>
-					<height>58</height>
+					<height>88</height>
 					<font>font20</font>
 					<label>$INFO[ListItem.Property(Addon.broken)]</label>
 					<align>left</align>

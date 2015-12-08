@@ -90,7 +90,7 @@
 						<posy>44</posy>
 						<width>30</width>
 						<height>20</height>
-						<texture>$INFO[Listitem.Thumb,flags/,.gif]</texture>
+						<texture>$INFO[Listitem.Thumb,subtitles/flags/,.gif]</texture>
 					</control>
 					<control type="label">
 						<posx>55</posx>
@@ -129,7 +129,7 @@
 						<width>100</width>
 						<height>25</height>
 						<aspectratio align="right">keep</aspectratio>
-						<texture>$INFO[ListItem.ActualIcon,rating/rating,.png]</texture>
+						<texture>$INFO[ListItem.ActualIcon,subtitles/rating/rating,.png]</texture>
 					</control>
 				</itemlayout>
 				<focusedlayout width="940" height="80">
@@ -165,7 +165,7 @@
 						<posy>44</posy>
 						<width>30</width>
 						<height>20</height>
-						<texture>$INFO[Listitem.Thumb,flags/,.gif]</texture>
+						<texture>$INFO[Listitem.Thumb,subtitles/flags/,.gif]</texture>
 					</control>
 					<control type="label">
 						<posx>55</posx>
@@ -204,7 +204,7 @@
 						<width>100</width>
 						<height>25</height>
 						<aspectratio align="right">keep</aspectratio>
-						<texture>$INFO[ListItem.ActualIcon,rating/rating,.png]</texture>
+						<texture>$INFO[ListItem.ActualIcon,subtitles/rating/rating,.png]</texture>
 					</control>
 				</focusedlayout>
 			</control>
