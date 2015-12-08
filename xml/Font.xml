@@ -3,6 +3,11 @@
 	<fontset id="Default" idloc="31390"> 
 	<!-- Normal Fonts -->
 		<font>
+			<name>font13</name>
+			<filename>Arial.ttf</filename>
+			<size>24</size>
+		</font>
+		<font>
 			<name>font16</name>
 			<filename>Arial.ttf</filename>
 			<size>16</size>
@@ -85,9 +90,13 @@
 			<linespacing>0.91</linespacing>
 		</font>
 	</fontset>
-
 	<fontset id="Arial" idloc="31391"> 
 	<!-- Normal Fonts -->
+		<font>
+			<name>font13</name>
+			<filename>Arial.ttf</filename>
+			<size>24</size>
+		</font>
 		<font>
 			<name>font16</name>
 			<filename>Arial.ttf</filename>
