@@ -12,6 +12,7 @@
 			<height>960</height>
 			<texture background="true">$INFO[Player.Art(fanart)]</texture>
 			<aspectratio>scale</aspectratio>
+			<fadetime>FanartCrossfadeTime</fadetime>
 		</control>
 		<control type="visualisation">
 			<description>visualisation</description>

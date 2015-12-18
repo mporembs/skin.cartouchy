@@ -139,6 +139,7 @@
 					<height>150</height>
 					<texture>$VAR[OSDImage]</texture>
 					<aspectratio>keep</aspectratio>
+					<fadetime>IconCrossfadeTime</fadetime>
 				</control>
 				<control type="label">
 					<posx>170</posx>
