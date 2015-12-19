@@ -46,8 +46,8 @@
 		<include>ScrollBarCommons</include>
 		<include>MediaSubMenu</include>
 		<include name="DropdownMenu">
-			<param name="panel-posy">0</param>
-			<param name="panel-height">560</param>
+			<param name="panel-posy">-80</param>
+			<param name="panel-height">640</param>
 		</include>
 		<include>ScrollOffsetLabel</include>
 	</controls>
