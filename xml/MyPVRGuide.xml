@@ -2,7 +2,7 @@
 <window>
 	<defaultcontrol always="true">10</defaultcontrol>
 	<views>10,11,12,13</views>
-	<onunload>Skin.Reset(DropdownMenuVisible)</onunload>
+	<onunload>ClearProperty(DropdownMenuVisible,Home)</onunload>
 	<controls>
 		<include>CommonBackground</include>
 		<include>MediaBladeLeft</include>

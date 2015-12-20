@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol>3</defaultcontrol>
-	<onunload>Skin.Reset(DropdownMenuVisible)</onunload>
+	<onunload>ClearProperty(DropdownMenuVisible,Home)</onunload>
 	<controls>
 		<include>CommonBackground</include>
 		<include>CommonBackgroundOverlay</include>
@@ -28,7 +28,8 @@
 				</item>
 				<item>
 					<label>5</label>
-					<onclick>Skin.ToggleSetting(DropdownMenuVisible)</onclick>
+					<onclick condition="IsEmpty(Window(Home).Property(DropdownMenuVisible))">SetProperty(DropdownMenuVisible,Show,Home)</onclick>
+					<onclick condition="!IsEmpty(Window(Home).Property(DropdownMenuVisible))">ClearProperty(DropdownMenuVisible,Home)</onclick>
 					<icon>icon_button_settings.png</icon>
 				</item>
 			</content>

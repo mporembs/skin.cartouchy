@@ -435,7 +435,8 @@
 				</item>
 				<item>
 					<label>5</label>
-					<onclick>Skin.ToggleSetting(DropdownMenuVisible)</onclick>
+					<onclick condition="IsEmpty(Window(Home).Property(DropdownMenuVisible))">SetProperty(DropdownMenuVisible,Show,Home)</onclick>
+					<onclick condition="!IsEmpty(Window(Home).Property(DropdownMenuVisible))">ClearProperty(DropdownMenuVisible,Home)</onclick>
 					<icon>icon_button_settings.png</icon>
 				</item>
 			</content>
@@ -1033,7 +1034,7 @@
 	</include>
 	<include name="DropdownMenu">
 		<control type="group">
-			<visible>Skin.HasSetting(DropdownMenuVisible)</visible>
+			<visible>!IsEmpty(Window(Home).Property(DropdownMenuVisible))</visible>
 			<include>VisibleFadeEffect</include>
 			<animation effect="fade" time="250">WindowClose</animation>
 			<control type="button">
@@ -1044,7 +1045,7 @@
 				<height>960</height>
 				<texturenofocus>-</texturenofocus>
 				<texturefocus>-</texturefocus>
-				<onclick>Skin.Reset(DropdownMenuVisible)</onclick>
+				<onclick>ClearProperty(DropdownMenuVisible,Home)</onclick>
 			</control>
 			<control type="group">
 				<posx>360r</posx>
@@ -1197,7 +1198,7 @@
 			<textwidth>240</textwidth>
 			<label>589</label>
 			<include>MenuButtonCommonValues</include>
-			<onclick>Skin.Reset(DropdownMenuVisible)</onclick>
+			<onclick>ClearProperty(DropdownMenuVisible,Home)</onclick>
 		</control>
 		<control type="button" id="1467">
 			<description>Current Playlist</description>
@@ -1305,13 +1306,13 @@
 			<description>Slideshow</description>
 			<include>MenuButtonCommonValues</include>
 			<label>108</label>
-			<onclick>Skin.Reset(DropdownMenuVisible)</onclick>
+			<onclick>ClearProperty(DropdownMenuVisible,Home)</onclick>
 		</control>
 		<control type="button" id="7">
 			<description>Recersive Slideshow</description>
 			<include>MenuButtonCommonValues</include>
 			<label>361</label>
-			<onclick>Skin.Reset(DropdownMenuVisible)</onclick>
+			<onclick>ClearProperty(DropdownMenuVisible,Home)</onclick>
 		</control>
 		<control type="radiobutton" id="9">
 			<description>Randomize Toggle</description>
