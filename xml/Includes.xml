@@ -1111,18 +1111,12 @@
 		<control type="button" id ="5">
 			<description>addon-updates</description>
 			<include>MenuButtonCommonValues</include>
-			<label>24063</label>
+			<label>10004</label>
 		</control>
 		<control type="button" id="9">
 			<description>Check for updates</description>
 			<include>MenuButtonCommonValues</include>
 			<label>24034</label>
-		</control>
-		<control type="radiobutton" id ="6">
-			<description>No notifications</description>
-			<textwidth>240</textwidth>
-			<include>MenuButtonCommonValues</include>
-			<label>25000</label>
 		</control>
 		<control type="radiobutton" id="7">
 			<description>Hide foreign</description>
