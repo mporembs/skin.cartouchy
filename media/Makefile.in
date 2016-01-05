@@ -1,14 +1,10 @@
 TARGET=Textures.xbt
 
-IMAGES := $(shell find . -name "*jpg")
-IMAGES += $(shell find . -name "*png")
-IMAGES += $(shell find . -name "*gif")
-
 all: $(TARGET)
 
 .PHONY: force
 
-$(TARGET): $(IMAGES)
+$(TARGET):
 ifeq (@ARCH@,arm)
 	@TEXTUREPACKER@ -dupecheck -use_none -input . -output $(TARGET)
 else
@@ -18,5 +14,6 @@ endif
 
 clean:
 	rm -f $(TARGET)
+
 distclean: clean
 
