@@ -1109,7 +1109,7 @@
 			<usealttexture>Container.SortDirection(Ascending)</usealttexture>
 		</control>
 		<control type="button" id ="5">
-			<description>addon-updates</description>
+			<description>settings</description>
 			<include>MenuButtonCommonValues</include>
 			<label>10004</label>
 		</control>
