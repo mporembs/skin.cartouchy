@@ -552,7 +552,7 @@
 			<posy>0</posy>
 			<include>VisibleFadeEffect</include>
 			<include>16x9_xPos_Relocation</include>
-			<visible>Player.HasMedia + ![Window.IsVisible(busydialog) | Window.IsVisible(infodialog) | Window.IsVisible(volumebar) | Window.IsVisible(1112)]</visible>
+			<visible>Player.HasMedia + ![Window.IsVisible(busydialog) | Window.IsVisible(Notification) | Window.IsVisible(volumebar) | Window.IsVisible(1112)]</visible>
 			<control type="image">
 				<posx>0</posx>
 				<posy>0</posy>

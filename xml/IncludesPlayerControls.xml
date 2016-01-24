@@ -34,7 +34,7 @@
 			<posy>10</posy>
 			<include>VisibleFadeEffect</include>
 			<include>16x9_xPos_Relocation</include>
-			<visible>![Window.IsVisible(busydialog) | Window.IsVisible(extendedprogressdialog) | Window.IsVisible(infodialog) | Window.IsVisible(volumebar) | Window.IsVisible(1112)]</visible>
+			<visible>![Window.IsVisible(busydialog) | Window.IsVisible(extendedprogressdialog) | Window.IsVisible(Notification) | Window.IsVisible(volumebar) | Window.IsVisible(1112)]</visible>
 			<control type="label">
 				<posx>250</posx>
 				<posy>0</posy>

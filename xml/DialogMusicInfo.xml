@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-	<defaultcontrol always="true">5</defaultcontrol>
+	<defaultcontrol always="true">9000</defaultcontrol>
 	<include>16x9_xPos_Relocation</include>
 	<include>Window_OpenClose_Animation_Zoom</include>
 	<coordinates>
@@ -22,8 +22,8 @@
 			<posy>0</posy>
 			<include>WindowTitleCommons</include>
 			<width>910</width>
-			<label>$INFO[Listitem.Album]</label>
-			<visible>container.content(Albums)</visible>
+			<label>$INFO[Listitem.Artist]</label>
+			<visible>container.content(Artists)</visible>
 		</control>
 		<control type="label">
 			<description>header label</description>
@@ -31,8 +31,8 @@
 			<posy>0</posy>
 			<include>WindowTitleCommons</include>
 			<width>910</width>
-			<label>$INFO[Listitem.Artist]</label>
-			<visible>container.content(Artists)</visible>
+			<label>$INFO[Listitem.Title]</label>
+			<visible>container.content(Songs)</visible>
 		</control>
 		<control type="group">
 			<posx>930</posx>
@@ -54,6 +54,182 @@
 			<texture colordiffuse="40000000">panel.png</texture>
 		</control>
 		<control type="group">
+			<visible>Container.Content(Songs)</visible>
+			<posy>70</posy>
+			<posx>20</posx>
+			<include>VisibleFadeEffect</include>
+			<control type="list" id="49">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>960</width>
+				<height>730</height>
+				<onleft>49</onleft>
+				<onright>49</onright>
+				<onup>9000</onup>
+				<ondown>61</ondown>
+				<pagecontrol>-</pagecontrol>
+				<scrolltime>200</scrolltime>
+				<itemlayout height="30">
+					<control type="label">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>200</width>
+						<height>30</height>
+						<font>font20_title</font>
+						<align>right</align>
+						<aligny>center</aligny>
+						<selectedcolor>selected</selectedcolor>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+					<control type="label">
+						<posx>210</posx>
+						<posy>0</posy>
+						<width>750</width>
+						<height>30</height>
+						<font>font20</font>
+						<align>left</align>
+						<aligny>center</aligny>
+						<selectedcolor>white</selectedcolor>
+						<label>$INFO[ListItem.Label2]</label>
+					</control>
+				</itemlayout>
+				<focusedlayout height="30">
+					<control type="label">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>200</width>
+						<height>30</height>
+						<font>font20_title</font>
+						<align>right</align>
+						<aligny>center</aligny>
+						<selectedcolor>selected</selectedcolor>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+					<control type="label">
+						<posx>210</posx>
+						<posy>0</posy>
+						<width>750</width>
+						<height>30</height>
+						<font>font20</font>
+						<align>left</align>
+						<aligny>center</aligny>
+						<selectedcolor>white</selectedcolor>
+						<label>$INFO[ListItem.Label2]</label>
+					</control>
+				</focusedlayout>
+				<content>
+					<item>
+						<label>$LOCALIZE[557]:</label>
+						<label2>$INFO[ListItem.Artist]</label2>
+						<onclick>noop</onclick>
+						<visible>!IsEmpty(ListItem.Artist)</visible>
+					</item>
+					<item>
+						<label>$LOCALIZE[558]:</label>
+						<label2>$INFO[ListItem.Album]$INFO[listitem.discnumber, - $LOCALIZE[427] ]</label2>
+						<onclick>noop</onclick>
+						<visible>!IsEmpty(ListItem.Album)</visible>
+					</item>
+					<item>
+						<label>$LOCALIZE[515]:</label>
+						<label2>$INFO[ListItem.Genre]</label2>
+						<onclick>noop</onclick>
+						<visible>!IsEmpty(ListItem.Genre)</visible>
+					</item>
+					<item>
+						<label>$LOCALIZE[175]:</label>
+						<label2>$INFO[ListItem.Mood]</label2>
+						<onclick>noop</onclick>
+						<visible>!IsEmpty(ListItem.Mood)</visible>
+					</item>
+					<item>
+						<label>$LOCALIZE[562]:</label>
+						<label2>$INFO[ListItem.Year]</label2>
+						<onclick>noop</onclick>
+						<visible>!IsEmpty(ListItem.Year)</visible>
+					</item>
+					<item>
+						<label>$LOCALIZE[554]:</label>
+						<label2>$INFO[ListItem.TrackNumber]</label2>
+						<onclick>noop</onclick>
+						<visible>!IsEmpty(ListItem.TrackNumber)</visible>
+					</item>
+					<item>
+						<label>$LOCALIZE[563]:</label>
+						<label2>$INFO[ListItem.RatingAndVotes]</label2>
+						<onclick>noop</onclick>
+						<visible>!IsEmpty(ListItem.RatingAndVotes)</visible>
+					</item>
+					<item>
+						<label>$LOCALIZE[38018]:</label>
+						<label2>$INFO[ListItem.Userrating]</label2>
+						<onclick>noop</onclick>
+						<visible>!IsEmpty(ListItem.Userrating)</visible>
+					</item>
+					<item>
+						<label>$LOCALIZE[29903]:</label>
+						<label2>$INFO[ListItem.Property(Role.Composer)]</label2>
+						<onclick>noop</onclick>
+						<visible>!IsEmpty(ListItem.Property(Role.Composer))</visible>
+					</item>
+					<item>
+						<label>$LOCALIZE[29905]:</label>
+						<label2>$INFO[ListItem.Property(Role.Conductor)]</label2>
+						<onclick>noop</onclick>
+						<visible>!IsEmpty(ListItem.Property(Role.Conductor))</visible>
+					</item>
+					<item>
+						<label>$LOCALIZE[38034]:</label>
+						<label2>$INFO[ListItem.Property(Role.Orchestra)]</label2>
+						<onclick>noop</onclick>
+						<visible>!IsEmpty(ListItem.Property(Role.Orchestra))</visible>
+					</item>
+					<item>
+						<label>$LOCALIZE[38035]:</label>
+						<label2>$INFO[ListItem.Property(Role.Lyricist)]</label2>
+						<onclick>noop</onclick>
+						<visible>!IsEmpty(ListItem.Property(Role.Lyricist))</visible>
+					</item>
+					<item>
+						<label>$LOCALIZE[38036]:</label>
+						<label2>$INFO[ListItem.Property(Role.Remixer)]</label2>
+						<onclick>noop</onclick>
+						<visible>!IsEmpty(ListItem.Property(Role.Remixer))</visible>
+					</item>
+					<item>
+						<label>$LOCALIZE[38037]:</label>
+						<label2>$INFO[ListItem.Property(Role.Arranger)]</label2>
+						<onclick>noop</onclick>
+						<visible>!IsEmpty(ListItem.Property(Role.Arranger))</visible>
+					</item>
+					<item>
+						<label>$LOCALIZE[38038]:</label>
+						<label2>$INFO[ListItem.Property(Role.Engineer)]</label2>
+						<onclick>noop</onclick>
+						<visible>!IsEmpty(ListItem.Property(Role.Engineer))</visible>
+					</item>
+					<item>
+						<label>$LOCALIZE[38039]:</label>
+						<label2>$INFO[ListItem.Property(Role.Producer)]</label2>
+						<onclick>noop</onclick>
+						<visible>!IsEmpty(ListItem.Property(Role.Producer))</visible>
+					</item>
+					<item>
+						<label>$LOCALIZE[38040]:</label>
+						<label2>$INFO[ListItem.Property(Role.DJMixer)]</label2>
+						<onclick>noop</onclick>
+						<visible>!IsEmpty(ListItem.Property(Role.DJMixer))</visible>
+					</item>
+					<item>
+						<label>$LOCALIZE[38041]:</label>
+						<label2>$INFO[ListItem.Property(Role.Mixer)]</label2>
+						<onclick>noop</onclick>
+						<visible>!IsEmpty(ListItem.Property(Role.Mixer))</visible>
+					</item>
+				</content>
+			</control>
+		</control>
+		<control type="group">
 			<visible>Container.Content(Albums) + !Control.IsVisible(50)</visible>
 			<posy>70</posy>
 			<posx>20</posx>
@@ -66,7 +242,7 @@
 				<aspectratio>keep</aspectratio>
 				<texture background="true">$INFO[ListItem.Icon]</texture>
 			</control>
-			<control type="textbox" id="601">
+			<control type="textbox">
 				<description>Description Value for Albums</description>
 				<posx>280</posx>
 				<posy>0</posy>
@@ -226,7 +402,7 @@
 				<aspectratio>keep</aspectratio>
 				<texture background="true">$INFO[ListItem.Icon]</texture>
 			</control>
-			<control type="textbox" id="600">
+			<control type="textbox">
 				<description>Description Value for Artists</description>
 				<posx>280</posx>
 				<posy>0</posy>
@@ -385,6 +561,7 @@
 			<pagecontrol>-</pagecontrol>
 			<scrolltime>200</scrolltime>
 			<include>VisibleFadeEffect</include>
+			<visible>[Container.Content(Artists) + !IsEmpty(Window.Property(ShowAlbumList))] | [Container.Content(Albums) + !IsEmpty(Window.Property(ShowSongList))]</visible>
 			<itemlayout condition="Container.Content(Albums)" height="60" width="1000">
 				<control type="image">
 					<posx>0</posx>
@@ -445,12 +622,12 @@
 			</focusedlayout>
 			<itemlayout condition="Container.Content(Artists)" height="330" width="333">
 				<control type="image">
-					<posx>10</posx>
+					<posx>26</posx>
 					<posy>15</posy>
-					<width>313</width>
+					<width>280</width>
 					<height>280</height>
 					<texture>$INFO[ListItem.Icon]</texture>
-					<aspectratio>keep</aspectratio>
+					<aspectratio>stretch</aspectratio>
 				</control>
 				<control type="label">
 					<posx>15</posx>
@@ -465,12 +642,12 @@
 			</itemlayout>
 			<focusedlayout condition="Container.Content(Artists)" height="330" width="333">
 				<control type="image">
-					<posx>10</posx>
+					<posx>26</posx>
 					<posy>15</posy>
-					<width>313</width>
+					<width>280</width>
 					<height>280</height>
 					<texture>$INFO[ListItem.Icon]</texture>
-					<aspectratio>keep</aspectratio>
+					<aspectratio>stretch</aspectratio>
 				</control>
 				<control type="image">
 					<posx>5</posx>
@@ -491,18 +668,6 @@
 				</control>
 			</focusedlayout>
 		</control>
-		<control type="label">
-			<posx>980</posx>
-			<posy>790</posy>
-			<width>800</width>
-			<height>30</height>
-			<font>font20</font>
-			<scroll>true</scroll>
-			<align>right</align>
-			<aligny>center</aligny>
-			<label>$INFO[Container(50).CurrentPage, ( $LOCALIZE[31024] ]$INFO[Container(50).NumPages,/, )]</label>
-			<visible>Control.IsVisible(50)</visible>
-		</control>
 		<control type="grouplist" id="9000">
 			<posx>0</posx>
 			<posy>730</posy>
@@ -515,29 +680,55 @@
 			<onright>9000</onright>
 			<onup>50</onup>
 			<ondown>49</ondown>
-			<control type="button" id="5">
-				<description>Cast/Review</description>
-				<width>230</width>
-				<include>ButtonInfoDialogsCommonValues</include>
-				<label>206</label>
-			</control>
 			<control type="button" id="6">
 				<description>Refresh</description>
 				<width>230</width>
 				<include>ButtonInfoDialogsCommonValues</include>
-				<label>184</label>
+				<label>-</label>
 			</control>
 			<control type="button" id="10">
 				<description>Get Thumb</description>
 				<width>230</width>
 				<include>ButtonInfoDialogsCommonValues</include>
-				<label>13405</label>
+				<label>-</label>
 			</control>
 			<control type="button" id="12">
 				<description>Get Fanart</description>
 				<width>230</width>
 				<include>ButtonInfoDialogsCommonValues</include>
-				<label>20413</label>
+				<label>-</label>
+			</control>
+			<control type="button" id="7">
+				<description>Rating button</description>
+				<width>230</width>
+				<include>ButtonInfoDialogsCommonValues</include>
+				<label>-</label>
+			</control>
+			<control type="togglebutton" id="900">
+				<description>list / info button</description>
+				<width>230</width>
+				<include>ButtonInfoDialogsCommonValues</include>
+				<alttexturefocus>list_focus.png</alttexturefocus>
+				<alttexturenofocus>button_nofocus.png</alttexturenofocus>
+				<label>21888</label>
+				<altlabel>19033</altlabel>
+				<usealttexture>!IsEmpty(Window.Property(ShowAlbumList))</usealttexture>
+				<onclick condition="IsEmpty(Window.Property(ShowAlbumList))">SetProperty(ShowAlbumList, show)</onclick>
+				<onclick condition="!IsEmpty(Window.Property(ShowAlbumList))">ClearProperty(ShowAlbumList)</onclick>
+				<visible>Container.Content(Artists)</visible>
+			</control>
+			<control type="togglebutton" id="900">
+				<description>list / info button</description>
+				<width>230</width>
+				<include>ButtonInfoDialogsCommonValues</include>
+				<alttexturefocus>list_focus.png</alttexturefocus>
+				<alttexturenofocus>button_nofocus.png</alttexturenofocus>
+				<label>182</label>
+				<altlabel>19033</altlabel>
+				<usealttexture>!IsEmpty(Window.Property(ShowSongList))</usealttexture>
+				<onclick condition="IsEmpty(Window.Property(ShowSongList))">SetProperty(ShowSongList, show)</onclick>
+				<onclick condition="!IsEmpty(Window.Property(ShowSongList))">ClearProperty(ShowSongList)</onclick>
+				<visible>Container.Content(Albums)</visible>
 			</control>
 		</control>
 	</controls>
