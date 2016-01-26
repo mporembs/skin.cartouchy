@@ -14,6 +14,10 @@
 	<constant name="FanartCrossfadeTime">500</constant>
 	<constant name="IconCrossfadeTime">400</constant>
 
+	<variable name="PlaylistHeader">
+		<value condition="Window.IsVisible(musicplaylist)">$LOCALIZE[10517]</value>
+		<value condition="Window.IsVisible(videoplaylist)">$LOCALIZE[10522]</value>
+	</variable>
 	<variable name="OSDImage">
 		<value condition="Window.IsVisible(MusicOSD)">$INFO[MusicPlayer.Cover]</value>
 		<value condition="Window.IsVisible(VideoOSD)">$INFO[VideoPlayer.Cover]</value>

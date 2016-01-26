@@ -11,7 +11,7 @@
 		<control type="label">
 			<description>Window label</description>
 			<include>MediaWindowTitleCommons</include>
-			<label>$LOCALIZE[10517]</label>
+			<label>$VAR[PlaylistHeader]</label>
 		</control>
 		<control type="group">
 			<include>Window_OpenClose_Animation_Zoom</include>
