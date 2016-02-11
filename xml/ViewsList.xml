@@ -136,9 +136,9 @@
 					<selectedcolor>selected</selectedcolor>
 					<align>right</align>
 					<aligny>center</aligny>
-					<label>$INFO[ListItem.Property(Addon.Status),, - ]$INFO[ListItem.Property(Addon.Version)]</label>
+					<label>$INFO[ListItem.AddonStatus,, - ]$INFO[ListItem.AddonVersion]</label>
 					<animation effect="slide" start="0" end ="60,0" time="0" condition="True">Conditional</animation>
-					<visible>Window.IsVisible(AddonBrowser) + !stringcompare(ListItem.Property(Addon.Status),$LOCALIZE[305])</visible>
+					<visible>Window.IsVisible(AddonBrowser) + !stringcompare(ListItem.AddonStatus,$LOCALIZE[305])</visible>
 				</control>
 				<control type="label">
 					<posx>$PARAM[label2-posx]</posx>
@@ -149,9 +149,9 @@
 					<selectedcolor>selected</selectedcolor>
 					<align>right</align>
 					<aligny>center</aligny>
-					<label>$INFO[ListItem.Property(Addon.Version)]</label>
+					<label>$INFO[ListItem.AddonVersion]</label>
 					<animation effect="slide" start="0" end ="60,0" time="0" condition="True">Conditional</animation>
-					<visible>Window.IsVisible(AddonBrowser) + stringcompare(ListItem.Property(Addon.Status),$LOCALIZE[305])</visible>
+					<visible>Window.IsVisible(AddonBrowser) + stringcompare(ListItem.AddonStatus,$LOCALIZE[305])</visible>
 				</control>
 				<control type="image">
 					<posx>50r</posx>
@@ -278,9 +278,9 @@
 					<selectedcolor>selected</selectedcolor>
 					<align>right</align>
 					<aligny>center</aligny>
-					<label>$INFO[ListItem.Property(Addon.Status),, - ]$INFO[ListItem.Property(Addon.Version)]</label>
+					<label>$INFO[ListItem.AddonStatus,, - ]$INFO[ListItem.AddonVersion]</label>
 					<animation effect="slide" start="0" end ="60,0" time="0" condition="True">Conditional</animation>
-					<visible>Window.IsVisible(AddonBrowser) + !stringcompare(ListItem.Property(Addon.Status),$LOCALIZE[305])</visible>
+					<visible>Window.IsVisible(AddonBrowser) + !stringcompare(ListItem.AddonStatus,$LOCALIZE[305])</visible>
 				</control>
 				<control type="label">
 					<posx>$PARAM[label2-posx]</posx>
@@ -291,9 +291,9 @@
 					<selectedcolor>selected</selectedcolor>
 					<align>right</align>
 					<aligny>center</aligny>
-					<label>$INFO[ListItem.Property(Addon.Version)]</label>
+					<label>$INFO[ListItem.AddonVersion]</label>
 					<animation effect="slide" start="0" end ="60,0" time="0" condition="True">Conditional</animation>
-					<visible>Window.IsVisible(AddonBrowser) + stringcompare(ListItem.Property(Addon.Status),$LOCALIZE[305])</visible>
+					<visible>Window.IsVisible(AddonBrowser) + stringcompare(ListItem.AddonStatus,$LOCALIZE[305])</visible>
 				</control>
 				<control type="image">
 					<posx>50r</posx>

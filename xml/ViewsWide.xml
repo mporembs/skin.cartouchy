@@ -728,7 +728,7 @@
 					<selectedcolor>selected</selectedcolor>
 					<align>left</align>
 					<aligny>center</aligny>
-					<label>$INFO[ListItem.Property(Addon.Creator)]</label>
+					<label>$INFO[ListItem.AddonCreator]</label>
 				</control>
 				<control type="label">
 					<posx>910r</posx>
@@ -739,7 +739,7 @@
 					<selectedcolor>selected</selectedcolor>
 					<align>right</align>
 					<aligny>center</aligny>
-					<label>$INFO[ListItem.Property(Addon.Version)]$INFO[ListItem.Property(Addon.Status), - ]</label>
+					<label>$INFO[ListItem.AddonVersion]$INFO[ListItem.AddonStatus, - ]</label>
 				</control>
 				<control type="image">
 					<posx>40r</posx>
@@ -755,7 +755,7 @@
 					<height>154</height>
 					<font>font25</font>
 					<align>justify</align>
-					<label>$INFO[ListItem.Property(Addon.Broken),[COLOR=blue][B],[/B][/COLOR][CR]]$INFO[ListItem.Property(Addon.Disclaimer),[COLOR=blue][B],[/B][/COLOR][CR]]$INFO[ListItem.Property(Addon.Description)]</label>
+					<label>$INFO[ListItem.AddonBroken,[COLOR=blue][B],[/B][/COLOR][CR]]$INFO[ListItem.AddonDisclaimer,[COLOR=blue][B],[/B][/COLOR][CR]]$INFO[ListItem.AddonDescription]</label>
 				</control>
 			</itemlayout>
 			<focusedlayout condition="Container.Content(Addons)" height="240" width="$PARAM[panel-width]">
@@ -794,7 +794,7 @@
 					<selectedcolor>selected</selectedcolor>
 					<align>left</align>
 					<aligny>center</aligny>
-					<label>$INFO[ListItem.Property(Addon.Creator)]</label>
+					<label>$INFO[ListItem.AddonCreator]</label>
 				</control>
 				<control type="label">
 					<posx>910r</posx>
@@ -805,7 +805,7 @@
 					<selectedcolor>selected</selectedcolor>
 					<align>right</align>
 					<aligny>center</aligny>
-					<label>$INFO[ListItem.Property(Addon.Version)]$INFO[ListItem.Property(Addon.Status), - ]</label>
+					<label>$INFO[ListItem.AddonVersion]$INFO[ListItem.AddonStatus, - ]</label>
 				</control>
 				<control type="image">
 					<posx>40r</posx>
@@ -821,7 +821,7 @@
 					<height>154</height>
 					<font>font25</font>
 					<align>justify</align>
-					<label>$INFO[ListItem.Property(Addon.Broken),[COLOR=blue][B],[/B][/COLOR][CR]]$INFO[ListItem.Property(Addon.Disclaimer),[COLOR=blue][B],[/B][/COLOR][CR]]$INFO[ListItem.Property(Addon.Description)]</label>
+					<label>$INFO[ListItem.AddonBroken,[COLOR=blue][B],[/B][/COLOR][CR]]$INFO[ListItem.AddonDisclaimer,[COLOR=blue][B],[/B][/COLOR][CR]]$INFO[ListItem.AddonDescription]</label>
 					<autoscroll delay="2000" time="2000" repeat="2000">True</autoscroll>
 				</control>
 			</focusedlayout>

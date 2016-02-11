@@ -225,7 +225,7 @@
 							<aligny>center</aligny>
 							<textcolor>grey3</textcolor>
 							<scroll>false</scroll>
-							<label>$INFO[ListItem.Property(AddonName)]</label>
+							<label>$INFO[ListItem.AddonName)]</label>
 						</control>
 						<control type="label">
 							<posx>100</posx>
@@ -273,7 +273,7 @@
 							<aligny>center</aligny>
 							<textcolor>white</textcolor>
 							<scroll>false</scroll>
-							<label>$INFO[ListItem.Property(AddonName)]</label>
+							<label>$INFO[ListItem.AddonName]</label>
 						</control>
 						<control type="label">
 							<posx>100</posx>
@@ -351,7 +351,7 @@
 							<aligny>center</aligny>
 							<textcolor>grey3</textcolor>
 							<scroll>false</scroll>
-							<label>$INFO[ListItem.Property(AddonName)]</label>
+							<label>$INFO[ListItem.AddonName]</label>
 						</control>
 						<control type="label">
 							<posx>100</posx>
@@ -399,7 +399,7 @@
 							<aligny>center</aligny>
 							<textcolor>white</textcolor>
 							<scroll>false</scroll>
-							<label>$INFO[ListItem.Property(AddonName)]</label>
+							<label>$INFO[ListItem.AddonName]</label>
 						</control>
 						<control type="label">
 							<posx>101</posx>
