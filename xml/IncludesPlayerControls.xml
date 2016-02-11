@@ -329,15 +329,7 @@
 			</control>
 		</control>
 		<include>MediaSubMenu</include>
-		<include name="DropdownMenu" condition="Window.IsVisible(MusicOSD) + MusicPlayer.Content(LiveTV)">
-			<param name="panel-posy">0</param>
-			<param name="panel-height">560</param>
-		</include>
-		<include name="DropdownMenu" condition="Window.IsVisible(MusicOSD) + !MusicPlayer.Content(LiveTV)">
-			<param name="panel-posy">80</param>
-			<param name="panel-height">480</param>
-		</include>
-		<include name="DropdownMenu" condition="Window.IsVisible(VideoOSD)">
+		<include name="DropdownMenu">
 			<param name="panel-posy">0</param>
 			<param name="panel-height">560</param>
 		</include>
