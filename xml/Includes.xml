@@ -62,7 +62,7 @@
 		<value condition="Window.IsVisible(Weather)">icon_breadcrumb_weather.png</value>
 		<value condition="Window.IsVisible(Pictures)">icon_breadcrumb_pictures.png</value>
 		<value condition="Window.IsVisible(Programs) | Window.IsVisible(AddonBrowser)">icon_breadcrumb_addons.png</value>
-		<value condition="Window.IsVisible(TVChannels) | Window.IsVisible(RadioChannels) | Window.IsVisible(TVGuide) | Window.IsVisible(RadioGuide) | Window.IsVisible(TVRecordings) | Window.IsVisible(RadioRecordings) | Window.IsVisible(TVSearch) | Window.IsVisible(RadioSearch) | Window.IsVisible(TVTimers) | Window.IsVisible(RadioTimers) | Window.IsVisible(TVTimerRules) | Window.IsVisible(RadioTimerRuless)">icon_breadcrumb_tv.png</value>
+		<value condition="Window.IsVisible(TVChannels) | Window.IsVisible(RadioChannels) | Window.IsVisible(TVGuide) | Window.IsVisible(RadioGuide) | Window.IsVisible(TVRecordings) | Window.IsVisible(RadioRecordings) | Window.IsVisible(TVSearch) | Window.IsVisible(RadioSearch) | Window.IsVisible(TVTimers) | Window.IsVisible(RadioTimers) | Window.IsVisible(TVTimerRules) | Window.IsVisible(RadioTimerRules)">icon_breadcrumb_tv.png</value>
 		<value>icon_breadcrumb_settings.png</value>
 	</variable>
 	<variable name="SeekLabel">
@@ -175,7 +175,7 @@
 			<texture>black.png</texture>
 			<colordiffuse>70000000</colordiffuse>
 			<include>VisibleFadeEffect</include>
-			<visible>[!IsEmpty(ListItem.Art(fanart)) + !Player.HasMedia] | [!Skin.HasSetting(HideVizBackground) + Player.HasAudio] | [!Skin.HasSetting(HideVideoBackground) + Player.HasVideo + !Window.IsVisible(TVChannels) + !Window.IsVisible(RadioChannels) + !Window.IsVisible(TVGuide) + !Window.IsVisible(RadioGuide) + !Window.IsVisible(TVSearch) + !Window.IsVisible(RadioSearch) + !Window.IsVisible(TVTimers) + !Window.IsVisible(RadioTimers) +  + !Window.IsVisible(TVTimerRules) + !Window.IsVisible(RadioTimerRules)!Window.IsVisible(TVRecordings) + !Window.IsVisible(RadioRecordings)]</visible>
+			<visible>[!IsEmpty(ListItem.Art(fanart)) + !Player.HasMedia] | [!Skin.HasSetting(HideVizBackground) + Player.HasAudio] | [!Skin.HasSetting(HideVideoBackground) + Player.HasVideo + !Window.IsVisible(TVChannels) + !Window.IsVisible(RadioChannels) + !Window.IsVisible(TVGuide) + !Window.IsVisible(RadioGuide) + !Window.IsVisible(TVSearch) + !Window.IsVisible(RadioSearch) + !Window.IsVisible(TVTimers) + !Window.IsVisible(RadioTimers) + !Window.IsVisible(TVTimerRules) + !Window.IsVisible(RadioTimerRules) + !Window.IsVisible(TVRecordings) + !Window.IsVisible(RadioRecordings)]</visible>
 		</control>
 	</include>
 	<include name="CommonBackgroundOverlay">
