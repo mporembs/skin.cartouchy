@@ -75,11 +75,7 @@ msgctxt "#31024"
 msgid "Page"
 msgstr ""
 
-msgctxt "#31025"
-msgid "Items"
-msgstr ""
-
-#empty strings from id 31026 to 31029
+#empty strings from id 31025 to 31029
 #ViewType labels
 
 msgctxt "#31030"
@@ -182,21 +178,7 @@ msgctxt "#31309"
 msgid "Memory Used:"
 msgstr ""
 
-#empty strings from id 31310 to 31312
-
-msgctxt "#31313"
-msgid "Choose a Scraper"
-msgstr ""
-
-msgctxt "#31314"
-msgid "Content Scanning Options"
-msgstr ""
-
-#empty strings from id 31315 to 31318
-
-msgctxt "#31319"
-msgid "Select Song"
-msgstr ""
+#empty strings from id 31310 to 31319
 
 msgctxt "#31320"
 msgid "Last Logged In"
