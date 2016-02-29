@@ -7,8 +7,6 @@ all: $(TARGET)
 $(TARGET):
 	@TEXTUREPACKER@ -dupecheck -input . -output $(TARGET)
 
-endif
-
 clean:
 	rm -f $(TARGET)
 
