@@ -88,16 +88,16 @@
 			<width>660</width>
 			<height>60</height>
 			<visible>Window.IsVisible(yesnodialog)</visible>
-			<control type="button" id="10">
-				<description>OK button</description>
-				<posx>0</posx>
+			<control type="button" id="11">
+				<description>Yes button</description>
+				<posx>210</posx>
 				<posy>0</posy>
 				<width>200</width>
 				<include>ButtonInfoDialogsCommonValues</include>
 			</control>
-			<control type="button" id="11">
-				<description>Cancel button</description>
-				<posx>210</posx>
+			<control type="button" id="10">
+				<description>No button</description>
+				<posx>0</posx>
 				<posy>0</posy>
 				<width>200</width>
 				<include>ButtonInfoDialogsCommonValues</include>
