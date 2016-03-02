@@ -246,6 +246,17 @@
 				<animation effect="fade" time="200" condition="Window.Next(Home)">WindowClose</animation>
 			</control>
 		</control>
+		<control type="button">
+			<posx>370r</posx>
+			<posy>16</posy>
+			<height>45</height>
+			<width>145</width>
+			<font>-</font>
+			<texturefocus>-</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<onclick>ActivateWindow(weather)</onclick>
+			<visible>!IsEmpty(Window(Weather).Property(Current.Temperature))</visible>
+		</control>
 		<control type="grouplist">
 			<!-- weather & time -->
 			<include>VisibleFadeEffect</include>
@@ -277,7 +288,7 @@
 		</control>
 	</include>
 	<include name="WeatherIcon">
-		<control type="button">
+		<control type="label">
 			<description>Weather label</description>
 			<height>45</height>
 			<width>100</width>
@@ -285,11 +296,8 @@
 			<textcolor>white</textcolor>
 			<align>right</align>
 			<animation effect="fade" time="300">VisibleChange</animation>
-			<texturefocus>-</texturefocus>
-			<texturenofocus>-</texturenofocus>
 			<aligny>center</aligny>
 			<textoffsetx>0</textoffsetx>
-			<onclick>ActivateWindow(weather)</onclick>
 			<label>$INFO[Window(Weather).Property(Current.Temperature)]$INFO[System.TemperatureUnits]</label>
 			<visible>!IsEmpty(Window(Weather).Property(Current.Temperature))</visible>
 		</control>
