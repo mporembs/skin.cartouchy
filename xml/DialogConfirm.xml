@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-	<onload condition="Window.IsVisible(yesnodialog)">SetFocus(11)</onload>
+	<onload condition="Window.IsVisible(yesnodialog)">SetFocus(10)</onload>
 	<coordinates>
 		<posx>290</posx>
 		<posy>300</posy>
