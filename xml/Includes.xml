@@ -84,6 +84,10 @@
 		<value condition="Player.Forwarding16x | Player.Rewinding16x">16x</value>
 		<value condition="Player.Forwarding32x | Player.Rewinding32x">32x</value>
 	</variable>
+	<variable name="MediaPlayingTitle">
+		<value condition="Player.HasAudio">[B]$INFO[MusicPlayer.Title][/B]</value>
+		<value condition="Player.HasVideo">[B]$INFO[VideoPlayer.Title][/B]</value>
+	</variable>
 
 	<include name="ScreenWidth">
 		<include condition="StringCompare(Skin.AspectRatio,16:9)">ScreenWidth-16x9</include>
@@ -415,14 +419,14 @@
 					<onclick condition="!Container.CanFilterAdvanced">SendClick(19)</onclick>
 					<onclick condition="Container.CanFilterAdvanced">Filter</onclick>
 					<icon>icon_button_filter.png</icon>
-					<visible>!Container.Filtered + ![Window.IsVisible(TVChannels) | Window.IsVisible(RadioChannels) | Window.IsVisible(TVRecordings) | Window.IsVisible(RadioRecordings) | Window.IsVisible(TVTimers) | Window.IsVisible(RadioTimers) | Window.IsVisible(TVTimerRules) | Window.IsVisible(RadioTimerRules) | Window.IsVisible(TVSearch) | Window.IsVisible(RadioSearch) | Window.IsVisible(MusicOSD) | Window.IsVisible(VideoOSD)]</visible>
+					<visible>!Container.Filtered + ![Window.IsVisible(TVChannels) | Window.IsVisible(RadioChannels) | Window.IsVisible(TVRecordings) | Window.IsVisible(RadioRecordings) | Window.IsVisible(TVTimers) | Window.IsVisible(RadioTimers) | Window.IsVisible(TVTimerRules) | Window.IsVisible(RadioTimerRules) | Window.IsVisible(TVSearch) | Window.IsVisible(RadioSearch) | Window.IsVisible(MusicOSD) | Window.IsVisible(VideoOSD) | Window.IsVisible(MusicPlaylist) | Window.IsVisible(VideoPlaylist)]</visible>
 				</item>
 				<item>
 					<label>587</label>
 					<onclick condition="!Container.CanFilterAdvanced">SendClick(19)</onclick>
 					<onclick condition="Container.CanFilterAdvanced">Filter</onclick>
 					<icon>icon_button_filtered.png</icon>
-					<visible>Container.Filtered + ![Window.IsVisible(TVChannels) | Window.IsVisible(RadioChannels) | Window.IsVisible(TVRecordings) | Window.IsVisible(RadioRecordings) | Window.IsVisible(TVTimers) | Window.IsVisible(RadioTimers) | Window.IsVisible(TVTimerRules) | Window.IsVisible(RadioTimerRules) | Window.IsVisible(TVSearch) | Window.IsVisible(RadioSearch) | Window.IsVisible(MusicOSD) | Window.IsVisible(VideoOSD)]</visible>
+					<visible>Container.Filtered + ![Window.IsVisible(TVChannels) | Window.IsVisible(RadioChannels) | Window.IsVisible(TVRecordings) | Window.IsVisible(RadioRecordings) | Window.IsVisible(TVTimers) | Window.IsVisible(RadioTimers) | Window.IsVisible(TVTimerRules) | Window.IsVisible(RadioTimerRules) | Window.IsVisible(TVSearch) | Window.IsVisible(RadioSearch) | Window.IsVisible(MusicOSD) | Window.IsVisible(VideoOSD) | Window.IsVisible(MusicPlaylist) | Window.IsVisible(VideoPlaylist)]</visible>
 				</item>
 				<item>
 					<label>587</label>
@@ -435,7 +439,13 @@
 					<onclick condition="![Window.IsVisible(TVGuide) | Window.IsVisible(RadioGuide)]">Container.NextViewMode</onclick>
 					<onclick condition="Window.IsVisible(TVGuide) | Window.IsVisible(RadioGuide)">SendClick(2)</onclick>
 					<icon>icon_button_view.png</icon>
-					<visible>![Window.IsVisible(TVChannels) | Window.IsVisible(RadioChannels) | Window.IsVisible(TVRecordings) | Window.IsVisible(RadioRecordings) | Window.IsVisible(TVTimers) | Window.IsVisible(RadioTimers) | Window.IsVisible(TVTimerRules) | Window.IsVisible(RadioTimerRules) | Window.IsVisible(TVSearch) | Window.IsVisible(RadioSearch) | Window.IsVisible(MusicOSD) | Window.IsVisible(VideoOSD)]</visible>
+					<visible>![Window.IsVisible(TVChannels) | Window.IsVisible(RadioChannels) | Window.IsVisible(TVRecordings) | Window.IsVisible(RadioRecordings) | Window.IsVisible(TVTimers) | Window.IsVisible(RadioTimers) | Window.IsVisible(TVTimerRules) | Window.IsVisible(RadioTimerRules) | Window.IsVisible(TVSearch) | Window.IsVisible(RadioSearch) | Window.IsVisible(MusicOSD) | Window.IsVisible(VideoOSD) | Window.IsVisible(MusicPlaylist) | Window.IsVisible(VideoPlaylist)]</visible>
+				</item>
+				<item>
+					<label>13376</label>
+					<onclick>ActivateWindow(1112)</onclick>
+					<icon>icon_button_volume.png</icon>
+					<visible>[Window.IsVisible(MusicOSD) | Window.IsVisible(VideoOSD) | Window.IsVisible(MusicPlaylist) | Window.IsVisible(VideoPlaylist)] + !System.Platform.IOS</visible>
 				</item>
 				<item>
 					<label>31200</label>
@@ -454,6 +464,7 @@
 					<onclick condition="IsEmpty(Window(Home).Property(DropdownMenuVisible))">SetProperty(DropdownMenuVisible,Show,Home)</onclick>
 					<onclick condition="!IsEmpty(Window(Home).Property(DropdownMenuVisible))">ClearProperty(DropdownMenuVisible,Home)</onclick>
 					<icon>icon_button_settings.png</icon>
+					<visible>![Window.IsVisible(MusicPlaylist) | Window.IsVisible(VideoPlaylist)]</visible>
 				</item>
 			</content>
 		</control>
@@ -626,7 +637,7 @@
 				<height>20</height>
 				<scrollout>false</scrollout>
 				<pauseatend>3000</pauseatend>
-				<label>[B]$INFO[MusicPlayer.Title]$INFO[VideoPlayer.Title][/B]</label>
+				<label>$VAR[MediaPlayingTitle]</label>
 				<align>center</align>
 				<aligny>center</aligny>
 				<font>font20</font>
