@@ -30,68 +30,84 @@
 			<include>VisibleFadeEffect</include>
 		</control>
 		<control type="group">
-			<posx>0</posx>
+			<posx>300</posx>
 			<posy>10</posy>
 			<include>VisibleFadeEffect</include>
 			<include>16x9_xPos_Relocation</include>
-			<visible>![Window.IsVisible(busydialog) | Window.IsVisible(extendedprogressdialog) | Window.IsVisible(Notification) | Window.IsVisible(volumebar) | Window.IsVisible(1112)]</visible>
-			<control type="label">
-				<posx>250</posx>
-				<posy>0</posy>
-				<width>180</width>
-				<height>32</height>
-				<font>font20_title</font>
-				<aligny>center</aligny>
-				<label>$INFO[Player.Time(hh:mm:ss)]</label>
+			<visible>![Window.IsVisible(busydialog) | Window.IsVisible(extendedprogressdialog) | Window.IsVisible(Notification) | Window.IsVisible(volumebar)]</visible>
+			<control type="button">
+				<description>Volume Button</description>
+				<posx>0</posx>
+				<posy>10</posy>
+				<width>40</width>
+				<height>40</height>
+				<label>-</label>
+				<texturenofocus>osd_volume.png</texturenofocus>
+				<texturefocus colordiffuse="blue">osd_volume.png</texturefocus>
+				<onclick>ActivateWindow(1112)</onclick>
 			</control>
-			<control type="label">
-				<posx>250</posx>
-				<posy>0</posy>
-				<width>780</width>
-				<height>32</height>
-				<font>font20_title</font>
-				<align>center</align>
-				<aligny>center</aligny>
-				<label>$VAR[SeekLabel]</label>
-			</control>
-			<control type="label">
-				<posx>1030</posx>
-				<posy>0</posy>
-				<width>180</width>
-				<height>32</height>
-				<font>font20_title</font>
-				<align>right</align>
-				<aligny>center</aligny>
-				<label>$INFO[Player.Duration(hh:mm:ss)]</label>
-			</control>
-			<control type="progress">
-				<description>Progressbar</description>
-				<posx>250</posx>
-				<posy>40</posy>
-				<width>780</width>
-				<height>12</height>
-				<info>Player.Cache</info>
-				<midtexture colordiffuse="grey2">white.png</midtexture>
-				<texturebg>-</texturebg>
-			</control>
-			<control type="progress">
-				<description>Progressbar</description>
-				<posx>250</posx>
-				<posy>40</posy>
-				<width>780</width>
-				<height>12</height>
-				<info>Player.Progress</info>
-			</control>
-			<control type="slider" id="87">
-				<description>Seek Slider</description>
-				<posx>250</posx>
-				<posy>30</posy>
-				<width>780</width>
-				<height>32</height>
-				<action>seek</action>
-				<texturesliderbar>-</texturesliderbar>
-				<textureslidernib>-</textureslidernib>
-				<textureslidernibfocus>-</textureslidernibfocus>
+			<control type="group">
+				<posx>64</posx>
+				<include>VisibleFadeEffect</include>
+				<visible>!Window.IsVisible(1112)</visible>
+				<control type="label">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>180</width>
+					<height>32</height>
+					<font>font20_title</font>
+					<aligny>center</aligny>
+					<label>$INFO[Player.Time(hh:mm:ss)]</label>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>552</width>
+					<height>32</height>
+					<font>font20_title</font>
+					<align>center</align>
+					<aligny>center</aligny>
+					<label>$VAR[SeekLabel]</label>
+				</control>
+				<control type="label">
+					<posx>552</posx>
+					<posy>0</posy>
+					<width>180</width>
+					<height>32</height>
+					<font>font20_title</font>
+					<align>right</align>
+					<aligny>center</aligny>
+					<label>$INFO[Player.Duration(hh:mm:ss)]</label>
+				</control>
+				<control type="progress">
+					<description>Progressbar</description>
+					<posx>0</posx>
+					<posy>40</posy>
+					<width>552</width>
+					<height>12</height>
+					<info>Player.Cache</info>
+					<midtexture colordiffuse="grey2">white.png</midtexture>
+					<texturebg>-</texturebg>
+				</control>
+				<control type="progress">
+					<description>Progressbar</description>
+					<posx>0</posx>
+					<posy>40</posy>
+					<width>552</width>
+					<height>12</height>
+					<info>Player.Progress</info>
+				</control>
+				<control type="slider" id="87">
+					<description>Seek Slider</description>
+					<posx>0</posx>
+					<posy>30</posy>
+					<width>552</width>
+					<height>32</height>
+					<action>seek</action>
+					<texturesliderbar>-</texturesliderbar>
+					<textureslidernib>-</textureslidernib>
+					<textureslidernibfocus>-</textureslidernibfocus>
+				</control>
 			</control>
 		</control>
 		<control type="group">

@@ -224,9 +224,8 @@
 					</item>
 					<item>
 						<label>13376</label>
-						<onclick>ActivateWindow(1112)</onclick>
-						<icon>icon_button_volume.png</icon>
-						<visible>!System.Platform.IOS</visible>
+						<onclick>ActivateWindow(FileManager)</onclick>
+						<icon>icon_button_filemanager.png</icon>
 					</item>
 					<item>
 						<label>1036</label>

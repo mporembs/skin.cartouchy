@@ -259,10 +259,9 @@
 			<texturefocus>-</texturefocus>
 			<texturenofocus>-</texturenofocus>
 			<onclick>ActivateWindow(weather)</onclick>
-			<visible>!IsEmpty(Window(Weather).Property(Current.Temperature))</visible>
+			<visible>!IsEmpty(Window(Weather).Property(Current.Temperature)) + !Player.HasMedia</visible>
 		</control>
 		<control type="grouplist">
-			<!-- weather & time -->
 			<include>VisibleFadeEffect</include>
 			<posx>415r</posx>
 			<posy>16</posy>
@@ -303,7 +302,7 @@
 			<aligny>center</aligny>
 			<textoffsetx>0</textoffsetx>
 			<label>$INFO[Window(Weather).Property(Current.Temperature)]$INFO[System.TemperatureUnits]</label>
-			<visible>!IsEmpty(Window(Weather).Property(Current.Temperature))</visible>
+			<visible>!IsEmpty(Window(Weather).Property(Current.Temperature)) + !Player.HasMedia</visible>
 		</control>
 		<control type="image">
 			<description>Weather</description>
@@ -313,7 +312,7 @@
 			<aspectratio align="left">keep</aspectratio>
 			<texture colordiffuse="blue">weather/$INFO[Window(Weather).Property(Current.FanartCode)].png</texture>
 			<animation effect="fade" time="300">VisibleChange</animation>
-			<visible>!IsEmpty(Window(Weather).Property(Current.Temperature))</visible>
+			<visible>!IsEmpty(Window(Weather).Property(Current.Temperature)) + !Player.HasMedia</visible>
 		</control>
 	</include>
 	<include name="BehindDialogFadeOut">
@@ -330,7 +329,7 @@
 	<include name="MediaWindowTitleCommons">
 		<posx>65</posx>
 		<posy>70r</posy>
-		<width>610</width>
+		<width>730</width>
 		<height>64</height>
 		<align>left</align>
 		<aligny>center</aligny>
@@ -415,6 +414,12 @@
 			<include>SubMenuCommonLayout</include>
 			<content>
 				<item>
+					<label>31200</label>
+					<onclick condition="Window.IsVisible(MusicOSD) | Window.IsVisible(VideoOSD)">Dialog.Close(all,true)</onclick>
+					<onclick>ParentDir</onclick>
+					<icon>icon_button_back.png</icon>
+				</item>
+				<item>
 					<label>587</label>
 					<onclick condition="!Container.CanFilterAdvanced">SendClick(19)</onclick>
 					<onclick condition="Container.CanFilterAdvanced">Filter</onclick>
@@ -440,24 +445,6 @@
 					<onclick condition="Window.IsVisible(TVGuide) | Window.IsVisible(RadioGuide)">SendClick(2)</onclick>
 					<icon>icon_button_view.png</icon>
 					<visible>![Window.IsVisible(TVChannels) | Window.IsVisible(RadioChannels) | Window.IsVisible(TVRecordings) | Window.IsVisible(RadioRecordings) | Window.IsVisible(TVTimers) | Window.IsVisible(RadioTimers) | Window.IsVisible(TVTimerRules) | Window.IsVisible(RadioTimerRules) | Window.IsVisible(TVSearch) | Window.IsVisible(RadioSearch) | Window.IsVisible(MusicOSD) | Window.IsVisible(VideoOSD) | Window.IsVisible(MusicPlaylist) | Window.IsVisible(VideoPlaylist)]</visible>
-				</item>
-				<item>
-					<label>13376</label>
-					<onclick>ActivateWindow(1112)</onclick>
-					<icon>icon_button_volume.png</icon>
-					<visible>[Window.IsVisible(MusicOSD) | Window.IsVisible(VideoOSD) | Window.IsVisible(MusicPlaylist) | Window.IsVisible(VideoPlaylist)] + !System.Platform.IOS</visible>
-				</item>
-				<item>
-					<label>31200</label>
-					<onclick condition="Window.IsVisible(MusicOSD) | Window.IsVisible(VideoOSD)">Dialog.Close(all,true)</onclick>
-					<onclick>ParentDir</onclick>
-					<icon>icon_button_back.png</icon>
-				</item>
-				<item>
-					<label>1036</label>
-					<onclick>ActivateWindow(Favourites)</onclick>
-					<icon>icon_button_favourites.png</icon>
-					<visible>![Window.IsVisible(MusicOSD) | Window.IsVisible(VideoOSD)]</visible>
 				</item>
 				<item>
 					<label>5</label>
@@ -575,11 +562,11 @@
 	</include>
 	<include name="CommonNowPlaying">
 		<control type="group">
-			<posx>390</posx>
+			<posx>300</posx>
 			<posy>0</posy>
 			<include>VisibleFadeEffect</include>
 			<include>16x9_xPos_Relocation</include>
-			<visible>Player.HasMedia + ![Window.IsVisible(busydialog) | Window.IsVisible(Notification) | Window.IsVisible(volumebar) | Window.IsVisible(1112)]</visible>
+			<visible>Player.HasMedia + ![Window.IsVisible(busydialog) | Window.IsVisible(Notification) | Window.IsVisible(volumebar)]</visible>
 			<control type="image">
 				<posx>0</posx>
 				<posy>0</posy>
@@ -588,9 +575,28 @@
 				<texture border="2">separator.png</texture>
 				<colordiffuse>FF464646</colordiffuse>
 			</control>
+			<control type="button">
+				<description>Volume Button</description>
+				<posx>13</posx>
+				<posy>20</posy>
+				<width>40</width>
+				<height>40</height>
+				<label>-</label>
+				<texturenofocus>osd_volume.png</texturenofocus>
+				<texturefocus colordiffuse="blue">osd_volume.png</texturefocus>
+				<onclick>ActivateWindow(1112)</onclick>
+			</control>
+			<control type="image">
+				<posx>64</posx>
+				<posy>0</posy>
+				<width>2</width>
+				<height>78</height>
+				<texture border="2">separator.png</texture>
+				<colordiffuse>FF464646</colordiffuse>
+			</control>
 			<control type="togglebutton">
 				<description>Play Button</description>
-				<posx>13</posx>
+				<posx>77</posx>
 				<posy>20</posy>
 				<width>40</width>
 				<height>40</height>
@@ -603,104 +609,107 @@
 				<onclick>PlayerControl(Play)</onclick>
 			</control>
 			<control type="image">
-				<posx>64</posx>
+				<posx>128</posx>
 				<posy>0</posy>
 				<width>2</width>
 				<height>78</height>
 				<texture border="2">separator.png</texture>
 				<colordiffuse>FF464646</colordiffuse>
 			</control>
-			<control type="progress">
-				<description>Progressbar</description>
-				<posx>66</posx>
-				<posy>73</posy>
-				<width>368</width>
-				<height>5</height>
-				<info>Player.Progress</info>
-				<texturebg colordiffuse="grey3">white.png</texturebg>
-				<midtexture colordiffuse="blue">white.png</midtexture>
-			</control>
-			<control type="button">
-				<posx>76</posx>
-				<posy>0</posy>
-				<width>348</width>
-				<height>80</height>
-				<texturefocus>-</texturefocus>
-				<texturenofocus>-</texturenofocus>
-				<onclick condition="Player.HasAudio">ActivateWindow(Visualisation)</onclick>
-				<onclick condition="Player.HasVideo">ActivateWindow(FullscreenVideo)</onclick>
-			</control>
-			<control type="fadelabel">
-				<posx>70</posx>
-				<posy>16</posy>
-				<width>360</width>
-				<height>20</height>
-				<scrollout>false</scrollout>
-				<pauseatend>3000</pauseatend>
-				<label>$VAR[MediaPlayingTitle]</label>
-				<align>center</align>
-				<aligny>center</aligny>
-				<font>font20</font>
-				<textcolor>blue</textcolor>
-			</control>
-			<control type="fadelabel">
-				<posx>70</posx>
-				<posy>45</posy>
-				<width>360</width>
-				<height>15</height>
-				<scrollout>false</scrollout>
-				<pauseatend>3000</pauseatend>
-				<label>[B]$INFO[MusicPlayer.Artist][/B]</label>
-				<align>center</align>
-				<aligny>center</aligny>
-				<font>font20</font>
-				<textcolor>white</textcolor>
-				<visible>Player.HasAudio</visible>
-			</control>
-			<control type="fadelabel">
-				<posx>70</posx>
-				<posy>45</posy>
-				<width>360</width>
-				<height>15</height>
-				<scrollout>false</scrollout>
-				<pauseatend>3000</pauseatend>
-				<label>[B]$INFO[VideoPlayer.Year] - $INFO[VideoPlayer.Duration][/B]</label>
-				<align>center</align>
-				<aligny>center</aligny>
-				<font>font20</font>
-				<textcolor>white</textcolor>
-				<visible>Player.HasVideo + VideoPlayer.Content(Movies)</visible>
-			</control>
-			<control type="fadelabel">
-				<posx>70</posx>
-				<posy>45</posy>
-				<width>360</width>
-				<height>15</height>
-				<scrollout>false</scrollout>
-				<pauseatend>3000</pauseatend>
-				<label>[B]$INFO[VideoPlayer.TVShowTitle][/B]</label>
-				<align>center</align>
-				<aligny>center</aligny>
-				<font>font20</font>
-				<textcolor>white</textcolor>
-				<visible>Player.HasVideo + VideoPlayer.Content(Episodes)</visible>
-			</control>
-			<control type="fadelabel">
-				<posx>70</posx>
-				<posy>45</posy>
-				<width>360</width>
-				<height>15</height>
-				<scrollout>false</scrollout>
-				<pauseatend>3000</pauseatend>
-				<label>[B]$INFO[VideoPlayer.Artist][/B]</label>
-				<align>center</align>
-				<aligny>center</aligny>
-				<font>font20</font>
-				<textcolor>white</textcolor>
-				<visible>Player.HasVideo + VideoPlayer.Content(MusicVideos)</visible>
+			<control type="group">
+				<visible>!Window.IsVisible(1112)</visible>
+				<control type="progress">
+					<description>Progressbar</description>
+					<posx>130</posx>
+					<posy>73</posy>
+					<width>420</width>
+					<height>5</height>
+					<info>Player.Progress</info>
+					<texturebg colordiffuse="grey3">white.png</texturebg>
+					<midtexture colordiffuse="blue">white.png</midtexture>
+				</control>
+				<control type="button">
+					<posx>140</posx>
+					<posy>0</posy>
+					<width>400</width>
+					<height>80</height>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onclick condition="Player.HasAudio">ActivateWindow(Visualisation)</onclick>
+					<onclick condition="Player.HasVideo">ActivateWindow(FullscreenVideo)</onclick>
+				</control>
+				<control type="fadelabel">
+					<posx>134</posx>
+					<posy>16</posy>
+					<width>412</width>
+					<height>20</height>
+					<scrollout>false</scrollout>
+					<pauseatend>3000</pauseatend>
+					<label>$VAR[MediaPlayingTitle]</label>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>font20</font>
+					<textcolor>blue</textcolor>
+				</control>
+				<control type="fadelabel">
+					<posx>134</posx>
+					<posy>45</posy>
+					<width>412</width>
+					<height>15</height>
+					<scrollout>false</scrollout>
+					<pauseatend>3000</pauseatend>
+					<label>[B]$INFO[MusicPlayer.Artist][/B]</label>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>font20</font>
+					<textcolor>white</textcolor>
+					<visible>Player.HasAudio</visible>
+				</control>
+				<control type="fadelabel">
+					<posx>134</posx>
+					<posy>45</posy>
+					<width>412</width>
+					<height>15</height>
+					<scrollout>false</scrollout>
+					<pauseatend>3000</pauseatend>
+					<label>[B]$INFO[VideoPlayer.Year] - $INFO[VideoPlayer.Duration][/B]</label>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>font20</font>
+					<textcolor>white</textcolor>
+					<visible>Player.HasVideo + VideoPlayer.Content(Movies)</visible>
+				</control>
+				<control type="fadelabel">
+					<posx>134</posx>
+					<posy>45</posy>
+					<width>412</width>
+					<height>15</height>
+					<scrollout>false</scrollout>
+					<pauseatend>3000</pauseatend>
+					<label>[B]$INFO[VideoPlayer.TVShowTitle][/B]</label>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>font20</font>
+					<textcolor>white</textcolor>
+					<visible>Player.HasVideo + VideoPlayer.Content(Episodes)</visible>
+				</control>
+				<control type="fadelabel">
+					<posx>134</posx>
+					<posy>45</posy>
+					<width>412</width>
+					<height>15</height>
+					<scrollout>false</scrollout>
+					<pauseatend>3000</pauseatend>
+					<label>[B]$INFO[VideoPlayer.Artist][/B]</label>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>font20</font>
+					<textcolor>white</textcolor>
+					<visible>Player.HasVideo + VideoPlayer.Content(MusicVideos)</visible>
+				</control>
 			</control>
 			<control type="image">
-				<posx>434</posx>
+				<posx>550</posx>
 				<posy>0</posy>
 				<width>2</width>
 				<height>78</height>
@@ -709,7 +718,7 @@
 			</control>
 			<control type="button">
 				<description>Next Button</description>
-				<posx>447</posx>
+				<posx>563</posx>
 				<posy>20</posy>
 				<width>40</width>
 				<height>40</height>
@@ -719,7 +728,26 @@
 				<onclick>PlayerControl(Next)</onclick>
 			</control>
 			<control type="image">
-				<posx>498</posx>
+				<posx>614</posx>
+				<posy>0</posy>
+				<width>2</width>
+				<height>78</height>
+				<texture border="2">separator.png</texture>
+				<colordiffuse>FF464646</colordiffuse>
+			</control>
+			<control type="button">
+				<description>Stop Button</description>
+				<posx>627</posx>
+				<posy>20</posy>
+				<width>40</width>
+				<height>40</height>
+				<label>-</label>
+				<texturenofocus>osd_stop.png</texturenofocus>
+				<texturefocus colordiffuse="blue">osd_stop.png</texturefocus>
+				<onclick>PlayerControl(Stop)</onclick>
+			</control>
+			<control type="image">
+				<posx>678</posx>
 				<posy>0</posy>
 				<width>2</width>
 				<height>78</height>
