@@ -715,7 +715,7 @@
 				<height>40</height>
 				<label>-</label>
 				<texturenofocus>osd_next.png</texturenofocus>
-				<texturefocus colordiffuse="blue">osd_ext.png</texturefocus>
+				<texturefocus colordiffuse="blue">osd_next.png</texturefocus>
 				<onclick>PlayerControl(Next)</onclick>
 			</control>
 			<control type="image">
