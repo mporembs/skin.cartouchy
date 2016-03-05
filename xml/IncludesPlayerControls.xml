@@ -344,8 +344,8 @@
 				</control>
 			</control>
 		</control>
-		<include>MediaSubMenu</include>
-		<include name="DropdownMenu">
+		<include>BottomMenu</include>
+		<include name="PopupMenu">
 			<param name="panel-posy">0</param>
 			<param name="panel-height">560</param>
 		</include>
