@@ -80,7 +80,7 @@
 					<width>200</width>
 					<height>25</height>
 					<aspectratio align="left">keep</aspectratio>
-					<texture fallback="rating/0.png">$INFO[ListItem.Rating,rating/,.png]</texture>
+					<texture fallback="rating/0.png">$INFO[ListItem.UserRating,rating/,.png]</texture>
 					<animation effect="slide" start="0,0" end="60,0" time="0" condition="Container.Content(TVShows) | container.Content(Seasons)">Conditional</animation>
 					<visible>!StringCompare(ListItem.Label,..)</visible>
 				</control>
@@ -183,7 +183,7 @@
 					<width>200</width>
 					<height>25</height>
 					<aspectratio align="left">keep</aspectratio>
-					<texture fallback="rating/0.png">$INFO[ListItem.Rating,rating/,.png]</texture>
+					<texture fallback="rating/0.png">$INFO[ListItem.UserRating,rating/,.png]</texture>
 					<animation effect="slide" start="0,0" end="60,0" time="0" condition="Container.Content(TVShows) | container.Content(Seasons)">Conditional</animation>
 					<visible>!StringCompare(ListItem.Label,..)</visible>
 				</control>
