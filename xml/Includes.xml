@@ -861,7 +861,7 @@
 					</item>
 					<item>
 						<label>-</label>
-						<onclick>ActivateWindow(Videos,Files,Return)</onclick>
+						<onclick>ActivateWindow(Video,Root,Return)</onclick>
 						<icon>icon_menu_videos.png</icon>
 						<visible>!Skin.HasSetting(HideHomeButtonVideo)</visible>
 					</item>
@@ -1037,7 +1037,7 @@
 		</item>
 		<item id="3">
 			<label>20342</label>
-			<onclick>ActivateWindow(Videos,MovieTitles,Return)</onclick>
+			<onclick>ActivateWindow(Video,MovieTitles,Return)</onclick>
 			<icon>icon_menu_movies.png</icon>
 			<thumb>-</thumb>
 			<visible>Library.HasContent(Movies)</visible>
@@ -1045,7 +1045,7 @@
 		</item>
 		<item id="4">
 			<label>20343</label>
-			<onclick>ActivateWindow(Videos,TVShowTitles,Return)</onclick>
+			<onclick>ActivateWindow(Video,TVShowTitles,Return)</onclick>
 			<icon>icon_menu_tvshows.png</icon>
 			<thumb>-</thumb>
 			<visible>Library.HasContent(TVShows)</visible>
@@ -1053,7 +1053,7 @@
 		</item>
 		<item id="5">
 			<label>3</label>
-			<onclick>ActivateWindow(Videos,Root,Return)</onclick>
+			<onclick>ActivateWindow(Video,Root,Return)</onclick>
 			<icon>icon_menu_videos.png</icon>
 			<thumb>-</thumb>
 			<visible>!Skin.HasSetting(HideHomeButtonVideo)</visible>
