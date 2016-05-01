@@ -34,7 +34,7 @@
 			<posy>100</posy>
 			<width>1200</width>
 			<height>750</height>
-			<onposx>9000</onposx>
+			<onleft>9000</onleft>
 			<onright>9001</onright>
 			<onup>9000</onup>
 			<ondown>9000</ondown>
