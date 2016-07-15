@@ -6,6 +6,7 @@
 	<include file="IncludesHomeRecentlyAdded.xml" />
 	<include file="IncludesKeypad.xml" />
 
+	<include file="ViewsInfoList.xml" />
 	<include file="ViewsList.xml" />
 	<include file="ViewsThumbnail.xml" />
 	<include file="ViewsWide.xml" />

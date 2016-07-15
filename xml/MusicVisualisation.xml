@@ -3,6 +3,7 @@
 	<defaultcontrol>-</defaultcontrol>
 	<onload>ActivateWindow(MusicOSD)</onload>
 	<onunload>ClearProperty(PopupMenuVisible,Home)</onunload>
+	<onload>RunScript(script.artistslideshow)</onload>
 	<controls>
 		<control type="image">
 			<description>fanart</description>
@@ -10,7 +11,7 @@
 			<posy>0</posy>
 			<include>ScreenWidth</include>
 			<height>960</height>
-			<texture background="true">$INFO[Player.Art(fanart)]</texture>
+			<texture background="true">$INFO[Window(Visualisation).Property(ArtistSlideshow)]</texture>
 			<aspectratio>scale</aspectratio>
 			<fadetime>FanartCrossfadeTime</fadetime>
 		</control>
