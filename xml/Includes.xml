@@ -93,6 +93,8 @@
 	<include name="ScreenWidth">
 		<include condition="String.IsEqual(Skin.AspectRatio,16:9)">ScreenWidth-16x9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">ScreenWidth-4x3</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,Pi)">ScreenWidth-Pi</include>
+
 	</include>
 
 	<include name="ScreenWidth-16x9">
@@ -101,6 +103,9 @@
 	<include name="ScreenWidth-4x3">
 		<width>1280</width>
 	</include>
+	<include name="ScreenWidth-Pi">
+		<width>800</width>
+	</include>
 
 	<include name="CommonBackground">
 		<control type="image">
@@ -108,7 +113,7 @@
 			<posy>0</posy>
 			<aspectratio>scale</aspectratio>
 			<include>ScreenWidth</include>
-			<height>960</height>
+			<height>480</height>
 			<texture fallback="special://skin/background/SKINDEFAULT.jpg">special://skin/background/$INFO[Skin.CurrentTheme].jpg</texture>
 			<visible>!Skin.HasSetting(UseCustomBackground)</visible>
 		</control>
@@ -194,130 +199,46 @@
 				<posx>0</posx>
 				<posy>0</posy>
 				<include>ScreenWidth</include>
-				<height>80</height>
-				<texture border="0,0,0,2">header.png</texture>
+				<height>60</height>
+				<texture border="0,0,0,1">header.png</texture>
 			</control>
 			<control type="button">
 				<description>Home Button</description>
-				<posx>22</posx>
-				<posy>2</posy>
-				<width>150</width>
-				<height>75</height>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>156</width>
+				<height>60</height>
 				<font>-</font>
 				<texturenofocus>-</texturenofocus>
 				<texturefocus>-</texturefocus>
 				<onclick>ActivateWindow(Home)</onclick>
 			</control>
 			<control type="image">
-				<description>Kodi Logo</description>
-				<posx>22</posx>
-				<posy>2</posy>
-				<width>150</width>
-				<height>75</height>
-				<texture>kodi_logo.png</texture>
+				<description>WRX Logo</description>
+				<posx>30</posx>
+				<posy>25</posy>
+				<width>56</width>
+				<height>10</height>
+				<texture>logo-wrx.png</texture>
 				<include>VisibleFadeEffect</include>
 			</control>
-		</control>
-		<control type="button">
-			<posx>370r</posx>
-			<posy>16</posy>
-			<height>45</height>
-			<width>145</width>
-			<font>-</font>
-			<texturefocus>-</texturefocus>
-			<texturenofocus>-</texturenofocus>
-			<onclick>ActivateWindow(weather)</onclick>
-			<visible>!String.IsEmpty(Window(Weather).Property(Current.Temperature)) + !Player.HasMedia</visible>
-		</control>
-		<control type="grouplist">
-			<include>VisibleFadeEffect</include>
-			<posx>415r</posx>
-			<posy>16</posy>
-			<width>400</width>
-			<height>45</height>
-			<align>right</align>
-			<itemgap>10</itemgap>
-			<orientation>horizontal</orientation>
-			<include condition="!Window.IsVisible(LoginScreen)">WeatherIcon</include>
-			<control type="label">
-				<description>System Time</description>
-				<height>45</height>
-				<width>145</width>
-				<font>font30</font>
-				<textcolor>white</textcolor>
-				<align>right</align>
-				<aligny>center</aligny>
-				<label>$INFO[System.Time]</label>
+<!-- 			<control type="label">
+				<posx>50</posx>
+				<posy>2</posy>
+				<label>$INFO[skin.AspectRatio]</label>
+				<include>VisibleFadeEffect</include>
 			</control>
-			<control type="image">
-				<description>System Time Clock</description>
-				<height>45</height>
-				<width>45</width>
-				<texture colordiffuse="blue">icon_header_clock.png</texture>
-				<aspectratio>keep</aspectratio>
-			</control>
-		</control>
+ -->		</control>
 	</include>
 	<include name="Footer">
-		<control type="image">
+<!-- 		<control type="image">
 			<posx>0</posx>
-			<posy>80r</posy>
+			<posy>60r</posy>
 			<include>ScreenWidth</include>
-			<height>80</height>
+			<height>60</height>
 			<texture flipy="true">header.png</texture>
 		</control>
-		<control type="rss">
-			<posx>0</posx>
-			<posy>58r</posy>
-			<height>30</height>
-			<include>ScreenWidth</include>
-			<font>font24_title</font>
-			<urlset>1</urlset>
-			<textcolor>white</textcolor>
-			<titlecolor>blue</titlecolor>
-			<headlinecolor>FFC0C0C0</headlinecolor>
-			<include>Window_OpenClose_Animation</include>
-			<visible>Window.IsVisible(Home)</visible>
-		</control>
-		<control type="image">
-			<description>Window Icon</description>
-			<posx>10</posx>
-			<posy>58r</posy>
-			<width>40</width>
-			<height>40</height>
-			<aspectratio>keep</aspectratio>
-			<texture>$VAR[Breadcrumb-Icon]</texture>
-			<colordiffuse>blue</colordiffuse>
-			<visible>!Window.IsVisible(Home)</visible>
-			<animation effect="fade" time="200" condition="Window.Previous(Home)">WindowOpen</animation>
-			<animation effect="fade" time="200" condition="Window.Next(Home)">WindowClose</animation>
-		</control>
-	</include>
-	<include name="WeatherIcon">
-		<control type="label">
-			<description>Weather label</description>
-			<height>45</height>
-			<width>100</width>
-			<font>font30</font>
-			<textcolor>white</textcolor>
-			<align>right</align>
-			<animation effect="fade" time="300">VisibleChange</animation>
-			<aligny>center</aligny>
-			<textoffsetx>0</textoffsetx>
-			<label>$INFO[Window(Weather).Property(Current.Temperature)]$INFO[System.TemperatureUnits]</label>
-			<visible>!String.IsEmpty(Window(Weather).Property(Current.Temperature)) + !Player.HasMedia</visible>
-		</control>
-		<control type="image">
-			<description>Weather</description>
-			<width>45</width>
-			<height>45</height>
-			<fadetime>300</fadetime>
-			<aspectratio align="left">keep</aspectratio>
-			<texture colordiffuse="blue">weather/$INFO[Window(Weather).Property(Current.FanartCode)].png</texture>
-			<animation effect="fade" time="300">VisibleChange</animation>
-			<visible>!String.IsEmpty(Window(Weather).Property(Current.Temperature)) + !Player.HasMedia</visible>
-		</control>
-	</include>
+ -->	</include>
 	<include name="BehindDialogFadeOut">
 		<control type="image">
 			<posx>-1706</posx>
@@ -416,17 +337,20 @@
 			<include>VisibleFadeEffect</include>
 			<include>BottomMenuLayout</include>
 			<content>
-				<item>
-					<label>31200</label>
-					<onclick condition="Window.IsVisible(MusicOSD) | Window.IsVisible(VideoOSD)">Dialog.Close(all,true)</onclick>
-					<onclick>ParentDir</onclick>
-					<icon>icon_button_back.png</icon>
-				</item>
+			<item>
+				<label>31200</label>
+				<top>5</top>
+				<left>30</left>
+				<onclick condition="Window.IsVisible(MusicOSD) | Window.IsVisible(VideoOSD)">Dialog.Close(all,true)</onclick>
+				<onclick>ParentDir</onclick>
+				<icon>icon-back.png</icon>
+			</item>
+
 				<item>
 					<label>587</label>
 					<onclick condition="!Container.CanFilterAdvanced">SendClick(19)</onclick>
 					<onclick condition="Container.CanFilterAdvanced">Filter</onclick>
-					<icon>icon_button_filter.png</icon>
+					<icon>icon-filter.png</icon>
 					<visible>!Container.Filtered + ![Window.IsVisible(TVChannels) | Window.IsVisible(RadioChannels) | Window.IsVisible(TVRecordings) | Window.IsVisible(RadioRecordings) | Window.IsVisible(TVTimers) | Window.IsVisible(RadioTimers) | Window.IsVisible(TVTimerRules) | Window.IsVisible(RadioTimerRules) | Window.IsVisible(TVSearch) | Window.IsVisible(RadioSearch) | Window.IsVisible(MusicOSD) | Window.IsVisible(VideoOSD) | Window.IsVisible(MusicPlaylist) | Window.IsVisible(VideoPlaylist) | Window.IsVisible(MusicPlaylistEditor)]</visible>
 				</item>
 				<item>
@@ -439,37 +363,37 @@
 				<item>
 					<label>587</label>
 					<onclick>SendClick(31)</onclick>
-					<icon>icon_button_filter.png</icon>
+					<icon>icon-filter.png</icon>
 					<visible>Window.IsVisible(TVChannels) | Window.IsVisible(RadioChannels)</visible>
 				</item>
 				<item>
 					<label>31202</label>
 					<onclick condition="![Window.IsVisible(TVGuide) | Window.IsVisible(RadioGuide)]">Container.NextViewMode</onclick>
 					<onclick condition="Window.IsVisible(TVGuide) | Window.IsVisible(RadioGuide)">SendClick(2)</onclick>
-					<icon>icon_button_view.png</icon>
+					<icon>icon-view.png</icon>
 					<visible>![Window.IsVisible(TVChannels) | Window.IsVisible(RadioChannels) | Window.IsVisible(TVRecordings) | Window.IsVisible(RadioRecordings) | Window.IsVisible(TVTimers) | Window.IsVisible(RadioTimers) | Window.IsVisible(TVTimerRules) | Window.IsVisible(RadioTimerRules) | Window.IsVisible(TVSearch) | Window.IsVisible(RadioSearch) | Window.IsVisible(MusicOSD) | Window.IsVisible(VideoOSD) | Window.IsVisible(MusicPlaylist) | Window.IsVisible(VideoPlaylist) | Window.IsVisible(MusicPlaylistEditor)]</visible>
 				</item>
 				<item>
 					<label>5</label>
 					<onclick condition="String.IsEmpty(Window(Home).Property(PopupMenuVisible))">SetProperty(PopupMenuVisible,Show,Home)</onclick>
 					<onclick condition="!String.IsEmpty(Window(Home).Property(PopupMenuVisible))">ClearProperty(PopupMenuVisible,Home)</onclick>
-					<icon>icon_button_settings.png</icon>
+					<icon>icon-settings.png</icon>
 				</item>
 			</content>
 		</control>
 	</include>
 	<include name="BottomMenuLayout">
-		<animation effect="fade" start="100" end="0" time="300" condition="Window.Next(Home)">WindowClose</animation>
+<!-- 		<animation effect="fade" start="100" end="0" time="300" condition="Window.Next(Home)">WindowClose</animation>
 		<animation effect="fade" end="100" start="0" time="300" condition="Window.Previous(Home)">WindowOpen</animation>
-		<animation effect="slide" start="0,0" end="120,0" time="0" condition="String.IsEqual(Container(9002).NumItems,5)">conditional</animation>
-		<animation effect="slide" start="0,0" end="240,0" time="0" condition="String.IsEqual(Container(9002).NumItems,4)">conditional</animation>
-		<animation effect="slide" start="0,0" end="360,0" time="0" condition="String.IsEqual(Container(9002).NumItems,3)">conditional</animation>
-		<animation effect="slide" start="0,0" end="480,0" time="0" condition="String.IsEqual(Container(9002).NumItems,2)">conditional</animation>
-		<animation effect="slide" start="0,0" end="600,0" time="0" condition="String.IsEqual(Container(9002).NumItems,1)">conditional</animation>
-		<posx>730r</posx>
-		<posy>78r</posy>
-		<width>802</width>
-		<height>120</height>
+		<animation effect="slide" start="0,0" end="482,0" time="0" condition="String.IsEqual(Container(9002).NumItems,5)">conditional</animation>
+		<animation effect="slide" start="0,0" end="554,0" time="0" condition="String.IsEqual(Container(9002).NumItems,4)">conditional</animation>
+		<animation effect="slide" start="0,0" end="626,0" time="0" condition="String.IsEqual(Container(9002).NumItems,3)">conditional</animation>
+		<animation effect="slide" start="0,0" end="698,0" time="0" condition="String.IsEqual(Container(9002).NumItems,2)">conditional</animation>
+		<animation effect="slide" start="0,0" end="770,0" time="0" condition="String.IsEqual(Container(9002).NumItems,1)">conditional</animation>
+ -->	<posx>263r</posx>
+		<posy>60r</posy>
+		<width>800</width>
+		<height>60</height>
 		<onleft>9002</onleft>
 		<onright>9002</onright>
 		<onup>9001</onup>
@@ -477,65 +401,24 @@
 		<pagecontrol>-</pagecontrol>
 		<scrolltime>300</scrolltime>
 		<orientation>Horizontal</orientation>
-		<itemlayout height="78" width="120">
+		<itemlayout height="60" width="62">
 			<control type="image">
-				<posx>0</posx>
-				<posy>0</posy>
-				<width>2</width>
-				<height>78</height>
-				<texture border="2">separator.png</texture>
-				<colordiffuse>A0464646</colordiffuse>
-			</control>
-			<control type="image">
-				<posx>21</posx>
-				<posy>0</posy>
-				<width>78</width>
-				<height>78</height>
-				<bordersize>12</bordersize>
+				<posx>15</posx>
+				<posy>14</posy>
+				<width>32</width>
+				<height>32</height>
 				<texture>$INFO[ListItem.Icon]</texture>
 				<aspectratio>keep</aspectratio>
-			</control>
-			<control type="image">
-				<posx>120</posx>
-				<posy>0</posy>
-				<width>2</width>
-				<height>78</height>
-				<texture border="2">separator.png</texture>
-				<colordiffuse>A0464646</colordiffuse>
 			</control>
 		</itemlayout>
-		<focusedlayout height="78" width="120">
+		<focusedlayout height="60" width="62">
 			<control type="image">
-				<posx>0</posx>
-				<posy>0</posy>
-				<width>2</width>
-				<height>78</height>
-				<texture border="2">separator.png</texture>
-				<colordiffuse>A0464646</colordiffuse>
-			</control>
-			<control type="image">
-				<posx>0</posx>
-				<posy>0</posy>
-				<width>122</width>
-				<height>78</height>
-				<texture>list_focus.png</texture>
-			</control>
-			<control type="image">
-				<posx>21</posx>
-				<posy>0</posy>
-				<width>78</width>
-				<height>78</height>
-				<bordersize>12</bordersize>
+				<posx>15</posx>
+				<posy>14</posy>
+				<width>32</width>
+				<height>32</height>
 				<texture>$INFO[ListItem.Icon]</texture>
 				<aspectratio>keep</aspectratio>
-			</control>
-			<control type="image">
-				<posx>120</posx>
-				<posy>0</posy>
-				<width>2</width>
-				<height>78</height>
-				<texture border="2">separator.png</texture>
-				<colordiffuse>A0464646</colordiffuse>
 			</control>
 		</focusedlayout>
 	</include>

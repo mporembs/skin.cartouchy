@@ -1,10 +1,13 @@
 <colors>
 	<color name="white">FFF0F0F0</color>
-	<color name="grey">FFA0A0A0</color>
+	<color name="grey">FFCDCDCD</color>
 	<color name="grey2">FF777777</color>
 	<color name="grey3">FF2C2C2C</color>
 	<color name="black">FF000000</color>
 	<color name="blue">FF12B2E7</color>
 	<color name="darkblue">FF009FC9</color>
-	<color name="selected">FF12B2E7</color>
+	<color name="selected">FFaec2eb</color>
+	<color name="purple">ff363d4c</color>
+	<color name="lightP">ffaec2eb</color>
+
 </colors>

@@ -6,6 +6,7 @@
 	<extension point="xbmc.gui.skin" debugging="false">
 		<res width="1280" height="960" aspect="4:3" folder="xml"/>
 		<res width="1706" height="960" aspect="16:9" default="true" folder="xml"/>
+		<res width="800" height="480" aspect="Pi" folder="xml"/>
 	</extension>
 	<extension point="xbmc.addon.metadata">
 		<summary lang="bg_BG">Облик за устройства с екран чувствителен на допир</summary>

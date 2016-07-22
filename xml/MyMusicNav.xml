@@ -5,15 +5,10 @@
 	<onunload>ClearProperty(PopupMenuVisible,Home)</onunload>
 	<controls>
 		<include>CommonBackground</include>
-		<include>SideMenu</include>
-		<include>Header</include>
+<!-- 		<include>SideMenu</include>
+ -->	<include>Header</include>
 		<include>CommonNowPlaying</include>
 		<include>Footer</include>
-		<control type="label">
-			<description>Window label</description>
-			<include>MediaWindowTitleCommons</include>
-			<label>$LOCALIZE[10516]$INFO[Container.FolderName, - ]</label>
-		</control>
 		<control type="group">
 			<include>Window_OpenClose_Animation_Zoom</include>
 			<include content="Thumbnail" condition="String.IsEqual(Skin.AspectRatio,16:9)"> <!-- view id = 50 -->
@@ -22,6 +17,10 @@
 			</include>
 			<include content="Thumbnail" condition="String.IsEqual(Skin.AspectRatio,4:3)"> <!-- view id = 50 -->
 				<param name="panel-width" value="1090"/>
+				<param name="layout-width" value="363"/>
+			</include>
+			<include content="Thumbnail" condition="String.IsEqual(Skin.AspectRatio,Pi)"> <!-- view id = 50 -->
+				<param name="panel-width" value="705"/>
 				<param name="layout-width" value="363"/>
 			</include>
 			<include content="List" condition="String.IsEqual(Skin.AspectRatio,16:9)"> <!-- view id = 500 -->
@@ -34,10 +33,15 @@
 				<param name="label-width" value="790"/>
 				<param name="label2-posx" value="920r"/>
 			</include>
-			<include content="InfoList">
+			<include content="InfoList" condition="String.IsEqual(Skin.AspectRatio,16:9)"> 
 				<param name="panel-width" value="1530"/>			
 				<param name="label-width" value="1230"/>
 				<param name="label2-posx" value="1360r"/>
+			</include>
+			<include content="InfoList" condition="String.IsEqual(Skin.AspectRatio,Pi)">
+				<param name="panel-width" value="750"/>			
+				<param name="label-width" value="500"/>
+				<param name="label2-posx" value="500r"/>
 			</include>
 			<include content="Wide" condition="String.IsEqual(Skin.AspectRatio,16:9)"> <!-- view id = 550 -->
 				<param name="panel-width" value="1530"/>

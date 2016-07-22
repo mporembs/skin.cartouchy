@@ -2,10 +2,10 @@
 <includes>
 	<include name="Thumbnail">
 		<control type="panel" id="50">
-			<posx>130</posx>
-			<posy>115</posy>
+			<posx>30</posx>
+			<posy>90</posy>
 			<width>$PARAM[panel-width]</width>
-			<height>750</height>
+			<height>315</height>
 			<onleft>2</onleft>
 			<onright>60</onright>
 			<onup>50</onup>
