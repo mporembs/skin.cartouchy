@@ -1,5 +1,6 @@
 <colors>
 	<color name="white">FFF0F0F0</color>
+	<color name="standard">FFeaeaea</color>
 	<color name="grey">FFCDCDCD</color>
 	<color name="grey2">FF777777</color>
 	<color name="grey3">FF2C2C2C</color>

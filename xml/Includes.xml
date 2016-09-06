@@ -271,17 +271,18 @@
 	<include name="ScrollBarCommons">
 		<control type="group">
 			<include>Window_OpenClose_Animation</include>
-			<posx>40r</posx>
-			<posy>120</posy>
+			<posx>34r</posx>
+			<posy>88</posy>
+			<width>100</width>
 			<visible>Control.IsVisible(60) + ![[Window.IsVisible(TVGuide) | Window.IsVisible(RadioGuide)] + Control.IsVisible(10)]</visible>
 			<animation effect="slide" start="40,0" end="0,0" time="400">Visible</animation>
 			<animation effect="slide" start="0,0" end="40,0" time="400">Hidden</animation>
 			<animation effect="slide" start="0,0" end="-7,0" time="0" condition="String.IsEqual(Skin.AspectRatio,4:3)">Conditional</animation>
 			<control type="scrollbar" id="60">
 				<posx>0</posx>
-				<posy>40</posy>
-				<width>26</width>
-				<height>640</height>
+				<posy>0</posy>
+				<width>6</width>
+				<height>320</height>
 				<texturesliderbackground colordiffuse="30FFFFFF">white.png</texturesliderbackground>
 				<texturesliderbar colordiffuse="grey">white.png</texturesliderbar>
 				<texturesliderbarfocus colordiffuse="blue">white.png</texturesliderbarfocus>
@@ -293,8 +294,8 @@
 				<onup>60</onup>
 				<showonepage>false</showonepage>
 				<orientation>vertical</orientation>
-				<animation effect="fade" time="150">Visible</animation>
-				<animation effect="fade" time="150">Hidden</animation>
+				<animation effect="fade" time="1000">Visible</animation>
+				<animation effect="fade" time="1000">Hidden</animation>
 			</control>
 		</control>
 	</include>
@@ -382,14 +383,14 @@
 		</control>
 	</include>
 	<include name="BottomMenuLayout">
-<!-- 		<animation effect="fade" start="100" end="0" time="300" condition="Window.Next(Home)">WindowClose</animation>
+		<animation effect="fade" start="100" end="0" time="300" condition="Window.Next(Home)">WindowClose</animation>
 		<animation effect="fade" end="100" start="0" time="300" condition="Window.Previous(Home)">WindowOpen</animation>
-		<animation effect="slide" start="0,0" end="482,0" time="0" condition="String.IsEqual(Container(9002).NumItems,5)">conditional</animation>
-		<animation effect="slide" start="0,0" end="554,0" time="0" condition="String.IsEqual(Container(9002).NumItems,4)">conditional</animation>
-		<animation effect="slide" start="0,0" end="626,0" time="0" condition="String.IsEqual(Container(9002).NumItems,3)">conditional</animation>
-		<animation effect="slide" start="0,0" end="698,0" time="0" condition="String.IsEqual(Container(9002).NumItems,2)">conditional</animation>
-		<animation effect="slide" start="0,0" end="770,0" time="0" condition="String.IsEqual(Container(9002).NumItems,1)">conditional</animation>
- -->	<posx>263r</posx>
+		<animation effect="slide" start="0,0" end="177,0" time="0" condition="String.IsEqual(Container(9002).NumItems,5)">conditional</animation>
+		<animation effect="slide" start="0,0" end="237,0" time="0" condition="String.IsEqual(Container(9002).NumItems,4)">conditional</animation>
+		<animation effect="slide" start="0,0" end="297,0" time="0" condition="String.IsEqual(Container(9002).NumItems,3)">conditional</animation>
+		<animation effect="slide" start="0,0" end="357,0" time="0" condition="String.IsEqual(Container(9002).NumItems,2)">conditional</animation>
+		<animation effect="slide" start="0,0" end="417,0" time="0" condition="String.IsEqual(Container(9002).NumItems,1)">conditional</animation>
+	<posx>500r</posx>
 		<posy>60r</posy>
 		<width>800</width>
 		<height>60</height>
@@ -420,6 +421,9 @@
 				<aspectratio>keep</aspectratio>
 			</control>
 		</focusedlayout>
+	</include>
+	<include name="backButton">
+
 	</include>
 	<include name="MenuButtonCommonValues">
 		<height>80</height>

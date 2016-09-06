@@ -35,7 +35,7 @@
 			<include>VisibleFadeEffect</include>
 			<include>16x9_xPos_Relocation</include>
 			<visible>![Window.IsVisible(busydialog) | Window.IsVisible(extendedprogressdialog) | Window.IsVisible(Notification) | Window.IsVisible(volumebar)]</visible>
-			<control type="button">
+<!-- 			<control type="button">
 				<description>Volume Button</description>
 				<posx>0</posx>
 				<posy>10</posy>
@@ -46,7 +46,7 @@
 				<texturefocus colordiffuse="blue">osd_volume.png</texturefocus>
 				<onclick>ActivateWindow(1112)</onclick>
 			</control>
-			<control type="group">
+ -->			<control type="group">
 				<posx>0</posx>
 				<include>VisibleFadeEffect</include>
 				<visible>!Window.IsVisible(1112)</visible>
@@ -110,7 +110,7 @@
 				</control>
 			</control>
 		</control>
-		<control type="group">
+<!-- 		<control type="group">
 			<posx>70r</posx>
 			<posy>0</posy>
 			<control type="image">
@@ -133,7 +133,7 @@
 				<texturenofocus>icon_dialog_close.png</texturenofocus>
 			</control>
 		</control>
-<!-- 		<control type="image">
+ --><!-- 		<control type="image">
 			<posx>0</posx>
 			<posy>80r</posy>
 			<include>ScreenWidth</include>

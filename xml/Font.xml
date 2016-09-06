@@ -6,15 +6,22 @@
 			<name>font12</name>
 			<filename>SF-UI-Display-light.ttf</filename>
 			<size>12</size>
+
 		</font>
 		<font>
 			<name>font13</name>
 			<filename>SF-UI-Display-Regular.ttf</filename>
-			<size>24</size>
+			<size>13</size>
+
 		</font>
 		<font>
 			<name>font14</name>
 			<filename>SF-UI-Display-Regular.ttf</filename>
+			<size>14</size>
+		</font>
+		<font>
+			<name>font14-L</name>
+			<filename>SF-UI-Display-light.ttf</filename>
 			<size>14</size>
 		</font>
 		<font>
@@ -26,6 +33,16 @@
 			<name>font16H</name>
 			<filename>SF-UI-Display-Heavy.ttf</filename>
 			<size>16</size>
+		</font>
+		<font>
+			<name>font18</name>
+			<filename>SF-UI-Display-Regular.ttf</filename>
+			<size>18</size>
+		</font>
+		<font>
+			<name>font18-L</name>
+			<filename>SF-UI-Display-light.ttf</filename>
+			<size>18</size>
 		</font>
 		<font>
 			<name>font20</name>
@@ -52,6 +69,9 @@
 			<filename>SF-UI-Display-Bold.ttf</filename>
 			<size>30</size>
 		</font>
+
+
+
 	<!-- Title Fonts -->
 		<font>
 			<name>font11_title</name>
