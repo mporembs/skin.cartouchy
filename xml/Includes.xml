@@ -250,11 +250,11 @@
 		</control>
 	</include>
 	<include name="MediaWindowTitleCommons">
-		<posx>65</posx>
-		<posy>70r</posy>
-		<width>730</width>
-		<height>64</height>
-		<align>left</align>
+		<posx>200</posx>
+		<posy>60r</posy>
+		<width>400</width>
+		<height>60</height>
+		<align>center</align>
 		<aligny>center</aligny>
 		<font>font24_title</font>
 		<textcolor>white</textcolor>
@@ -334,13 +334,28 @@
 			<visible>false</visible>
 		</control>
 		<control type="button">
-				<label>31200</label>
-				<top>420</top>
-				<left>30</left>
-				<onclick condition="Window.IsVisible(MusicOSD) | Window.IsVisible(VideoOSD)">Dialog.Close(all,true)</onclick>
-				<onclick>ParentDir</onclick>
-				<icon>icon-back.png</icon>
+			<description>Back Button</description>
+			<posx>0</posx>
+			<posy>60r</posy>
+			<width>92</width>
+			<height>60</height>
+			<font>-</font>
+			<texturenofocus>-</texturenofocus>
+			<texturefocus>-</texturefocus>
+			<onclick>ParentDir</onclick>
 		</control>
+		<control type="image">
+			<description>Back Button Image</description>
+			<posx>30</posx>
+			<posy>46r</posy>
+			<width>32</width>
+			<height>32</height>
+			<texture>icon-back.png</texture>
+			<include>VisibleFadeEffect</include>
+		</control>
+		<image>
+			<texture>icon-back.png</texture>
+		</image>
 		<control type="panel" id="9002">
 			<include>VisibleFadeEffect</include>
 			<include>BottomMenuLayout</include>

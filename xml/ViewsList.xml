@@ -12,16 +12,16 @@
 			<ondown>500</ondown>
 			<viewtype label="535">list</viewtype>
 			<pagecontrol>60</pagecontrol>
-			<scrolltime>200</scrolltime>
+			<scrolltime>0</scrolltime>
 			<preloaditems>2</preloaditems>
 			<itemlayout height="70" width="$PARAM[panel-width]" condition="!Window.IsVisible(EventLog)">
-				<control type="image">
+<!-- 				<control type="image">
 					<posx>0</posx>
 					<posy>0</posy>
 					<width>$PARAM[layout-width]</width>
 					<height>70</height>
 					<texture border="40,0,40,5">list_nofocus.png</texture>
-				</control>
+				</control> -->
 				<control type="image">
 					<posx>4</posx>
 					<posy>4</posy>

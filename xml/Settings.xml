@@ -180,7 +180,7 @@
 				</item>
 			</content>
 		</control>
-		<control type="textbox">
+<!-- 		<control type="textbox">
 			<description>Settings Description</description>
 			<posx>250</posx>
 			<posy>70r</posy>
@@ -191,6 +191,6 @@
 			<textcolor>blue</textcolor>
 			<align>center</align>
 			<include>16x9_xPos_Relocation</include>
-		</control>
+		</control> -->
 	</controls>
 </window>
