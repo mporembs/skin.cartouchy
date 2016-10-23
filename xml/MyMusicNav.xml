@@ -33,6 +33,11 @@
 				<param name="label-width" value="790"/>
 				<param name="label2-posx" value="920r"/>
 			</include>
+			<include content="List" condition="String.IsEqual(Skin.AspectRatio,pi)"> <!-- view id = 500 -->
+				<param name="panel-width" value="750"/>			
+				<param name="label-width" value="500"/>
+				<param name="label2-posx" value="500r"/>
+			</include>
 			<include content="InfoList" condition="String.IsEqual(Skin.AspectRatio,16:9)"> 
 				<param name="panel-width" value="1530"/>			
 				<param name="label-width" value="1230"/>

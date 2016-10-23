@@ -1,19 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 	<include name="List">
-		<control type="image">
-			<posx>120</posx>
-			<posy>130</posy>
-			<width>$PARAM[panel-width]</width>
-			<height>700</height>
-			<texture>panel.png</texture>
-			<visible>Control.IsVisible(500)</visible>
-		</control>
 		<control type="panel" id="500">
-			<posx>120</posx>
-			<posy>130</posy>
+			<posx>30</posx>
+			<posy>90</posy>
 			<width>$PARAM[panel-width]</width>
-			<height>700</height>
+			<height>315</height>
 			<onleft>2</onleft>
 			<onright>60</onright>
 			<onup>500</onup>
