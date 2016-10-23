@@ -230,14 +230,14 @@
  -->		</control>
 	</include>
 	<include name="Footer">
-<!-- 		<control type="image">
+		<control type="image">
 			<posx>0</posx>
 			<posy>60r</posy>
 			<include>ScreenWidth</include>
 			<height>60</height>
 			<texture flipy="true">header.png</texture>
 		</control>
- -->	</include>
+	</include>
 	<include name="BehindDialogFadeOut">
 		<control type="image">
 			<posx>-1706</posx>
@@ -333,19 +333,18 @@
 			<description>Filter button needed for panel below to work</description>
 			<visible>false</visible>
 		</control>
-		<control type="panel" id="9002">
-			<include>VisibleFadeEffect</include>
-			<include>BottomMenuLayout</include>
-			<content>
-			<item>
+		<control type="button">
 				<label>31200</label>
-				<top>5</top>
+				<top>420</top>
 				<left>30</left>
 				<onclick condition="Window.IsVisible(MusicOSD) | Window.IsVisible(VideoOSD)">Dialog.Close(all,true)</onclick>
 				<onclick>ParentDir</onclick>
 				<icon>icon-back.png</icon>
-			</item>
-
+		</control>
+		<control type="panel" id="9002">
+			<include>VisibleFadeEffect</include>
+			<include>BottomMenuLayout</include>
+			<content>
 				<item>
 					<label>587</label>
 					<onclick condition="!Container.CanFilterAdvanced">SendClick(19)</onclick>
@@ -421,9 +420,6 @@
 				<aspectratio>keep</aspectratio>
 			</control>
 		</focusedlayout>
-	</include>
-	<include name="backButton">
-
 	</include>
 	<include name="MenuButtonCommonValues">
 		<height>80</height>
