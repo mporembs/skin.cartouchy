@@ -47,7 +47,7 @@
 					<height>70</height>
 					<font>font16</font>
 					<selectedcolor>selected</selectedcolor>
-					<align>center</align>
+					<align>left</align>
 					<aligny>center</aligny>
 					<label>$INFO[ListItem.Label]</label>
 				</control>
@@ -189,7 +189,7 @@
 					<height>70</height>
 					<font>font16</font>
 					<selectedcolor>selected</selectedcolor>
-					<align>center</align>
+					<align>left</align>
 					<aligny>center</aligny>
 					<label>$INFO[ListItem.Label]</label>
 				</control>
