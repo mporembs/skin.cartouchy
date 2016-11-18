@@ -25,6 +25,11 @@
 			<size>14</size>
 		</font>
 		<font>
+			<name>font16L</name>
+			<filename>SF-UI-Display-light.ttf</filename>
+			<size>16</size>
+		</font>
+		<font>
 			<name>font16</name>
 			<filename>SF-UI-Display-Regular.ttf</filename>
 			<size>16</size>
