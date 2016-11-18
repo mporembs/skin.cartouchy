@@ -342,6 +342,7 @@
 			<font>-</font>
 			<texturenofocus>-</texturenofocus>
 			<texturefocus>-</texturefocus>
+			<onclick condition="Window.IsVisible(MusicOSD) | Window.IsVisible(VideoOSD)">Dialog.Close(all,true)</onclick>
 			<onclick>ParentDir</onclick>
 		</control>
 		<control type="image">
