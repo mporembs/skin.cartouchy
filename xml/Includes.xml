@@ -145,7 +145,7 @@
 			<fadetime>FanartCrossfadeTime</fadetime>
 			<visible>Container.Content(Albums) | Container.Content(Songs)</visible>
 		</control> -->
-		<control type="image">
+<!-- 		<control type="image">
 			<posx>0</posx>
 			<posy>0</posy>
 			<include>ScreenWidth</include>
@@ -165,7 +165,7 @@
 			<aspectratio>scale</aspectratio>
 			<fadetime>FanartCrossfadeTime</fadetime>
 			<visible>Player.HasMedia</visible>
-		</control>
+		</control> -->
 		<control type="videowindow">
 			<posx>0</posx>
 			<posy>0</posy>
