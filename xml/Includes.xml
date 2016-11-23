@@ -113,7 +113,7 @@
 			<aspectratio>scale</aspectratio>
 			<include>ScreenWidth</include>
 			<height>480</height>
-			<texture fallback="special://skin/background/SKINDEFAULT.jpg">special://skin/background/$INFO[Skin.CurrentTheme].jpg</texture>
+			<texture fallback="special://skin/background/SKINDEFAULT.png">special://skin/background/$INFO[Skin.CurrentTheme].jpg</texture>
 			<visible>!Skin.HasSetting(UseCustomBackground)</visible>
 		</control>
 		<control type="image">
@@ -145,27 +145,27 @@
 			<fadetime>FanartCrossfadeTime</fadetime>
 			<visible>Container.Content(Albums) | Container.Content(Songs)</visible>
 		</control> -->
-<!-- 		<control type="image">
-			<posx>0</posx>
-			<posy>0</posy>
-			<include>ScreenWidth</include>
-			<height>960</height>
-			<texture background="true">$INFO[ListItem.Art(fanart)]</texture>
-			<aspectratio>scale</aspectratio>
-			<fadetime>FanartCrossfadeTime</fadetime>
-			<visible>![Container.Content(Seasons) | Container.Content(Episodes) | Container.Content(Albums) | Container.Content(Songs)]</visible>
-		</control>
-		<control type="image">
-			<description>fanart</description>
-			<posx>0</posx>
-			<posy>0</posy>
-			<include>ScreenWidth</include>
-			<height>960</height>
-			<texture background="true">$INFO[Player.Art(fanart)]</texture>
-			<aspectratio>scale</aspectratio>
-			<fadetime>FanartCrossfadeTime</fadetime>
-			<visible>Player.HasMedia</visible>
-		</control> -->
+	<!-- 		<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<include>ScreenWidth</include>
+				<height>960</height>
+				<texture background="true">$INFO[ListItem.Art(fanart)]</texture>
+				<aspectratio>scale</aspectratio>
+				<fadetime>FanartCrossfadeTime</fadetime>
+				<visible>![Container.Content(Seasons) | Container.Content(Episodes) | Container.Content(Albums) | Container.Content(Songs)]</visible>
+			</control>
+			<control type="image">
+				<description>fanart</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<include>ScreenWidth</include>
+				<height>960</height>
+				<texture background="true">$INFO[Player.Art(fanart)]</texture>
+				<aspectratio>scale</aspectratio>
+				<fadetime>FanartCrossfadeTime</fadetime>
+				<visible>Player.HasMedia</visible>
+			</control> -->
 		<control type="videowindow">
 			<posx>0</posx>
 			<posy>0</posy>
