@@ -35,8 +35,8 @@
 					<visible>Container.Content(Artists) | Container.Content(Albums) | Container.Content(Songs) | Container.Content(Addons) | Container.Content(Actors) | Container.Content(Sets) | [Window.IsVisible(Pictures) + !String.IsEmpty(Container.FolderPath)]</visible>
 				</control>
 				<control type="image">
-					<posx>4</posx>
-					<posy>4</posy>
+					<posx>12</posx>
+					<posy>0</posy>
 					<width>86</width>
 					<height>86</height>
 					<texture background="true">$INFO[Listitem.Icon]</texture>
@@ -88,8 +88,8 @@
 					<visible>Container.Content(Artists) | Container.Content(Albums) | Container.Content(Songs) | Container.Content(Addons) | Container.Content(Actors) | Container.Content(Sets) | [Window.IsVisible(Pictures) + !String.IsEmpty(Container.FolderPath)]</visible>
 				</control>
 				<control type="image">
-					<posx>4</posx>
-					<posy>4</posy>
+					<posx>12</posx>
+					<posy>0</posy>
 					<width>86</width>
 					<height>86</height>
 					<texture background="true">$INFO[Listitem.Icon]</texture>

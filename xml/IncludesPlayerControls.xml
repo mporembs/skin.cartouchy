@@ -35,17 +35,6 @@
 			<include>VisibleFadeEffect</include>
 			<include>16x9_xPos_Relocation</include>
 			<visible>![Window.IsVisible(busydialog) | Window.IsVisible(extendedprogressdialog) | Window.IsVisible(Notification) | Window.IsVisible(volumebar)]</visible>
-<!-- 			<control type="button">
-				<description>Volume Button</description>
-				<posx>0</posx>
-				<posy>10</posy>
-				<width>40</width>
-				<height>40</height>
-				<label>-</label>
-				<texturenofocus>osd_volume.png</texturenofocus>
-				<texturefocus colordiffuse="blue">osd_volume.png</texturefocus>
-				<onclick>ActivateWindow(1112)</onclick>
-			</control> -->
 			<control type="group">
 				<posx>0</posx>
 				<include>VisibleFadeEffect</include>
@@ -100,9 +89,9 @@
 				<control type="slider" id="87">
 					<description>Seek Slider</description>
 					<posx>0</posx>
-					<posy>30</posy>
-					<width>552</width>
-					<height>32</height>
+					<posy>55</posy>
+					<width>800</width>
+					<height>3</height>
 					<action>seek</action>
 					<texturesliderbar>-</texturesliderbar>
 					<textureslidernib>-</textureslidernib>
@@ -163,14 +152,6 @@
 					<texture>$VAR[OSDImage]</texture>
 					<aspectratio>keep</aspectratio>
 					<fadetime>IconCrossfadeTime</fadetime>
-				</control>
-				<control type="progress">
-					<description>Progressbar</description>
-					<posx>0</posx>
-					<posy>220</posy>
-					<width>220</width>
-					<height>3</height>
-					<info>Player.Progress</info>
 				</control>
 				<control type="label">
 					<posx>0</posx>
@@ -289,59 +270,68 @@
 				<posx>250</posx>
 				<posy>0</posy>
 				<width>ScreenWidth</width>
-				<height>50</height>
+				<height>64</height>
 				<align>center</align>
 				<orientation>horizontal</orientation>
-				<itemgap>30</itemgap>
+				<itemgap>20</itemgap>
 				<control type="button">
-					<width>50</width>
-					<height>50</height>
-					<texturefocus colordiffuse="blue">osd_previous.png</texturefocus>
-					<texturenofocus>osd_previous.png</texturenofocus>
+					<width>64</width>
+					<height>64</height>
+					<texturefocus colordiffuse="lime">osd-previous.png</texturefocus>
+					<texturenofocus>osd-previous.png</texturenofocus>
 					<onclick>PlayerControl(Previous)</onclick>
 				</control>
-				<control type="button">
+			<!-- 	<control type="button">
 					<width>50</width>
 					<height>50</height>
-					<texturefocus colordiffuse="blue">osd_rewind.png</texturefocus>
+					<texturefocus colordiffuse="lime">osd_rewind.png</texturefocus>
 					<texturenofocus>osd_rewind.png</texturenofocus>
 					<onclick>PlayerControl(Rewind)</onclick>
-				</control>
+				</control> -->
 				<control type="togglebutton">
-					<width>50</width>
-					<height>50</height>
-					<texturefocus colordiffuse="blue">osd_pause.png</texturefocus>
-					<texturenofocus>osd_pause.png</texturenofocus>
-					<alttexturefocus colordiffuse="blue">osd_play.png</alttexturefocus>
-					<alttexturenofocus>osd_play.png</alttexturenofocus>
+					<width>64</width>
+					<height>64</height>
+					<texturefocus colordiffuse="lime">osd-pause.png</texturefocus>
+					<texturenofocus>osd-pause.png</texturenofocus>
+					<alttexturefocus colordiffuse="lime">osd-play.png</alttexturefocus>
+					<alttexturenofocus>osd-play.png</alttexturenofocus>
 					<usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
 					<onclick>PlayerControl(Play)</onclick>
 				</control>
 				<control type="button">
-					<width>50</width>
-					<height>50</height>
-					<texturefocus colordiffuse="blue">osd_stop.png</texturefocus>
-					<texturenofocus>osd_stop.png</texturenofocus>
+					<width>64</width>
+					<height>64</height>
+					<texturefocus colordiffuse="lime">osd-stop.png</texturefocus>
+					<texturenofocus>osd-stop.png</texturenofocus>
 					<onclick>PlayerControl(Stop)</onclick>
 				</control>
-				<control type="button">
+				<!-- <control type="button">
 					<width>50</width>
 					<height>50</height>
-					<texturefocus colordiffuse="blue">osd_forward.png</texturefocus>
+					<texturefocus colordiffuse="lime">osd_forward.png</texturefocus>
 					<texturenofocus>osd_forward.png</texturenofocus>
 					<onclick>PlayerControl(Forward)</onclick>
-				</control>
+				</control> -->
 				<control type="button">
-					<width>50</width>
-					<height>50</height>
-					<texturefocus colordiffuse="blue">osd_next.png</texturefocus>
-					<texturenofocus>osd_next.png</texturenofocus>
+					<width>64</width>
+					<height>64</height>
+					<texturefocus colordiffuse="lime">osd-next.png</texturefocus>
+					<texturenofocus>osd-next.png</texturenofocus>
 					<onclick>PlayerControl(Next)</onclick>
 				</control>
+				<control type="button">
+				<description>Volume Button</description>
+				<width>64</width>
+				<height>64</height>
+				<label>-</label>
+				<texturenofocus>osd-volume.png</texturenofocus>
+				<texturefocus colordiffuse="lime">osd-volume.png</texturefocus>
+				<onclick>ActivateWindow(1112)</onclick>
+			</control>
 				<control type="togglebutton">
 					<width>50</width>
 					<height>50</height>
-					<texturefocus colordiffuse="blue">osd_record.png</texturefocus>
+					<texturefocus colordiffuse="lime">osd_record.png</texturefocus>
 					<texturenofocus>osd_record.png</texturenofocus>
 					<alttexturefocus colordiffuse="red">osd_record.png</alttexturefocus>
 					<alttexturenofocus colordiffuse="red">osd_record.png</alttexturenofocus>
