@@ -91,7 +91,7 @@
 					<posx>0</posx>
 					<posy>45</posy>
 					<width>800</width>
-					<height>10</height>
+					<height>20</height>
 					<action>seek</action>
 					<texturesliderbar>-</texturesliderbar>
 					<textureslidernib>-</textureslidernib>
