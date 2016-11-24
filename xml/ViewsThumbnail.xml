@@ -3,9 +3,9 @@
 	<include name="Thumbnail">
 		<control type="panel" id="50">
 			<posx>30</posx>
-			<posy>90</posy>
+			<posy>72</posy>
 			<width>$PARAM[panel-width]</width>
-			<height>315</height>
+			<height>336</height>
 			<onleft>2</onleft>
 			<onright>60</onright>
 			<onup>50</onup>
@@ -17,19 +17,19 @@
 			<animation effect="slide" start="0,0" end="-1,0" time="0" condition="String.IsEqual(Skin.AspectRatio,4:3)">Conditional</animation>
 			<animation effect="slide" start="0,0" end="-1,0" time="0" condition="String.IsEqual(Skin.AspectRatio,16:9) + Container.Content(Episodes)">Conditional</animation>
 			<animation effect="slide" start="0,0" end="28,0" time="0" condition="String.IsEqual(Skin.AspectRatio,4:3) + Container.Content(Episodes)">Conditional</animation>
-			<itemlayout condition="!Container.Content(Movies) + !Container.Content(Seasons) + !Container.Content(Episodes) + !Container.Content(TVShows) + !Container.Content(MusicVideos)" height="113" width="117">
+			<itemlayout condition="!Container.Content(Movies) + !Container.Content(Seasons) + !Container.Content(Episodes) + !Container.Content(TVShows) + !Container.Content(MusicVideos)" height="112" width="119">
 				<control type="image">
-					<posx>0</posx>
+					<posx>12</posx>
 					<posy>0</posy>
-					<width>95</width>
-					<height>95</height>
+					<width>86</width>
+					<height>86</height>
 					<texture>button_nofocus.png</texture>
 				</control>
 				<control type="image">
-					<posx>0</posx>
+					<posx>12</posx>
 					<posy>0</posy>
-					<width>95</width>
-					<height>95</height>
+					<width>86</width>
+					<height>86</height>
 					<texture background="true">$INFO[Listitem.Icon]</texture>
 					<aspectratio>scale</aspectratio>
 					<visible>Container.Content(Artists) | Container.Content(Albums) | Container.Content(Songs) | Container.Content(Addons) | Container.Content(Actors) | Container.Content(Sets) | [Window.IsVisible(Pictures) + !String.IsEmpty(Container.FolderPath)]</visible>
@@ -50,17 +50,16 @@
 					<height>45</height>
 					<texture colordiffuse="40000000">black.png</texture>
 				</control> -->
-<!-- 				<control type="textbox">
-					<posx>10</posx>
-					<posy>200</posy>
-					<width>200</width>
-					<height>49</height>
-					<font>font20_narrow</font>
+				<control type="textbox">
+					<posx>12</posx>
+					<posy>89</posy>
+					<width>86</width>
+					<height>12</height>
+					<font>font10</font>
 					<selectedcolor>selected</selectedcolor>
 					<align>center</align>
-					<aligny>center</aligny>
 					<label>$INFO[ListItem.Label]</label>
-				</control> -->
+				</control>
 				<control type="image">
 					<posx>180</posx>
 					<posy>2</posy>
@@ -73,17 +72,17 @@
 			</itemlayout>
 			<focusedlayout condition="!Container.Content(Movies) + !Container.Content(Seasons) + !Container.Content(Episodes) + !Container.Content(TVShows) + !Container.Content(MusicVideos)" height="113" width="117">
 				<control type="image">
-					<posx>0</posx>
+					<posx>12</posx>
 					<posy>0</posy>
-					<width>95</width>
-					<height>95</height>
+					<width>86</width>
+					<height>86</height>
 					<texture>button_nofocus.png</texture>
 				</control>
 				<control type="image">
-					<posx>0</posx>
+					<posx>12</posx>
 					<posy>0</posy>
-					<width>95</width>
-					<height>95</height>
+					<width>86</width>
+					<height>86</height>
 					<texture background="true">$INFO[Listitem.Icon]</texture>
 					<aspectratio>scale</aspectratio>
 					<visible>Container.Content(Artists) | Container.Content(Albums) | Container.Content(Songs) | Container.Content(Addons) | Container.Content(Actors) | Container.Content(Sets) | [Window.IsVisible(Pictures) + !String.IsEmpty(Container.FolderPath)]</visible>
@@ -104,17 +103,16 @@
 					<height>45</height>
 					<texture colordiffuse="darkblue">white.png</texture>
 				</control> -->
-<!-- 				<control type="textbox">
-					<posx>10</posx>
-					<posy>200</posy>
-					<width>200</width>
-					<height>49</height>
-					<font>font20_narrow</font>
+				<control type="textbox">
+					<posx>12</posx>
+					<posy>89</posy>
+					<width>86</width>
+					<height>12</height>
+					<font>font10</font>
 					<selectedcolor>selected</selectedcolor>
 					<align>center</align>
-					<aligny>center</aligny>
 					<label>$INFO[ListItem.Label]</label>
-				</control> -->
+				</control>
 				<control type="image">
 					<posx>180</posx>
 					<posy>2</posy>

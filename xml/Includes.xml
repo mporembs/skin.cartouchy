@@ -271,18 +271,18 @@
 	<include name="ScrollBarCommons">
 		<control type="group">
 			<include>Window_OpenClose_Animation</include>
-			<posx>34r</posx>
-			<posy>88</posy>
-			<width>100</width>
+			<posx>56r</posx>
+			<posy>72</posy>
+			<width>56</width>
 			<visible>Control.IsVisible(60) + ![[Window.IsVisible(TVGuide) | Window.IsVisible(RadioGuide)] + Control.IsVisible(10)]</visible>
 			<animation effect="slide" start="40,0" end="0,0" time="400">Visible</animation>
 			<animation effect="slide" start="0,0" end="40,0" time="400">Hidden</animation>
 			<animation effect="slide" start="0,0" end="-7,0" time="0" condition="String.IsEqual(Skin.AspectRatio,4:3)">Conditional</animation>
 			<control type="scrollbar" id="60">
-				<posx>0</posx>
+				<posx>25</posx>
 				<posy>0</posy>
 				<width>6</width>
-				<height>320</height>
+				<height>336</height>
 				<texturesliderbackground colordiffuse="30FFFFFF">white.png</texturesliderbackground>
 				<texturesliderbar colordiffuse="grey">white.png</texturesliderbar>
 				<texturesliderbarfocus colordiffuse="blue">white.png</texturesliderbarfocus>
@@ -348,9 +348,9 @@
 		<control type="image">
 			<description>Back Button Image</description>
 			<posx>30</posx>
-			<posy>52r</posy>
-			<width>44</width>
-			<height>44</height>
+			<posy>50r</posy>
+			<width>40</width>
+			<height>40</height>
 			<texture>icon-back.png</texture>
 			<include>VisibleFadeEffect</include>
 		</control>
@@ -419,9 +419,9 @@
 		<itemlayout height="60" width="62">
 			<control type="image">
 				<posx>15</posx>
-				<posy>52r</posy>
-				<width>44</width>
-				<height>44</height>
+				<posy>50r</posy>
+				<width>40</width>
+				<height>40</height>
 				<texture>$INFO[ListItem.Icon]</texture>
 				<aspectratio>keep</aspectratio>
 			</control>
@@ -429,9 +429,9 @@
 		<focusedlayout height="60" width="62">
 			<control type="image">
 				<posx>15</posx>
-				<posy>52r</posy>
-				<width>44</width>
-				<height>44</height>
+				<posy>50r</posy>
+				<width>40</width>
+				<height>40</height>
 				<texture>$INFO[ListItem.Icon]</texture>
 				<aspectratio>keep</aspectratio>
 			</control>

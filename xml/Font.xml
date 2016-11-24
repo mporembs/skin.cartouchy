@@ -3,10 +3,14 @@
 	<fontset id="Default" idloc="31390"> 
 	<!-- Normal Fonts -->
 		<font>
+			<name>font10</name>
+			<filename>SF-UI-Display-light.ttf</filename>
+			<size>10</size>
+		</font>
+		<font>
 			<name>font12</name>
 			<filename>SF-UI-Display-light.ttf</filename>
 			<size>12</size>
-
 		</font>
 		<font>
 			<name>font13</name>

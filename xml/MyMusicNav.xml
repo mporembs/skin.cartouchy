@@ -20,8 +20,8 @@
 				<param name="layout-width" value="363"/>
 			</include>
 			<include content="Thumbnail" condition="String.IsEqual(Skin.AspectRatio,Pi)"> <!-- view id = 50 -->
-				<param name="panel-width" value="705"/>
-				<param name="layout-width" value="117"/>
+				<param name="panel-width" value="714"/>
+				<param name="layout-width" value="119"/>
 			</include>
 			<include content="List" condition="String.IsEqual(Skin.AspectRatio,16:9)"> <!-- view id = 500 -->
 				<param name="panel-width" value="1530"/>
