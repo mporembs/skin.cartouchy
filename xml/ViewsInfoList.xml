@@ -48,7 +48,7 @@
 				<orientation>vertical</orientation>
 				<viewtype label="535">list</viewtype>
 				<scrolltime tween="sine" easing="out">0</scrolltime>
-				<itemlayout height="48" width="1030" condition="!Window.IsVisible(EventLog)">
+				<itemlayout height="42" width="1030" condition="!Window.IsVisible(EventLog)">
 					<control type="label">
 						<posx>5</posx>
 						<posy>2</posy>
@@ -66,7 +66,7 @@
 						<posy>0</posy>
 						<width>$PARAM[label-width]</width>
 						<height>24</height>
-						<font>font24</font>
+						<font>font20</font>
 						<textcolor>standard</textcolor>
 						<selectedcolor>selected</selectedcolor>
 						<align>left</align>
@@ -142,7 +142,7 @@
 						<visible>Window.IsVisible(AddonBrowser) + String.IsEqual(ListItem.Label2,$LOCALIZE[305])</visible>
 					</control>
 				</itemlayout>
-				<focusedlayout height="48" width="1050" condition="!Window.IsVisible(EventLog)">
+				<focusedlayout height="42" width="1050" condition="!Window.IsVisible(EventLog)">
 					<control type="label">
 						<posx>5</posx>
 						<posy>2</posy>
@@ -154,13 +154,12 @@
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.TrackNumber]</label>
 					</control>
-
 					<control type="label">
 						<posx>30</posx>
 						<posy>0</posy>
 						<width>$PARAM[label-width]</width>
 						<height>24</height>
-						<font>font24</font>
+						<font>font20</font>
 						<selectedcolor>selected</selectedcolor>
 						<align>left</align>
 						<aligny>center</aligny>

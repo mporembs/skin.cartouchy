@@ -45,8 +45,8 @@
 				<texturenofocus>osd_volume.png</texturenofocus>
 				<texturefocus colordiffuse="blue">osd_volume.png</texturefocus>
 				<onclick>ActivateWindow(1112)</onclick>
-			</control>
- -->			<control type="group">
+			</control> -->
+			<control type="group">
 				<posx>0</posx>
 				<include>VisibleFadeEffect</include>
 				<visible>!Window.IsVisible(1112)</visible>
@@ -163,6 +163,14 @@
 					<texture>$VAR[OSDImage]</texture>
 					<aspectratio>keep</aspectratio>
 					<fadetime>IconCrossfadeTime</fadetime>
+				</control>
+				<control type="progress">
+					<description>Progressbar</description>
+					<posx>0</posx>
+					<posy>220</posy>
+					<width>220</width>
+					<height>3</height>
+					<info>Player.Progress</info>
 				</control>
 				<control type="label">
 					<posx>0</posx>
