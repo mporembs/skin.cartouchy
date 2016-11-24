@@ -438,18 +438,18 @@
 		</focusedlayout>
 	</include>
 	<include name="MenuButtonCommonValues">
-		<height>80</height>
-		<width>350</width>
+		<height>60</height>
+		<width>235</width>
 		<textoffsetx>10</textoffsetx>
-		<textwidth>330</textwidth>
+		<textwidth>205</textwidth>
 		<textcolor>white</textcolor>
 		<align>left</align>
 		<aligny>center</aligny>
-		<font>font22</font>
-		<texturefocus>list_focus.png</texturefocus>
+		<font>font16L</font>
+<!-- 		<texturefocus>list_focus.png</texturefocus>
 		<texturenofocus border="40,0,40,5">list_nofocus.png</texturenofocus>
 		<pulseonselect>false</pulseonselect>
-	</include>
+ -->	</include>
 	<include name="ButtonInfoDialogsCommonValues">
 		<height>60</height>
 		<width>158</width>
@@ -990,34 +990,36 @@
 	<include name="PopupMenu">
 		<control type="group">
 			<visible>!String.IsEmpty(Window(Home).Property(PopupMenuVisible))</visible>
-			<include>VisibleFadeEffect</include>
-			<animation effect="fade" time="250">WindowClose</animation>
+				<animation effect="slide" start="235,0" time="350" tween="sine" easing="inout">Visible</animation>
+				<animation effect="slide" start="0,0" end="235,0" time="350" tween="sine" easing="inout">Hidden</animation>
+<!-- 			<include>VisibleFadeEffect</include>
+ -->			
 			<control type="button">
 				<description>Hidden button to close the sort when its focused</description>
 				<posx>0</posx>
 				<posy>0</posy>
 				<include>ScreenWidth</include>
-				<height>960</height>
+				<height>480</height>
 				<texturenofocus>-</texturenofocus>
 				<texturefocus>-</texturefocus>
 				<onclick>ClearProperty(PopupMenuVisible,Home)</onclick>
 			</control>
 			<control type="group">
-				<posx>360r</posx>
-				<posy>685r</posy>
+				<posx>235r</posx>
+				<posy>0</posy>
 				<control type="image">
 					<description>Panel image</description>
 					<posx>0</posx>
 					<posy>$PARAM[panel-posy]</posy>
 					<width>350</width>
 					<height>$PARAM[panel-height]</height>
-					<texture>dialog_back.png</texture>
+					<texture colordiffuse="lime">dialog_back.png</texture>
 				</control>
 				<control type="grouplist">
 					<posx>0</posx>
 					<posy>$PARAM[panel-posy]</posy>
-					<width>350</width>
-					<height>560</height>
+					<width>235</width>
+					<height>480</height>
 					<onleft>9000</onleft>
 					<onright>50</onright>
 					<onup>9000</onup>
@@ -1037,14 +1039,14 @@
 					<include condition="Window.IsVisible(VideoOSD)">VideoOSDMenu</include>
 					<include condition="Window.IsVisible(VideoPlaylist)">VideoPlaylistMenu</include>
 				</control>
-				<control type="image">
+				<!-- <control type="image">
 					<description>Panel Arrow image</description>
 					<posx>110r</posx>
 					<posy>125r</posy>
 					<width>75</width>
 					<height>41</height>
 					<texture>arrow_up.png</texture>
-				</control>
+				</control> -->
 			</control>
 		</control>
 	</include>

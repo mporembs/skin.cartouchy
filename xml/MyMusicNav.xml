@@ -67,7 +67,7 @@
 			<label>$LOCALIZE[5]</label>
 		</control> -->
 		<include content="PopupMenu">
-			<param name="panel-posy">80</param>
+			<param name="panel-posy">0</param>
 			<param name="panel-height">480</param>
 		</include>
 		<include>ScrollOffsetLabel</include>
