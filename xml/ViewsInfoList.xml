@@ -12,6 +12,15 @@
 				<aspectratio aligny="center">keep</aspectratio>
 				<visible>!SubString(ListItem.Icon,Default)</visible>
 			</control>
+			<control type="button">
+				<left>30</left>
+				<top>90</top>
+				<width>220</width>
+				<height>220</height>
+				<texturefocus></texturefocus>
+				<texturenofocus></texturenofocus>
+				<onclick>PlayMedia($INFO[ListItem.FolderPath])</onclick>
+			</control>
 			<control type="label">
 				<posx>30</posx>
 				<posy>300</posy>
