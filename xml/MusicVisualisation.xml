@@ -10,7 +10,8 @@
 		    <posy>0</posy>
 		    <width>800</width>
 		    <height>480</height>
-		    <imagepath background="true">$INFO[Window(Visualisation).Property(ArtistSlideshow)]</imagepath>
+<!-- 		    <colordiffuse>overlay</colordiffuse>
+ -->		    <imagepath background="true">$INFO[Window(Visualisation).Property(ArtistSlideshow)]</imagepath>
 		    <aspectratio>scale</aspectratio>
 		    <timeperimage>10000</timeperimage>
 		    <fadetime>2000</fadetime>

@@ -277,23 +277,23 @@
 				<control type="button">
 					<width>64</width>
 					<height>64</height>
-					<texturefocus colordiffuse="lime">osd-previous.png</texturefocus>
+					<texturefocus colordiffuse="focus">osd-previous.png</texturefocus>
 					<texturenofocus>osd-previous.png</texturenofocus>
 					<onclick>PlayerControl(Previous)</onclick>
 				</control>
 			<!-- 	<control type="button">
 					<width>50</width>
 					<height>50</height>
-					<texturefocus colordiffuse="lime">osd_rewind.png</texturefocus>
+					<texturefocus colordiffuse="focus">osd_rewind.png</texturefocus>
 					<texturenofocus>osd_rewind.png</texturenofocus>
 					<onclick>PlayerControl(Rewind)</onclick>
 				</control> -->
 				<control type="togglebutton">
 					<width>64</width>
 					<height>64</height>
-					<texturefocus colordiffuse="lime">osd-pause.png</texturefocus>
+					<texturefocus colordiffuse="focus">osd-pause.png</texturefocus>
 					<texturenofocus>osd-pause.png</texturenofocus>
-					<alttexturefocus colordiffuse="lime">osd-play.png</alttexturefocus>
+					<alttexturefocus colordiffuse="focus">osd-play.png</alttexturefocus>
 					<alttexturenofocus>osd-play.png</alttexturenofocus>
 					<usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
 					<onclick>PlayerControl(Play)</onclick>
@@ -301,21 +301,21 @@
 				<control type="button">
 					<width>64</width>
 					<height>64</height>
-					<texturefocus colordiffuse="lime">osd-stop.png</texturefocus>
+					<texturefocus colordiffuse="focus">osd-stop.png</texturefocus>
 					<texturenofocus>osd-stop.png</texturenofocus>
 					<onclick>PlayerControl(Stop)</onclick>
 				</control>
 				<!-- <control type="button">
 					<width>50</width>
 					<height>50</height>
-					<texturefocus colordiffuse="lime">osd_forward.png</texturefocus>
+					<texturefocus colordiffuse="focus">osd_forward.png</texturefocus>
 					<texturenofocus>osd_forward.png</texturenofocus>
 					<onclick>PlayerControl(Forward)</onclick>
 				</control> -->
 				<control type="button">
 					<width>64</width>
 					<height>64</height>
-					<texturefocus colordiffuse="lime">osd-next.png</texturefocus>
+					<texturefocus colordiffuse="focus">osd-next.png</texturefocus>
 					<texturenofocus>osd-next.png</texturenofocus>
 					<onclick>PlayerControl(Next)</onclick>
 				</control>
@@ -325,13 +325,13 @@
 				<height>64</height>
 				<label>-</label>
 				<texturenofocus>osd-volume.png</texturenofocus>
-				<texturefocus colordiffuse="lime">osd-volume.png</texturefocus>
+				<texturefocus colordiffuse="focus">osd-volume.png</texturefocus>
 				<onclick>ActivateWindow(1112)</onclick>
 			</control>
 				<control type="togglebutton">
 					<width>50</width>
 					<height>50</height>
-					<texturefocus colordiffuse="lime">osd_record.png</texturefocus>
+					<texturefocus colordiffuse="focus">osd_record.png</texturefocus>
 					<texturenofocus>osd_record.png</texturenofocus>
 					<alttexturefocus colordiffuse="red">osd_record.png</alttexturefocus>
 					<alttexturenofocus colordiffuse="red">osd_record.png</alttexturenofocus>

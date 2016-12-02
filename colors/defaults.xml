@@ -8,8 +8,8 @@
 	<color name="blue">FF12B2E7</color>
 	<color name="darkblue">FF009FC9</color>
 	<color name="selected">FFaec2eb</color>
-	<color name="purple">ff363d4c</color>
-	<color name="lightP">ffaec2eb</color>
-	<color name="lime">ffdedc3e</color>
-
+	<color name="primary">ff363d4c</color>
+	<color name="secondary">ffaec2eb</color>
+	<color name="overlay">ff363d4c</color>
+	<color name="focus">ff79dfdb</color>
 </colors>

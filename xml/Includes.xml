@@ -521,7 +521,7 @@
 					<align>center</align>
 					<aligny>center</aligny>
 					<font>font16L</font>
-					<textcolor>lime</textcolor>
+					<textcolor>focus</textcolor>
 				</control>
 				<control type="fadelabel">
 					<posy>30</posy>
@@ -953,7 +953,7 @@
 					<posy>$PARAM[panel-posy]</posy>
 					<width>350</width>
 					<height>$PARAM[panel-height]</height>
-					<texture colordiffuse="lime">dialog_back.png</texture>
+					<texture colordiffuse="focus">dialog_back.png</texture>
 				</control>
 				<control type="grouplist">
 					<posx>0</posx>
