@@ -462,20 +462,20 @@
 	</include>
 	<include name="CommonNowPlaying">
 		<control type="group">
-			<posx>300</posx>
+			<posx>0</posx>
 			<posy>0</posy>
 			<include>VisibleFadeEffect</include>
-			<include>16x9_xPos_Relocation</include>
-			<visible>Player.HasMedia + ![Window.IsVisible(busydialog) | Window.IsVisible(Notification) | Window.IsVisible(volumebar)]</visible>
-			<control type="image">
-				<posx>0</posx>
-				<posy>0</posy>
-				<width>2</width>
-				<height>78</height>
-				<texture border="2">separator.png</texture>
-				<colordiffuse>FF464646</colordiffuse>
+<!-- 			<include>16x9_xPos_Relocation</include>
+ -->			<visible>Player.HasMedia + ![Window.IsVisible(busydialog) | Window.IsVisible(Notification) | Window.IsVisible(volumebar)]</visible>
+			<control type="progress">
+					<description>Progressbar</description>
+					<posx>0</posx>
+					<posy>55</posy>
+					<width>800</width>
+					<height>3</height>
+					<info>Player.Progress</info>
 			</control>
-			<control type="button">
+<!-- 			<control type="button">
 				<description>Volume Button</description>
 				<posx>13</posx>
 				<posy>20</posy>
@@ -485,14 +485,6 @@
 				<texturenofocus>osd_volume.png</texturenofocus>
 				<texturefocus colordiffuse="blue">osd_volume.png</texturefocus>
 				<onclick>ActivateWindow(1112)</onclick>
-			</control>
-			<control type="image">
-				<posx>64</posx>
-				<posy>0</posy>
-				<width>2</width>
-				<height>78</height>
-				<texture border="2">separator.png</texture>
-				<colordiffuse>FF464646</colordiffuse>
 			</control>
 			<control type="togglebutton">
 				<description>Play Button</description>
@@ -507,116 +499,80 @@
 				<alttexturenofocus>osd_play.png</alttexturenofocus>
 				<usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
 				<onclick>PlayerControl(Play)</onclick>
-			</control>
-			<control type="image">
-				<posx>128</posx>
-				<posy>0</posy>
-				<width>2</width>
-				<height>78</height>
-				<texture border="2">separator.png</texture>
-				<colordiffuse>FF464646</colordiffuse>
-			</control>
+			</control> -->
 			<control type="group">
+				<posx>200</posx>
+				<width>400</width>
 				<visible>!Window.IsVisible(1112)</visible>
-				<control type="progress">
-					<description>Progressbar</description>
-					<posx>130</posx>
-					<posy>73</posy>
-					<width>420</width>
-					<height>5</height>
-					<info>Player.Progress</info>
-					<texturebg colordiffuse="grey3">white.png</texturebg>
-					<midtexture colordiffuse="blue">white.png</midtexture>
-				</control>
 				<control type="button">
-					<posx>140</posx>
 					<posy>0</posy>
-					<width>400</width>
-					<height>80</height>
+					<height>60</height>
 					<texturefocus>-</texturefocus>
 					<texturenofocus>-</texturenofocus>
 					<onclick condition="Player.HasAudio">ActivateWindow(Visualisation)</onclick>
 					<onclick condition="Player.HasVideo">ActivateWindow(FullscreenVideo)</onclick>
 				</control>
 				<control type="fadelabel">
-					<posx>134</posx>
-					<posy>16</posy>
-					<width>412</width>
+					<posy>10</posy>
 					<height>20</height>
 					<scrollout>false</scrollout>
 					<pauseatend>3000</pauseatend>
 					<label>$VAR[MediaPlayingTitle]</label>
 					<align>center</align>
 					<aligny>center</aligny>
-					<font>font20</font>
-					<textcolor>blue</textcolor>
+					<font>font16L</font>
+					<textcolor>lime</textcolor>
 				</control>
 				<control type="fadelabel">
-					<posx>134</posx>
-					<posy>45</posy>
-					<width>412</width>
-					<height>15</height>
+					<posy>30</posy>
+					<height>20</height>
 					<scrollout>false</scrollout>
 					<pauseatend>3000</pauseatend>
-					<label>[B]$INFO[MusicPlayer.Artist][/B]</label>
+					<label>$INFO[MusicPlayer.Artist]</label>
 					<align>center</align>
 					<aligny>center</aligny>
-					<font>font20</font>
+					<font>font16L</font>
 					<textcolor>white</textcolor>
 					<visible>Player.HasAudio</visible>
 				</control>
 				<control type="fadelabel">
-					<posx>134</posx>
-					<posy>45</posy>
-					<width>412</width>
-					<height>15</height>
+					<posy>30</posy>
+					<height>20</height>
 					<scrollout>false</scrollout>
 					<pauseatend>3000</pauseatend>
-					<label>[B]$INFO[VideoPlayer.Year] - $INFO[VideoPlayer.Duration][/B]</label>
+					<label>$INFO[VideoPlayer.Year] - $INFO[VideoPlayer.Duration]</label>
 					<align>center</align>
 					<aligny>center</aligny>
-					<font>font20</font>
+					<font>font16L</font>
 					<textcolor>white</textcolor>
 					<visible>Player.HasVideo + VideoPlayer.Content(Movies)</visible>
 				</control>
 				<control type="fadelabel">
-					<posx>134</posx>
-					<posy>45</posy>
-					<width>412</width>
-					<height>15</height>
+					<posy>30</posy>
+					<height>20</height>
 					<scrollout>false</scrollout>
 					<pauseatend>3000</pauseatend>
-					<label>[B]$INFO[VideoPlayer.TVShowTitle][/B]</label>
+					<label>$INFO[VideoPlayer.TVShowTitle]</label>
 					<align>center</align>
 					<aligny>center</aligny>
-					<font>font20</font>
+					<font>font16L</font>
 					<textcolor>white</textcolor>
 					<visible>Player.HasVideo + VideoPlayer.Content(Episodes)</visible>
 				</control>
 				<control type="fadelabel">
-					<posx>134</posx>
-					<posy>45</posy>
-					<width>412</width>
-					<height>15</height>
+					<posy>30</posy>
+					<height>20</height>
 					<scrollout>false</scrollout>
 					<pauseatend>3000</pauseatend>
-					<label>[B]$INFO[VideoPlayer.Artist][/B]</label>
+					<label>$INFO[VideoPlayer.Artist]</label>
 					<align>center</align>
 					<aligny>center</aligny>
-					<font>font20</font>
+					<font>font16L</font>
 					<textcolor>white</textcolor>
 					<visible>Player.HasVideo + VideoPlayer.Content(MusicVideos)</visible>
 				</control>
 			</control>
-			<control type="image">
-				<posx>550</posx>
-				<posy>0</posy>
-				<width>2</width>
-				<height>78</height>
-				<texture border="2">separator.png</texture>
-				<colordiffuse>FF464646</colordiffuse>
-			</control>
-			<control type="button">
+<!-- 			<control type="button">
 				<description>Next Button</description>
 				<posx>563</posx>
 				<posy>20</posy>
@@ -626,14 +582,6 @@
 				<texturenofocus>osd_next.png</texturenofocus>
 				<texturefocus colordiffuse="blue">osd_next.png</texturefocus>
 				<onclick>PlayerControl(Next)</onclick>
-			</control>
-			<control type="image">
-				<posx>614</posx>
-				<posy>0</posy>
-				<width>2</width>
-				<height>78</height>
-				<texture border="2">separator.png</texture>
-				<colordiffuse>FF464646</colordiffuse>
 			</control>
 			<control type="button">
 				<description>Stop Button</description>
@@ -645,15 +593,7 @@
 				<texturenofocus>osd_stop.png</texturenofocus>
 				<texturefocus colordiffuse="blue">osd_stop.png</texturefocus>
 				<onclick>PlayerControl(Stop)</onclick>
-			</control>
-			<control type="image">
-				<posx>678</posx>
-				<posy>0</posy>
-				<width>2</width>
-				<height>78</height>
-				<texture border="2">separator.png</texture>
-				<colordiffuse>FF464646</colordiffuse>
-			</control>
+			</control> -->
 		</control>
 	</include>
 	<include name="ScrollOffsetLabel">

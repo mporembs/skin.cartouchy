@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol>-</defaultcontrol>
-	<onload>ActivateWindow(MusicOSD)</onload>
 	<onload>RunScript(script.artistslideshow, daemon=True)</onload>
+	<onload>ActivateWindow(MusicOSD)</onload>
 	<onunload>ClearProperty(PopupMenuVisible,Home)</onunload>
 	<controls>
 		<control type="multiimage">
