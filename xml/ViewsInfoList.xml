@@ -19,7 +19,7 @@
 				<height>220</height>
 				<texturefocus></texturefocus>
 				<texturenofocus></texturenofocus>
-				<onclick>PlayMedia($INFO[ListItem.FolderPath])</onclick>
+				<onclick>PlayMedia($INFO[ListItem.FolderPath][,isdir])</onclick>
 			</control>
 			<control type="label">
 				<posx>30</posx>
