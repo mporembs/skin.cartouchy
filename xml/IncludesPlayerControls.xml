@@ -155,21 +155,21 @@
 				</control>
 				<control type="label">
 					<posx>0</posx>
-					<posy>240</posy>
+					<posy>265</posy>
 					<width>220</width>
 					<height>25</height>
 					<align>left</align>
-					<font>font16H</font>
+					<font>font16L</font>
 					<label>$VAR[OSDLabel1]</label>
 				</control>
 				<control type="label">
 					<posx>0</posx>
-					<posy>265</posy>
+					<posy>240</posy>
 					<width>220</width>
 					<height>30</height>
-					<font>font16L</font>
+					<font>font16H</font>
 					<align>left</align>
-					<label>$VAR[OSDLabel2]</label>
+					<label>$VAR[OSDLabel3]</label>
 				</control>
 				<control type="label">
 					<posx>0</posx>
@@ -178,7 +178,7 @@
 					<height>25</height>
 					<align>left</align>
 					<font>font16L</font>
-					<label>$VAR[OSDLabel3]</label>
+					<label>$VAR[OSDYear]</label>
 				</control>
 <!-- 				<control type="group">
 					<posx>275r</posx>
