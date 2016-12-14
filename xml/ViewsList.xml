@@ -45,7 +45,7 @@
 					<posy>0</posy>
 					<width>$PARAM[label-width]</width>
 					<height>60</height>
-					<font>font18L</font>
+					<font>font18</font>
 					<selectedcolor>selected</selectedcolor>
 					<align>left</align>
 					<aligny>center</aligny>
@@ -187,7 +187,7 @@
 					<posy>0</posy>
 					<width>$PARAM[label-width]</width>
 					<height>60</height>
-					<font>font18L</font>
+					<font>font18</font>
 					<selectedcolor>selected</selectedcolor>
 					<align>left</align>
 					<aligny>center</aligny>
