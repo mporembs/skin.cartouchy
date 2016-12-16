@@ -153,6 +153,33 @@
 					<aspectratio>keep</aspectratio>
 					<fadetime>IconCrossfadeTime</fadetime>
 				</control>
+					<control type="label">
+					<posx>238</posx>
+					<posy>10</posy>
+					<width>418</width>
+					<height>30</height>
+					<align>left</align>
+					<font>font20</font>
+					<label>$INFO[MusicPlayer.PlaylistPosition] / $INFO[MusicPlayer.PlaylistLength]</label>
+				</control>
+				<control type="label">
+					<posx>238</posx>
+					<posy>70</posy>
+					<width>418</width>
+					<height>30</height>
+					<align>left</align>
+					<font>font28H</font>
+					<label>$VAR[OSDLabel2]</label>
+				</control>
+				<control type="label">
+					<posx>238</posx>
+					<posy>110</posy>
+					<width>418</width>
+					<height>30</height>
+					<align>left</align>
+					<font>font24L</font>
+					<label>$VAR[OSDLabel1]</label>
+				</control>
 				<control type="label">
 					<posx>0</posx>
 					<posy>265</posy>
@@ -267,8 +294,8 @@
 		<control type="group">
 			<posy>250</posy>
 			<control type="grouplist">
-				<posx>250</posx>
-				<posy>0</posy>
+				<posx>0</posx>
+				<posy>76r</posy>
 				<width>ScreenWidth</width>
 				<height>64</height>
 				<align>center</align>
