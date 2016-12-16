@@ -69,9 +69,24 @@
 			<size>24</size>
 		</font>
 		<font>
+			<name>font24L</name>
+			<filename>SF-UI-Display-Light.ttf</filename>
+			<size>24</size>
+		</font>
+		<font>
 			<name>font25</name>
 			<filename>SF-UI-Display-Regular.ttf</filename>
 			<size>25</size>
+		</font>
+		<font>
+			<name>font26H</name>
+			<filename>SF-UI-Display-Bold.ttf</filename>
+			<size>26</size>
+		</font>
+		<font>
+			<name>font28H</name>
+			<filename>SF-UI-Display-Bold.ttf</filename>
+			<size>28</size>
 		</font>
 		<font>
 			<name>font30</name>
