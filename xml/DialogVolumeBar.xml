@@ -3,7 +3,7 @@
 	<include>dialogeffect</include>
 	<controls>
 		<control type="group">
-			<posx>390</posx>
+			<posx>150</posx>
 			<posy>0</posy>
 			<width>500</width>
 			<height>78</height>
@@ -36,8 +36,8 @@
 				<posy>72</posy>
 				<width>500</width>
 				<height>6</height>
-				<texturebg colordiffuse="grey3">white.png</texturebg>
-				<midtexture colordiffuse="blue">white.png</midtexture>
+				<texturebg colordiffuse="overlay">white.png</texturebg>
+				<midtexture colordiffuse="secondary">white.png</midtexture>
 				<info>Player.Volume</info>
 			</control>
 			<control type="slider" id="1">
