@@ -170,6 +170,7 @@
 					<align>left</align>
 					<font>font28H</font>
 					<scroll>true</scroll>
+					<scrollspeed>30</scrollspeed>
 					<label>$VAR[OSDLabel2]</label>
 				</control>
 				<control type="label">
@@ -180,6 +181,7 @@
 					<align>left</align>
 					<font>font24L</font>
 					<scroll>true</scroll>
+					<scrollspeed>30</scrollspeed>
 					<label>$VAR[OSDLabel1]</label>
 				</control>
 				<control type="label">
