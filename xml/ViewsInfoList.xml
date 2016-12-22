@@ -24,7 +24,7 @@
 			<control type="label">
 				<posx>30</posx>
 				<posy>300</posy>
-				<width>$PARAM[label-width]</width>
+				<width>220</width>
 				<height>70</height>
 				<font>font16H</font>
 				<textcolor>white</textcolor>					
@@ -35,7 +35,7 @@
 			<control type="label">
 				<posx>30</posx>
 				<posy>330</posy>
-				<width>$PARAM[label-width]</width>
+				<width>220</width>
 				<height>70</height>
 				<font>font16</font>
 				<textcolor>grey</textcolor>
