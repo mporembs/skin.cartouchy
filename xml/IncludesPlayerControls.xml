@@ -169,6 +169,7 @@
 					<height>30</height>
 					<align>left</align>
 					<font>font28H</font>
+					<scroll>true</scroll>
 					<label>$VAR[OSDLabel2]</label>
 				</control>
 				<control type="label">
@@ -178,6 +179,7 @@
 					<height>30</height>
 					<align>left</align>
 					<font>font24L</font>
+					<scroll>true</scroll>
 					<label>$VAR[OSDLabel1]</label>
 				</control>
 				<control type="label">
