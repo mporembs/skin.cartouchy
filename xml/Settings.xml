@@ -28,97 +28,97 @@
 			</content>
 		</control>
 		<control type="panel" id="9000">
-			<include>16x9_xPos_Relocation</include>
-			<include>Window_OpenClose_Animation_Zoom</include>
-			<posx>40</posx>
-			<posy>100</posy>
-			<width>1200</width>
-			<height>750</height>
+<!-- 			<include>16x9_xPos_Relocation</include> -->			
+		<include>Window_OpenClose_Animation_Zoom</include>
+			<posx>30</posx>
+			<posy>72</posy>
+			<width>740</width>
+			<height>336</height>
 			<onleft>9000</onleft>
 			<onright>9001</onright>
 			<onup>9000</onup>
 			<ondown>9000</ondown>
 			<pagecontrol>-</pagecontrol>
-			<scrolltime>300</scrolltime>
-			<itemlayout height="250" width="400">
-				<control type="image">
+			<scrolltime>0</scrolltime>
+			<itemlayout height="112" width="185">
+				<!-- <control type="image">
 					<posx>20</posx>
 					<posy>20</posy>
-					<width>360</width>
-					<height>210</height>
+					<width>185</width>
+					<height>112</height>
 					<texture>button_nofocus.png</texture>
+				</control> -->
+				<control type="image">
+					<posx>5</posx>
+					<posy>5</posy>
+					<width>175</width>
+					<height>102</height>
+					<texture colordiffuse="20000000">black.png</texture>
 				</control>
 				<control type="image">
-					<posx>20</posx>
-					<posy>180</posy>
-					<width>360</width>
-					<height>50</height>
-					<texture colordiffuse="40000000">black.png</texture>
-				</control>
-				<control type="image">
-					<posx>80</posx>
-					<posy>10</posy>
-					<width>240</width>
-					<height>240</height>
-					<texture>$INFO[ListItem.Icon]</texture>
-					<align>center</align>
+					<posx>50</posx>
+					<posy>26</posy>
+					<width>85</width>
+					<height>60</height>
+<!-- 					<texture>$INFO[ListItem.Icon]</texture>
+ -->					<align>center</align>
 				</control>
 				<control type="label">
 					<posx>0</posx>
-					<posy>190</posy>
-					<width>400</width>
-					<height>400</height>
+					<posy>44</posy>
+					<width>185</width>
+					<height>24</height>
 					<label>$INFO[ListItem.Label]</label>
-					<font>font20_title</font>
+					<font>font22</font>
 					<align>center</align>
 					<textcolor>white</textcolor>
 				</control>
 			</itemlayout>
-			<focusedlayout height="250" width="400">
+			<focusedlayout height="112" width="185">
 				<control type="group">
-					<animation type="Focus" reversible="false">
+<!-- 					<animation type="Focus" reversible="false">
 						<effect type="zoom" center="auto" start="100" end="108" time="250" tween="sine" />
 					</animation>
 					<animation type="UnFocus" reversible="false">
 						<effect type="zoom" center="auto" start="108" end="100" time="250" tween="sine" />
 					</animation>
+ -->					<control type="image">
+						<posx>5</posx>
+						<posy>5</posy>
+						<width>175</width>
+						<height>102</height>
+<!-- 						<texture>button_nofocus.png</texture>
+ -->					</control>
 					<control type="image">
-						<posx>20</posx>
-						<posy>20</posy>
-						<width>360</width>
-						<height>210</height>
-						<texture>button_nofocus.png</texture>
+						<posx>5</posx>
+						<posy>5</posy>
+						<width>175</width>
+						<height>102</height>
+<!-- 						<texture>list_focus.png</texture>
+ -->						<animation effect="fade" start="100" end="0" time="0">Unfocus</animation>
 					</control>
 					<control type="image">
-						<posx>20</posx>
-						<posy>20</posy>
-						<width>360</width>
-						<height>210</height>
-						<texture>list_focus.png</texture>
-						<animation effect="fade" start="100" end="0" time="0">Unfocus</animation>
-					</control>
-					<control type="image">
-						<posx>20</posx>
-						<posy>180</posy>
-						<width>360</width>
-						<height>50</height>
-						<texture colordiffuse="40000000">black.png</texture>
+						<posx>5</posx>
+						<posy>5</posy>
+						<width>175</width>
+						<height>102</height>
+						<texture colordiffuse="20000000">black.png</texture>
 					</control>
 					<control type="image">
 						<posx>80</posx>
 						<posy>10</posy>
-						<width>240</width>
-						<height>240</height>
-						<texture>$INFO[ListItem.Icon]</texture>
-						<align>center</align>
+						<width>185</width>
+						<height>112</height>
+<!-- 						<texture>$INFO[ListItem.Icon]</texture>
+ -->						<align>center</align>
 					</control>
 					<control type="label">
 						<posx>0</posx>
-						<posy>190</posy>
-						<width>400</width>
-						<height>400</height>
+						<posy>44</posy>
+						<width>185</width>
+						<height>24</height>
 						<label>$INFO[ListItem.Label]</label>
-						<font>font20_title</font>
+						<font>font22</font>
 						<align>center</align>
 					</control>
 				</control>

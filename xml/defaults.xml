@@ -66,10 +66,10 @@
 	<default type="radiobutton">
 		<posx>0</posx>
 		<posy>0</posy>
-		<width>300</width>
-		<height>42</height>
-		<radiowidth>90</radiowidth>
-		<radioheight>45</radioheight>
+		<width>200</width>
+		<height>28</height>
+		<radiowidth>60</radiowidth>
+		<radioheight>30</radioheight>
 		<textureradioonfocus>radiobutton_on.png</textureradioonfocus>
 		<textureradioonnofocus>radiobutton_on.png</textureradioonnofocus>
 		<textureradioofffocus>radiobutton_off.png</textureradioofffocus>
@@ -141,10 +141,10 @@
 	<default type="spincontrolex">
 		<posx>0</posx>
 		<posy>0</posy>
-		<width>300</width>
-		<height>42</height>
-		<spinwidth>70</spinwidth>
-		<spinheight>45</spinheight>
+		<width>150</width>
+		<height>21</height>
+		<spinwidth>34</spinwidth>
+		<spinheight>22</spinheight>
 		<texturefocus>list_focus.png</texturefocus>
 		<texturenofocus border="40,0,40,5">list_nofocus.png</texturenofocus>
 		<textureup>arrow_up.png</textureup>

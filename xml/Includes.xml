@@ -260,7 +260,7 @@
 		<height>60</height>
 		<align>center</align>
 		<aligny>center</aligny>
-		<font>font24_title</font>
+		<font>font18L</font>
 		<textcolor>white</textcolor>
 		<scroll>false</scroll>
 		<include>Window_OpenClose_Animation</include>
