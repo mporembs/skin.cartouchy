@@ -4,9 +4,9 @@
 	<controls>
 		<include>CommonBackground</include>
 		<include>Header</include>
-		<include>CommonNowPlaying</include>
+<!-- 		<include>CommonNowPlaying</include>
 		<include>Header</include>
-		<control type="label">
+ -->		<control type="label">
 			<description>Window label</description>
 			<include>MediaWindowTitleCommons</include>
 			<label>$LOCALIZE[20077]</label>
@@ -31,20 +31,20 @@
 			<include>Window_OpenClose_Animation_Zoom</include>
 			<include>16x9_xPos_Relocation</include>
 			<posx>30</posx>
-			<posy>140</posy>
+			<posy>72</posy>
 			<control type="image">
 				<posx>0</posx>
 				<posy>0</posy>
-				<width>290</width>
-				<height>720</height>
+				<width>180</width>
+				<height>336</height>
 				<texture>panel.png</texture>
 			</control>
 			<control type="grouplist" id="9">
 				<description>button area</description>
 				<posx>0</posx>
 				<posy>0</posy>
-				<width>290</width>
-				<height>720</height>
+				<width>185</width>
+				<height>336</height>
 				<itemgap>-1</itemgap>
 				<onleft>9</onleft>
 				<onright>9</onright>
@@ -52,10 +52,10 @@
 				<ondown>2</ondown>
 				<control type="button" id="91">
 					<description>Home Button</description>
-					<width>290</width>
-					<height>80</height>
+					<width>185</width>
+					<height>52</height>
 					<aligny>center</aligny>
-					<font>font24_title</font>
+					<font>font16H</font>
 					<textcolor>white</textcolor>
 					<texturefocus>list_focus.png</texturefocus>
 					<texturenofocus border="40,0,40,5">list_nofocus.png</texturenofocus>
@@ -66,10 +66,10 @@
 				</control>
 				<control type="button" id="92">
 					<description>Addon Button</description>
-					<width>290</width>
-					<height>80</height>
+					<width>185</width>
+					<height>52</height>
 					<aligny>center</aligny>
-					<font>font24_title</font>
+					<font>font16H</font>
 					<textcolor>white</textcolor>
 					<texturefocus>list_focus.png</texturefocus>
 					<texturenofocus border="40,0,40,5">list_nofocus.png</texturenofocus>
@@ -80,18 +80,18 @@
 				</control>
 			</control>
 			<control type="image">
-				<posx>310</posx>
+				<posx>190</posx>
 				<posy>0</posy>
-				<width>880</width>
-				<height>720</height>
+				<width>550</width>
+				<height>336</height>
 				<texture border="20">panel.png</texture>
 			</control>
 			<control type="grouplist" id="100">
 				<description>control area</description>
-				<posx>310</posx>
+				<posx>190</posx>
 				<posy>0</posy>
-				<width>880</width>
-				<height>720</height>
+				<width>550</width>
+				<height>336</height>
 				<pagecontrol>60</pagecontrol>
 				<itemgap>-1</itemgap>
 				<onup>100</onup>
@@ -100,11 +100,11 @@
 				<onright>60</onright>
 				<visible>Skin.String(SkinSettings,1)</visible>
 				<control type="label" id="101">
-					<width>880</width>
-					<height>80</height>
+					<width>550</width>
+					<height>52</height>
 					<align>center</align>
 					<aligny>center</aligny>
-					<font>font24_title</font>
+					<font>font16L</font>
 					<textcolor>white</textcolor>
 					<label>31500</label>
 					<textoffsetx>20</textoffsetx>
@@ -118,10 +118,10 @@
 				</control>
 				<control type="radiobutton" id="102">
 					<description>Show LiveTV</description>
-					<width>880</width>
-					<height>80</height>
+					<width>550</width>
+					<height>52</height>
 					<aligny>center</aligny>
-					<font>font24_title</font>
+					<font>font16L</font>
 					<textcolor>white</textcolor>
 					<texturefocus>list_focus.png</texturefocus>
 					<texturenofocus border="40,0,40,5">list_nofocus.png</texturenofocus>
@@ -133,10 +133,10 @@
 				</control>
 				<control type="radiobutton" id="103">
 					<description>Show Radio</description>
-					<width>880</width>
-					<height>80</height>
+					<width>550</width>
+					<height>52</height>
 					<aligny>center</aligny>
-					<font>font24_title</font>
+					<font>font16L</font>
 					<textcolor>white</textcolor>
 					<texturefocus>list_focus.png</texturefocus>
 					<texturenofocus border="40,0,40,5">list_nofocus.png</texturenofocus>
@@ -148,10 +148,10 @@
 				</control>
 				<control type="radiobutton" id="104">
 					<description>Hide Videos</description>
-					<width>880</width>
-					<height>80</height>
+					<width>550</width>
+					<height>52</height>
 					<aligny>center</aligny>
-					<font>font24_title</font>
+					<font>font16L</font>
 					<textcolor>white</textcolor>
 					<texturefocus>list_focus.png</texturefocus>
 					<texturenofocus border="40,0,40,5">list_nofocus.png</texturenofocus>
@@ -163,10 +163,10 @@
 				</control>
 				<control type="radiobutton" id="105">
 					<description>Hide Movies</description>
-					<width>880</width>
-					<height>80</height>
+					<width>550</width>
+					<height>52</height>
 					<aligny>center</aligny>
-					<font>font24_title</font>
+					<font>font16L</font>
 					<textcolor>white</textcolor>
 					<texturefocus>list_focus.png</texturefocus>
 					<texturenofocus border="40,0,40,5">list_nofocus.png</texturenofocus>
@@ -179,10 +179,10 @@
 				</control>
 				<control type="radiobutton" id="106">
 					<description>Hide TVShows</description>
-					<width>880</width>
-					<height>80</height>
+					<width>550</width>
+					<height>52</height>
 					<aligny>center</aligny>
-					<font>font24_title</font>
+					<font>font16L</font>
 					<textcolor>white</textcolor>
 					<texturefocus>list_focus.png</texturefocus>
 					<texturenofocus border="40,0,40,5">list_nofocus.png</texturenofocus>
@@ -195,10 +195,10 @@
 				</control>
 				<control type="radiobutton" id="107">
 					<description>Hide Music</description>
-					<width>880</width>
-					<height>80</height>
+					<width>550</width>
+					<height>52</height>
 					<aligny>center</aligny>
-					<font>font24_title</font>
+					<font>font16L</font>
 					<textcolor>white</textcolor>
 					<texturefocus>list_focus.png</texturefocus>
 					<texturenofocus border="40,0,40,5">list_nofocus.png</texturenofocus>
@@ -210,10 +210,10 @@
 				</control>
 				<control type="radiobutton" id="108">
 					<description>Hide Pictures</description>
-					<width>880</width>
-					<height>80</height>
+					<width>550</width>
+					<height>52</height>
 					<aligny>center</aligny>
-					<font>font24_title</font>
+					<font>font16L</font>
 					<textcolor>white</textcolor>
 					<texturefocus>list_focus.png</texturefocus>
 					<texturenofocus border="40,0,40,5">list_nofocus.png</texturenofocus>
@@ -225,10 +225,10 @@
 				</control>
 				<control type="radiobutton" id="109">
 					<description>Hide Programs</description>
-					<width>880</width>
-					<height>80</height>
+					<width>550</width>
+					<height>52</height>
 					<aligny>center</aligny>
-					<font>font24_title</font>
+					<font>font16L</font>
 					<textcolor>white</textcolor>
 					<texturefocus>list_focus.png</texturefocus>
 					<texturenofocus border="40,0,40,5">list_nofocus.png</texturenofocus>
@@ -239,11 +239,11 @@
 					<textoffsetx>20</textoffsetx>
 				</control>
 				<control type="label" id="110">
-					<width>880</width>
-					<height>80</height>
+					<width>550</width>
+					<height>52</height>
 					<align>center</align>
 					<aligny>center</aligny>
-					<font>font24_title</font>
+					<font>font16L</font>
 					<textcolor>white</textcolor>
 					<label>31502</label>
 					<textoffsetx>20</textoffsetx>
@@ -257,10 +257,10 @@
 				</control>
 				<control type="radiobutton" id="111">
 					<description>Show Weather info and button</description>
-					<width>880</width>
-					<height>80</height>
+					<width>550</width>
+					<height>52</height>
 					<aligny>center</aligny>
-					<font>font24_title</font>
+					<font>font16L</font>
 					<textcolor>white</textcolor>
 					<texturefocus>list_focus.png</texturefocus>
 					<texturenofocus border="40,0,40,5">list_nofocus.png</texturenofocus>
@@ -272,10 +272,10 @@
 				</control>
 				<control type="radiobutton" id="112">
 					<description>Use custom background</description>
-					<width>880</width>
-					<height>80</height>
+					<width>550</width>
+					<height>52</height>
 					<aligny>center</aligny>
-					<font>font24_title</font>
+					<font>font16L</font>
 					<textcolor>white</textcolor>
 					<texturefocus>list_focus.png</texturefocus>
 					<texturenofocus border="40,0,40,5">list_nofocus.png</texturenofocus>
@@ -286,10 +286,10 @@
 					<textoffsetx>20</textoffsetx>
 				</control>
 				<control type="button" id="113">
-					<width>880</width>
-					<height>80</height>
+					<width>550</width>
+					<height>52</height>
 					<aligny>center</aligny>
-					<font>font24_title</font>
+					<font>font16L</font>
 					<textcolor>white</textcolor>
 					<texturefocus>list_focus.png</texturefocus>
 					<texturenofocus border="40,0,40,5">list_nofocus.png</texturenofocus>
@@ -302,10 +302,10 @@
 				</control>
 				<control type="radiobutton" id="114">
 					<description>Hide video background</description>
-					<width>880</width>
-					<height>80</height>
+					<width>550</width>
+					<height>52</height>
 					<aligny>center</aligny>
-					<font>font24_title</font>
+					<font>font16L</font>
 					<textcolor>white</textcolor>
 					<texturefocus>list_focus.png</texturefocus>
 					<texturenofocus border="40,0,40,5">list_nofocus.png</texturenofocus>
@@ -317,10 +317,10 @@
 				</control>
 				<control type="radiobutton" id="115">
 					<description>Hide viz background</description>
-					<width>880</width>
-					<height>80</height>
+					<width>550</width>
+					<height>52</height>
 					<aligny>center</aligny>
-					<font>font24_title</font>
+					<font>font16L</font>
 					<textcolor>white</textcolor>
 					<texturefocus>list_focus.png</texturefocus>
 					<texturenofocus border="40,0,40,5">list_nofocus.png</texturenofocus>
@@ -333,10 +333,10 @@
 			</control>
 			<control type="grouplist" id="200">
 				<description>control area</description>
-				<posx>310</posx>
+				<posx>190</posx>
 				<posy>0</posy>
-				<width>880</width>
-				<height>720</height>
+				<width>550</width>
+				<height>336</height>
 				<pagecontrol>60</pagecontrol>
 				<itemgap>-1</itemgap>
 				<onup>200</onup>
@@ -345,11 +345,11 @@
 				<onright>60</onright>
 				<visible>Skin.String(SkinSettings,2)</visible>
 				<control type="label" id="201">
-					<width>880</width>
-					<height>80</height>
+					<width>550</width>
+					<height>52</height>
 					<align>center</align>
 					<aligny>center</aligny>
-					<font>font24_title</font>
+					<font>font16L</font>
 					<textcolor>white</textcolor>
 					<label>31501</label>
 				</control>
@@ -362,10 +362,10 @@
 				</control>
 				<control type="button" id="202">
 					<description>Home Addon Button</description>
-					<width>880</width>
-					<height>80</height>
+					<width>550</width>
+					<height>52</height>
 					<aligny>center</aligny>
-					<font>font24_title</font>
+					<font>font16L</font>
 					<textcolor>white</textcolor>
 					<texturefocus>list_focus.png</texturefocus>
 					<texturenofocus border="40,0,40,5">list_nofocus.png</texturenofocus>
@@ -377,10 +377,10 @@
 				</control>
 				<control type="button" id="203">
 					<description>Home Addon Button</description>
-					<width>880</width>
-					<height>80</height>
+					<width>550</width>
+					<height>52</height>
 					<aligny>center</aligny>
-					<font>font24_title</font>
+					<font>font16L</font>
 					<textcolor>white</textcolor>
 					<texturefocus>list_focus.png</texturefocus>
 					<texturenofocus border="40,0,40,5">list_nofocus.png</texturenofocus>
@@ -392,10 +392,10 @@
 				</control>
 				<control type="button" id="204">
 					<description>Home Addon Button</description>
-					<width>880</width>
-					<height>80</height>
+					<width>550</width>
+					<height>52</height>
 					<aligny>center</aligny>
-					<font>font24_title</font>
+					<font>font16L</font>
 					<textcolor>white</textcolor>
 					<texturefocus>list_focus.png</texturefocus>
 					<texturenofocus border="40,0,40,5">list_nofocus.png</texturenofocus>
@@ -407,10 +407,10 @@
 				</control>
 				<control type="button" id="205">
 					<description>Home Addon Button</description>
-					<width>880</width>
-					<height>80</height>
+					<width>550</width>
+					<height>52</height>
 					<aligny>center</aligny>
-					<font>font24_title</font>
+					<font>font16L</font>
 					<textcolor>white</textcolor>
 					<texturefocus>list_focus.png</texturefocus>
 					<texturenofocus border="40,0,40,5">list_nofocus.png</texturenofocus>
@@ -422,10 +422,10 @@
 				</control>
 				<control type="button" id="206">
 					<description>Home Addon Button</description>
-					<width>880</width>
-					<height>80</height>
+					<width>550</width>
+					<height>52</height>
 					<aligny>center</aligny>
-					<font>font24_title</font>
+					<font>font16L</font>
 					<textcolor>white</textcolor>
 					<texturefocus>list_focus.png</texturefocus>
 					<texturenofocus border="40,0,40,5">list_nofocus.png</texturenofocus>
@@ -437,10 +437,10 @@
 				</control>
 				<control type="button" id="207">
 					<description>Home Addon Button</description>
-					<width>880</width>
-					<height>80</height>
+					<width>550</width>
+					<height>52</height>
 					<aligny>center</aligny>
-					<font>font24_title</font>
+					<font>font16L</font>
 					<textcolor>white</textcolor>
 					<texturefocus>list_focus.png</texturefocus>
 					<texturenofocus border="40,0,40,5">list_nofocus.png</texturenofocus>
@@ -452,10 +452,10 @@
 				</control>
 				<control type="button" id="208">
 					<description>Home Addon Button</description>
-					<width>880</width>
-					<height>80</height>
+					<width>550</width>
+					<height>52</height>
 					<aligny>center</aligny>
-					<font>font24_title</font>
+					<font>font16L</font>
 					<textcolor>white</textcolor>
 					<texturefocus>list_focus.png</texturefocus>
 					<texturenofocus border="40,0,40,5">list_nofocus.png</texturenofocus>
@@ -467,10 +467,10 @@
 				</control>
 				<control type="button" id="209">
 					<description>Home Addon Button</description>
-					<width>880</width>
-					<height>80</height>
+					<width>550</width>
+					<height>52</height>
 					<aligny>center</aligny>
-					<font>font24_title</font>
+					<font>font16L</font>
 					<textcolor>white</textcolor>
 					<texturefocus>list_focus.png</texturefocus>
 					<texturenofocus border="40,0,40,5">list_nofocus.png</texturenofocus>
@@ -482,10 +482,10 @@
 				</control>
 				<control type="button" id="210">
 					<description>Home Addon Button</description>
-					<width>880</width>
-					<height>80</height>
+					<width>550</width>
+					<height>52</height>
 					<aligny>center</aligny>
-					<font>font24_title</font>
+					<font>font16L</font>
 					<textcolor>white</textcolor>
 					<texturefocus>list_focus.png</texturefocus>
 					<texturenofocus border="40,0,40,5">list_nofocus.png</texturenofocus>
@@ -497,10 +497,10 @@
 				</control>
 				<control type="button" id="211">
 					<description>Home Addon Button</description>
-					<width>880</width>
-					<height>80</height>
+					<width>550</width>
+					<height>52</height>
 					<aligny>center</aligny>
-					<font>font24_title</font>
+					<font>font16L</font>
 					<textcolor>white</textcolor>
 					<texturefocus>list_focus.png</texturefocus>
 					<texturenofocus border="40,0,40,5">list_nofocus.png</texturenofocus>
@@ -512,10 +512,10 @@
 				</control>
 				<control type="button" id="212">
 					<description>Home Addon Button</description>
-					<width>880</width>
-					<height>80</height>
+					<width>550</width>
+					<height>52</height>
 					<aligny>center</aligny>
-					<font>font24_title</font>
+					<font>font16L</font>
 					<textcolor>white</textcolor>
 					<texturefocus>list_focus.png</texturefocus>
 					<texturenofocus border="40,0,40,5">list_nofocus.png</texturenofocus>
@@ -527,10 +527,10 @@
 				</control>
 				<control type="button" id="213">
 					<description>Home Addon Button</description>
-					<width>880</width>
-					<height>80</height>
+					<width>550</width>
+					<height>52</height>
 					<aligny>center</aligny>
-					<font>font24_title</font>
+					<font>font16L</font>
 					<textcolor>white</textcolor>
 					<texturefocus>list_focus.png</texturefocus>
 					<texturenofocus border="40,0,40,5">list_nofocus.png</texturenofocus>

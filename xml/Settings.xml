@@ -65,7 +65,7 @@
 				</control>
 				<control type="label">
 					<posx>0</posx>
-					<posy>44</posy>
+					<posy>39</posy>
 					<width>185</width>
 					<height>24</height>
 					<label>$INFO[ListItem.Label]</label>
@@ -114,7 +114,7 @@
 					</control>
 					<control type="label">
 						<posx>0</posx>
-						<posy>44</posy>
+						<posy>39</posy>
 						<width>185</width>
 						<height>24</height>
 						<label>$INFO[ListItem.Label]</label>
