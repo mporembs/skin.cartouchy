@@ -154,17 +154,29 @@
 				<param name="iconback-posx">326</param>
 				<param name="iconback-width">75</param>
 			</include>
+			<include content="HomeMenu" condition="String.IsEqual(Skin.AspectRatio,Pi">
+				<param name="panel-width">233</param>
+				<param name="layout-width">233</param>
+				<param name="list-width">233</param>
+				<param name="label-posx-left">60</param>
+				<param name="label-posx-right">60</param>
+				<param name="label-width">223</param>
+				<param name="icon-posx-left">-6</param>
+				<param name="icon-posx-right">318</param>
+				<param name="iconback-posx">326</param>
+				<param name="iconback-width">75</param>
+			</include>
 			<control type="panel" id="9002">
 				<include>Window_OpenClose_Animation</include>
-				<posx>240</posx>
-				<posy>185r</posy>
+				<posx>-30</posx>
+				<posy>53r</posy>
 				<animation effect="fade" start="100" end="0" time="300" condition="Window.Next(Home)">WindowClose</animation>
 				<animation effect="fade" end="100" start="0" time="300" condition="Window.Previous(Home)">WindowOpen</animation>
 				<animation effect="slide" start="0,0" end="60,0" time="0" condition="String.IsEqual(Container(9002).NumItems,4)">conditional</animation>
 				<animation effect="slide" start="0,0" end="120,0" time="0" condition="String.IsEqual(Container(9002).NumItems,3)">conditional</animation>
 				<animation effect="slide" start="0,0" end="-100,0" time="0" condition="String.IsEqual(Skin.AspectRatio,4:3)">Conditional</animation>
-				<width>802</width>
-				<height>120</height>
+				<width>760</width>
+				<height>45</height>
 				<onleft>9002</onleft>
 				<onright>9002</onright>
 				<onup>9001</onup>
@@ -172,19 +184,19 @@
 				<pagecontrol>-</pagecontrol>
 				<scrolltime>300</scrolltime>
 				<orientation>Horizontal</orientation>
-				<itemlayout height="100" width="120">
+				<itemlayout height="45" width="55">
 					<control type="image">
-						<posx>5</posx>
+						<posx>0</posx>
 						<posy>0</posy>
-						<width>90</width>
-						<height>90</height>
+						<width>45</width>
+						<height>45</height>
 						<texture>button_nofocus.png</texture>
 					</control>
 					<control type="image">
-						<posx>10</posx>
-						<posy>5</posy>
-						<width>80</width>
-						<height>80</height>
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>45</width>
+						<height>45</height>
 						<bordersize>12</bordersize>
 						<texture>$INFO[ListItem.Icon]</texture>
 						<aspectratio>keep</aspectratio>
@@ -192,17 +204,17 @@
 				</itemlayout>
 				<focusedlayout height="100" width="120">
 					<control type="image">
-						<posx>5</posx>
+						<posx>0</posx>
 						<posy>0</posy>
-						<width>90</width>
-						<height>90</height>
+						<width>45</width>
+						<height>45</height>
 						<texture>list_focus.png</texture>
 					</control>
 					<control type="image">
-						<posx>10</posx>
-						<posy>5</posy>
-						<width>80</width>
-						<height>80</height>
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>45</width>
+						<height>45</height>
 						<bordersize>12</bordersize>
 						<texture>$INFO[ListItem.Icon]</texture>
 						<aspectratio>keep</aspectratio>
@@ -251,6 +263,10 @@
 		<include content="HomeRecentlyAddedInfo" condition="String.IsEqual(Skin.AspectRatio,4:3)">
 			<param name="group-posx">430r</param>
 			<param name="panel-width">420</param>
+		</include>
+		<include content="HomeRecentlyAddedInfo" condition="String.IsEqual(Skin.AspectRatio,Pi)">
+			<param name="group-posx">273</param>
+			<param name="panel-width">470</param>
 		</include>
 	</controls>	
 </window>

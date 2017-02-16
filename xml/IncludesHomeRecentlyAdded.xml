@@ -428,70 +428,70 @@
 					<viewtype label="535">list</viewtype>
 					<pagecontrol>-</pagecontrol>
 					<scrolltime>200</scrolltime>
-					<itemlayout height="220" width="210">
-						<control type="image">
+					<itemlayout height="112" width="119">
+						<!-- <control type="image">
 							<posx>5</posx>
 							<posy>5</posy>
-							<width>200</width>
-							<height>210</height>
+							<width>86</width>
+							<height>86</height>
 							<texture>black.png</texture>
 							<colordiffuse>99000000</colordiffuse>
-						</control>
+						</control> -->
 						<control type="image">
-							<posx>15</posx>
-							<posy>15</posy>
-							<width>180</width>
-							<height>165</height>
+							<posx>13</posx>
+							<posy>0</posy>
+							<width>86</width>
+							<height>86</height>
 							<texture background="true">$INFO[Listitem.Icon]</texture>
 						</control>
 						<control type="label">
-							<posx>15</posx>
-							<posy>185</posy>
-							<width>190</width>
-							<height>25</height>
-							<font>font16</font>
-							<textcolor>grey2</textcolor>
-							<selectedcolor>selected</selectedcolor>
+							<posx>0</posx>
+							<posy>89</posy>
+							<width>112</width>
+							<height>12</height>
+							<font>font10</font>
+<!-- 							<textcolor>grey2</textcolor>
+ -->							<selectedcolor>selected</selectedcolor>
 							<align>center</align>
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Label]</label>
 						</control>
 					</itemlayout>
-					<focusedlayout height="170" width="160">
-						<control type="image">
+					<focusedlayout height="112" width="119">
+					<!-- 	<control type="image">
 							<posx>5</posx>
 							<posy>5</posy>
 							<width>200</width>
 							<height>210</height>
 							<texture>black.png</texture>
 							<colordiffuse>99000000</colordiffuse>
-						</control>
+						</control> -->
 						<control type="image">
-							<posx>15</posx>
-							<posy>15</posy>
-							<width>180</width>
-							<height>165</height>
+							<posx>13</posx>
+							<posy>0</posy>
+							<width>86</width>
+							<height>86</height>
 							<texture background="true">$INFO[Listitem.Icon]</texture>
 						</control>
 						<control type="label">
-							<posx>15</posx>
-							<posy>185</posy>
-							<width>190</width>
-							<height>25</height>
-							<font>font16</font>
+							<posx>0</posx>
+							<posy>89</posy>
+							<width>112</width>
+							<height>12</height>
+							<font>font10</font>
 							<textcolor>white</textcolor>
 							<selectedcolor>selected</selectedcolor>
 							<align>center</align>
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Label]</label>
 						</control>
-						<control type="image">
+						<!-- <control type="image">
 							<posx>5</posx>
 							<posy>5</posy>
 							<width>200</width>
 							<height>210</height>
 							<texture border="5">thumb_focus.png</texture>
-						</control>
+						</control> -->
 					</focusedlayout>
 					<content>
 						<item id="1">

@@ -736,14 +736,14 @@
 			<posx>0</posx>
 			<control type="image">
 				<description>Menu Panel</description>
-				<posx>40</posx>
-				<posy>100</posy>
+				<posx>30</posx>
+				<posy>72</posy>
 				<width>$PARAM[list-width]</width>
-				<height>620</height>
+				<height>336</height>
 				<texture>panel.png</texture>
 				<animation effect="slide" start="0,0" end="-20,0" time="0" condition="String.IsEqual(Skin.AspectRatio,4:3)">Conditional</animation>
 			</control>
-			<control type="image">
+<!-- 			<control type="image">
 				<description>Menu Panel</description>
 				<posx>540</posx>
 				<posy>100</posy>
@@ -751,12 +751,12 @@
 				<height>620</height>
 				<texture>panel.png</texture>
 				<animation effect="slide" start="0,0" end="-104,0" time="0" condition="String.IsEqual(Skin.AspectRatio,4:3)">Conditional</animation>
-			</control>
+			</control> -->
 			<control type="image">
-				<posx>40</posx>
+				<posx>30</posx>
 				<posy>-55</posy>
 				<width>$PARAM[list-width]</width>
-				<height>155</height>
+				<height>52</height>
 				<texture border="40,0,40,5">list_nofocus.png</texture>
 				<animation effect="slide" start="0,0" end="0,77" time="0" condition="!Integer.IsGreater(Container(9000).NumItems,2)">conditional</animation>
 				<animation effect="slide" start="0,0" end="0,77" time="0" condition="!Integer.IsGreater(Container(9000).NumItems,4)">conditional</animation>
@@ -764,7 +764,7 @@
 				<animation effect="slide" start="0,0" end="-20,0" time="0" condition="String.IsEqual(Skin.AspectRatio,4:3)">Conditional</animation>
 				<visible>!Integer.IsGreater(Container(9000).NumItems,6)</visible>
 			</control>
-			<control type="image">
+			<!-- <control type="image">
 				<posx>540</posx>
 				<posy>-55</posy>
 				<width>$PARAM[list-width]</width>
@@ -775,12 +775,12 @@
 				<animation effect="slide" start="0,0" end="0,77" time="0" condition="!Integer.IsGreater(Container(9000).NumItems,6)">conditional</animation>
 				<animation effect="slide" start="0,0" end="-104,0" time="0" condition="String.IsEqual(Skin.AspectRatio,4:3)">Conditional</animation>
 				<visible>!Integer.IsGreater(Container(9000).NumItems,6)</visible>
-			</control>
+			</control> -->
 			<control type="panel" id="9000">
-				<posx>40</posx>
-				<posy>100</posy>
+				<posx>30</posx>
+				<posy>72</posy>
 				<width>$PARAM[panel-width]</width>
-				<height>620</height>
+				<height>336</height>
 				<onleft>9000</onleft>
 				<onright>9003</onright>
 				<onup>10</onup>
@@ -788,69 +788,69 @@
 				<pagecontrol>-</pagecontrol>
 				<scrolltime>300</scrolltime>
 				<orientation>vertical</orientation>
-				<animation effect="slide" start="0,0" end="0,77" time="0" condition="!Integer.IsGreater(Container(9000).NumItems,2)">conditional</animation>
+				<!-- <animation effect="slide" start="0,0" end="0,77" time="0" condition="!Integer.IsGreater(Container(9000).NumItems,2)">conditional</animation>
 				<animation effect="slide" start="0,0" end="0,77" time="0" condition="!Integer.IsGreater(Container(9000).NumItems,4)">conditional</animation>
 				<animation effect="slide" start="0,0" end="0,77" time="0" condition="!Integer.IsGreater(Container(9000).NumItems,6)">conditional</animation>
-				<animation effect="slide" start="0,0" end="-20,0" time="0" condition="String.IsEqual(Skin.AspectRatio,4:3)">Conditional</animation>
-				<itemlayout height="155" width="$PARAM[layout-width]">
-					<control type="image">
+				<animation effect="slide" start="0,0" end="-20,0" time="0" condition="String.IsEqual(Skin.AspectRatio,4:3)">Conditional</animation> -->
+				<itemlayout height="52" width="$PARAM[layout-width]">
+					<!-- <control type="image">
 						<posx>$PARAM[icon-posx-left]</posx>
 						<posy>18</posy>
 						<width>90</width>
 						<height>120</height>
 						<texture>$INFO[ListItem.Icon]</texture>
 						<aspectratio>keep</aspectratio>
-					</control>
+					</control> -->
 					<control type="label">
-						<posx>$PARAM[label-posx-left]</posx>
+						<posx>30</posx>
 						<posy>0</posy>
 						<width>$PARAM[label-width]</width>
-						<height>155</height>
-						<font>font35_title</font>
+						<height>52</height>
+						<font>font16H</font>
 						<textcolor>white</textcolor>
 						<aligny>center</aligny>
 						<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
 					</control>
-					<control type="image">
+				<!-- 	<control type="image">
 						<posx>0</posx>
 						<posy>0</posy>
 						<width>$PARAM[list-width]</width>
-						<height>155</height>
+						<height>52</height>
 						<texture border="40,0,40,5">list_nofocus.png</texture>
-					</control>
+					</control> -->
 				</itemlayout>
-				<focusedlayout height="155" width="$PARAM[layout-width]">
-					<control type="image">
+				<focusedlayout height="52" width="$PARAM[layout-width]">
+					<!-- <control type="image">
 						<posx>0</posx>
 						<posy>0</posy>
 						<width>$PARAM[list-width]</width>
-						<height>155</height>
+						<height>52</height>
 						<texture>list_focus.png</texture>
 						<visible>Control.HasFocus(9000)</visible>
-					</control>
-					<control type="image">
+					</control> -->
+					<!-- <control type="image">
 						<posx>0</posx>
 						<posy>0</posy>
 						<width>$PARAM[iconback-width]</width>
-						<height>155</height>
+						<height>52</height>
 						<texture>black.png</texture>
 						<colordiffuse>50000000</colordiffuse>
 						<visible>Control.HasFocus(9000)</visible>
-					</control>
-					<control type="image">
+					</control> -->
+				<!-- 	<control type="image">
 						<posx>$PARAM[icon-posx-left]</posx>
 						<posy>18</posy>
 						<width>90</width>
 						<height>120</height>
 						<texture>$INFO[ListItem.Icon]</texture>
 						<aspectratio>keep</aspectratio>
-					</control>
+					</control> -->
 					<control type="label">
-						<posx>$PARAM[label-posx-left]</posx>
+						<posx>30</posx>
 						<posy>0</posy>
 						<width>$PARAM[label-width]</width>
-						<height>155</height>
-						<font>font35_title</font>
+						<height>52</height>
+						<font>font16H</font>
 						<textcolor>white</textcolor>
 						<aligny>center</aligny>
 						<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
