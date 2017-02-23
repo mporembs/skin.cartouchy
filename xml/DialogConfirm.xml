@@ -2,8 +2,8 @@
 <window>
 	<onload condition="Window.IsVisible(yesnodialog)">SetFocus(10)</onload>
 	<coordinates>
-		<posx>290</posx>
-		<posy>300</posy>
+		<posx>0</posx>
+		<posy>0</posy>
 	</coordinates>
 	<include>16x9_xPos_Relocation</include>
 	<include>dialogeffect</include>
