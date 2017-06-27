@@ -18,7 +18,7 @@
 			<include>Window_OpenClose_Animation</include>
 			<animation effect="slide" start="0,0" end="106,0" time="0" condition="String.IsEqual(Skin.AspectRatio,4:3)">Conditional</animation>
 			<visible>Library.HasContent(Movies) | Library.HasContent(TVShows) | Library.HasContent(Music) | Integer.IsGreater(Container(2400).NumItems,0)</visible>
-			<control type="button">
+<!-- 			<control type="button">
 				<posx>509r</posx>
 				<posy>120</posy>
 				<width>33</width>
@@ -35,13 +35,13 @@
 				<texturenofocus>arrow_right.png</texturenofocus>
 				<texturefocus colordiffuse="blue">arrow_right.png</texturefocus>
 				<onclick>Control.Move(9010,1)</onclick>
-			</control>
+			</control> -->
 			<control type="wraplist" id="9010">
 				<include>VisibleFadeEffect</include>
 				<posx>426r</posx>
 				<posy>78</posy>
 				<width>200</width>
-				<height>140</height>
+				<height>280</height>
 				<onup>9000</onup>
 				<ondown>9002</ondown>
 				<scrolltime>0</scrolltime>
@@ -67,7 +67,7 @@
 					</control>
 				</itemlayout>
 				<focusedlayout width="200" height="140">
-					<control type="image">
+<!-- 					<control type="image">
 						<posx>20</posx>
 						<posy>20</posy>
 						<height>100</height>
@@ -82,7 +82,7 @@
 						<width>160</width>
 						<texture>list_focus.png</texture>
 						<visible>Control.HasFocus(9010)</visible>
-					</control>
+					</control> -->
 					<control type="label">
 						<posx>5</posx>
 						<posy>0</posy>
@@ -111,9 +111,9 @@
 						<visible>Library.HasContent(TVShows)</visible>
 					</item>
 					<item id="3">
-						<label>$LOCALIZE[31011][CR]$LOCALIZE[31016]</label>
+<!-- 						<label>$LOCALIZE[31011][CR]$LOCALIZE[31016]</label>
 						<onclick>Control.Move(9010,1)</onclick>
-						<icon>-</icon>
+ -->						<icon>-</icon>
 						<thumb>-</thumb>
 						<visible>Library.HasContent(Music)</visible>
 					</item>

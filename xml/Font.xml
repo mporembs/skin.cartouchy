@@ -13,6 +13,16 @@
 			<size>12</size>
 		</font>
 		<font>
+			<name>font12R</name>
+			<filename>SF-UI-Display-Regular.ttf</filename>
+			<size>12</size>
+		</font>
+		<font>
+			<name>font12B</name>
+			<filename>SF-UI-Display-Bold.ttf</filename>
+			<size>12</size>
+		</font>
+		<font>
 			<name>font13</name>
 			<filename>SF-UI-Display-Regular.ttf</filename>
 			<size>13</size>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol always="true">50</defaultcontrol>
-	<views>50,500,550,1001</views>
+	<views>50,500,550,1100,1101,</views>
 	<onunload>ClearProperty(PopupMenuVisible,Home)</onunload>
 	<controls>
 		<include>CommonBackground</include>
@@ -23,6 +23,10 @@
 				<param name="panel-width" value="714"/>
 				<param name="layout-width" value="119"/>
 			</include>
+			<include content="BigGrid" condition="String.IsEqual(Skin.AspectRatio,Pi)">
+				<param name="panel-width" value="720"/>
+				<param name="layout-width" value="119"/>
+			</include>
 			<include content="List" condition="String.IsEqual(Skin.AspectRatio,16:9)"> <!-- view id = 500 -->
 				<param name="panel-width" value="1530"/>
 				<param name="label-width" value="1230"/>
@@ -35,8 +39,8 @@
 			</include>
 			<include content="List" condition="String.IsEqual(Skin.AspectRatio,pi)"> <!-- view id = 500 -->
 				<param name="panel-width" value="714"/>			
-				<param name="label-width" value="500"/>
-				<param name="label2-posx" value="700r"/>
+				<param name="label-width" value="300"/>
+				<param name="label2-posx" value="350"/>
 			</include>
 			<include content="InfoList" condition="String.IsEqual(Skin.AspectRatio,16:9)"> 
 				<param name="panel-width" value="1530"/>			

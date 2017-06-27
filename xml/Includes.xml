@@ -11,6 +11,7 @@
 	<include file="ViewsThumbnail.xml" />
 	<include file="ViewsWide.xml" />
 	<include file="ViewsPVR.xml" />
+	<include file="ViewsBigGrid.xml" />
 
 	<constant name="FanartCrossfadeTime">500</constant>
 	<constant name="IconCrossfadeTime">400</constant>
