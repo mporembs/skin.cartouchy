@@ -2,6 +2,9 @@
 <smartplaylist type="albums">
     <name>Random albums</name>
     <match>all</match>
+	<rule field="lastplayed" operator="notinthelast">
+   		<value>30 days</value>
+	</rule>
     <limit>4</limit>
     <order direction="ascending">random</order>
 </smartplaylist>
