@@ -103,6 +103,12 @@
 			<filename>SF-UI-Display-Bold.ttf</filename>
 			<size>30</size>
 		</font>
+		<font>
+			<name>font36L</name>
+			<filename>SF-UI-Display-Light.ttf</filename>
+			<size>36</size>
+		</font>
+
 
 
 

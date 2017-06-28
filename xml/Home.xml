@@ -47,7 +47,7 @@
 				<scrolltime>0</scrolltime>
 				<orientation>Horizontal</orientation>
 				<itemlayout width="200" height="140">
-					<control type="image">
+<!-- 					<control type="image">
 						<posx>20</posx>
 						<posy>20</posy>
 						<height>100</height>
@@ -64,7 +64,7 @@
 						<aligny>center</aligny>
 						<textcolor>white</textcolor>
 						<font>font22</font>
-					</control>
+					</control> -->
 				</itemlayout>
 				<focusedlayout width="200" height="140">
 <!-- 					<control type="image">
@@ -82,7 +82,7 @@
 						<width>160</width>
 						<texture>list_focus.png</texture>
 						<visible>Control.HasFocus(9010)</visible>
-					</control> -->
+					</control>
 					<control type="label">
 						<posx>5</posx>
 						<posy>0</posy>
@@ -93,7 +93,7 @@
 						<aligny>center</aligny>
 						<textcolor>white</textcolor>
 						<font>font22</font>
-					</control>
+					</control> -->
 				</focusedlayout>
 				<content>
 					<item id="1">
@@ -111,9 +111,9 @@
 						<visible>Library.HasContent(TVShows)</visible>
 					</item>
 					<item id="3">
-<!-- 						<label>$LOCALIZE[31011][CR]$LOCALIZE[31016]</label>
+						<label>$LOCALIZE[31011][CR]$LOCALIZE[31016]</label>
 						<onclick>Control.Move(9010,1)</onclick>
- -->						<icon>-</icon>
+						<icon>-</icon>
 						<thumb>-</thumb>
 						<visible>Library.HasContent(Music)</visible>
 					</item>
@@ -168,7 +168,7 @@
 			</include>
 			<control type="panel" id="9002">
 				<include>Window_OpenClose_Animation</include>
-				<posx>-30</posx>
+				<posx>30</posx>
 				<posy>53r</posy>
 				<animation effect="fade" start="100" end="0" time="300" condition="Window.Next(Home)">WindowClose</animation>
 				<animation effect="fade" end="100" start="0" time="300" condition="Window.Previous(Home)">WindowOpen</animation>
@@ -185,14 +185,14 @@
 				<scrolltime>300</scrolltime>
 				<orientation>Horizontal</orientation>
 				<itemlayout height="45" width="55">
-					<control type="image">
+<!-- 					<control type="image">
 						<posx>0</posx>
 						<posy>0</posy>
 						<width>45</width>
 						<height>45</height>
 						<texture>button_nofocus.png</texture>
 					</control>
-					<control type="image">
+ -->					<control type="image">
 						<posx>0</posx>
 						<posy>0</posy>
 						<width>45</width>
@@ -203,14 +203,14 @@
 					</control>
 				</itemlayout>
 				<focusedlayout height="100" width="120">
-					<control type="image">
+<!-- 					<control type="image">
 						<posx>0</posx>
 						<posy>0</posy>
 						<width>45</width>
 						<height>45</height>
 						<texture>list_focus.png</texture>
 					</control>
-					<control type="image">
+ -->					<control type="image">
 						<posx>0</posx>
 						<posy>0</posy>
 						<width>45</width>
@@ -251,8 +251,8 @@
 						<label>20183</label>
 						<onclick>ReloadSkin</onclick>
 						<icon>icon_button_refresh.png</icon>
-						<visible>false</visible>
-					</item>
+<!-- 						<visible>false</visible>
+ -->					</item>
 				</content>
 			</control>
 		</control>

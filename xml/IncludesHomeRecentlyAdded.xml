@@ -3,7 +3,7 @@
 	<include name="HomeRecentlyAddedInfo">
 		<control type="group">
 			<posx>0</posx>
-			<posy>210</posy>
+			<posy>70</posy>
 			<animation type="WindowClose" reversible="false">
 				<effect type="fade" start="100" end="0" time="400" />
 			</animation>
@@ -409,7 +409,22 @@
 				</control>
 				<control type="panel" id="2300">
 					<visible>Library.HasContent(Music) + Container(9010).HasFocus(3)</visible>
-					<animation type="Visible" reversible="false">
+					  <control type="label">
+					        <description>My First label</description>
+					        <posx>0</posx>
+					        <posy>0</posy>
+					        <width>250</width>
+					        <height>20</height>
+					        <visible>true</visible>
+					        <align>left</align>
+					        <aligny>top</aligny>
+					        <scroll>false</scroll>
+					        <label>Random Albums</label>
+					        <haspath>false</haspath>
+					        <font>font14</font>
+					        <textcolor>grey</textcolor>
+					  </control>
+  					<animation type="Visible" reversible="false">
 						<effect type="slide" start="400,0" end="0,0" delay="200" easing="out" tween="quadratic" time="400" />
 						<effect type="fade" start="0" end="100" delay="200" time="400" />
 					</animation>
@@ -418,9 +433,9 @@
 						<effect type="fade" start="100" end="0" time="400" />
 					</animation>
 					<posx>0</posx>
-					<posy>0</posy>
+					<posy>40</posy>
 					<width>560</width>
-					<height>112</height>
+					<height>152</height>
 					<onleft>1000</onleft>
 					<onright>2300</onright>
 					<onup>2003</onup>
@@ -429,14 +444,6 @@
 					<pagecontrol>60</pagecontrol>
 					<scrolltime>200</scrolltime>
 					<itemlayout height="112" width="119">
-						<!-- <control type="image">
-							<posx>5</posx>
-							<posy>5</posy>
-							<width>86</width>
-							<height>86</height>
-							<texture>black.png</texture>
-							<colordiffuse>99000000</colordiffuse>
-						</control> -->
 						<control type="image">
 							<posx>13</posx>
 							<posy>0</posy>
@@ -450,22 +457,13 @@
 							<width>112</width>
 							<height>12</height>
 							<font>font10</font>
-<!-- 							<textcolor>grey2</textcolor>
- -->							<selectedcolor>selected</selectedcolor>
+							<textcolor>grey</textcolor>
 							<align>center</align>
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Label]</label>
 						</control>
 					</itemlayout>
 					<focusedlayout height="112" width="119">
-					<!-- 	<control type="image">
-							<posx>5</posx>
-							<posy>5</posy>
-							<width>200</width>
-							<height>210</height>
-							<texture>black.png</texture>
-							<colordiffuse>99000000</colordiffuse>
-						</control> -->
 						<control type="image">
 							<posx>13</posx>
 							<posy>0</posy>
@@ -485,15 +483,8 @@
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Label]</label>
 						</control>
-						<!-- <control type="image">
-							<posx>5</posx>
-							<posy>5</posy>
-							<width>200</width>
-							<height>210</height>
-							<texture border="5">thumb_focus.png</texture>
-						</control> -->
 					</focusedlayout>
-					<content sortby="lastused" sortorder="descending" target="music" limit="12">special://skin/playlists/random_albums.xsp</content>
+					<content sortby="lastused" sortorder="descending" target="music" limit="4">special://skin/playlists/random_albums.xsp</content>
 				</control>
 				<control type="panel" id="2400">
 					<visible>Container(9010).HasFocus(4)</visible>
