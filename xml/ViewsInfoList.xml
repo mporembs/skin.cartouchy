@@ -2,7 +2,7 @@
 <includes>
 	<include name="InfoList">
 			<control type="group">
-			<visible>Control.IsVisible(1001)</visible>
+			<visible>Control.IsVisible(1100)</visible>
 			<control type="image">
 	            <left>30</left>
 				<top>90</top>
@@ -43,7 +43,7 @@
 				<aligny>center</aligny>
 				<label>$INFO[ListItem.Album]</label>
 			</control>
-			<control type="list" id="1001">
+			<control type="list" id="1100">
 				<left>285</left>
 				<top>90</top>
 				<centertop>50%</centertop>
