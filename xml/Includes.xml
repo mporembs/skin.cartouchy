@@ -235,8 +235,9 @@
 				<font>-</font>
 				<texturenofocus>-</texturenofocus>
 				<texturefocus>-</texturefocus>
-<!-- 				<onclick>ActivateWindow(Home)</onclick>
- -->			</control>
+				<onclick condition="String.IsEmpty(Window(Home).Property(TopMenuVisible))">SetProperty(TopMenuVisible,Show,Home)</onclick>
+				<onclick condition="!String.IsEmpty(Window(Home).Property(TopMenuVisible))">ClearProperty(TopMenuVisible,Home)</onclick>
+			</control>
 			<control type="image">
 				<description>Menu Icon</description>
 				<posx>66r</posx>
@@ -752,12 +753,16 @@
 	</include>
 		<include name="TopMenu">
 		<control type="group">
+			<visible>!String.IsEmpty(Window(Home).Property(TopMenuVisible))</visible>
 			<posx>0</posx>
 			<posy>0</posy>
 			<width>800</width>
 			<height>225</height>
-			<animation effect="slide" start="0,-30" end="0,-225" time="600" tween="Back" easing="In">WindowClose</animation>
-			<animation effect="slide" end="0,-30" start="0,-225" time="600" tween="Back" easing="Out">WindowOpen</animation>
+<!-- 			<animation effect="slide" start="0,-30" end="0,-225" time="600" tween="Back" easing="In">WindowOpen</animation>
+			<animation effect="slide" end="0,-30" start="0,-225" time="600" tween="Back" easing="Out">WindowClose</animation>
+ -->
+<!-- 			<animation effect="slide" start="0,-30" end="0,-225" time="600" tween="Back" easing="In">Hidden</animation>
+ -->			<animation effect="slide" end="0,-30" start="0,-225" time="600" tween="Back" easing="Out">VisibleChange</animation>
 			<control type="image">
 				<description>Menu Panel</description>
 				<posx>0</posx>
@@ -783,6 +788,7 @@
 				<font>-</font>
 				<texturenofocus>-</texturenofocus>
 				<texturefocus>-</texturefocus>
+				<onclick condition="!String.IsEmpty(Window(Home).Property(TopMenuVisible))">ClearProperty(TopMenuVisible,Home)</onclick>
 				<onclick>ActivateWindow(Home)</onclick>
 			</control>
 			<control type="image">
@@ -804,11 +810,12 @@
 				<font>-</font>
 				<texturenofocus>-</texturenofocus>
 				<texturefocus>-</texturefocus>
-<!-- 				<onclick>ActivateWindow(Home)</onclick>
- -->			</control>
+				<onclick condition="String.IsEmpty(Window(Home).Property(TopMenuVisible))">SetProperty(TopMenuVisible,Show,Home)</onclick>
+				<onclick condition="!String.IsEmpty(Window(Home).Property(TopMenuVisible))">ClearProperty(TopMenuVisible,Home)</onclick>
+			</control>
 			<control type="image">
 				<description>Close Icon</description>
-				<animation effect="fade" start="0" end="100" delay="800" time="200" tween="quadratic" easing="In">WindowOpen</animation>
+				<animation effect="fade" start="0" end="100" delay="500" time="400" tween="quadratic" easing="In" condition="!String.IsEmpty(Window(Home).Property(TopMenuVisible))">Conditional</animation>
 				<posx>66r</posx>
 				<posy>44</posy>
 				<width>32</width>
@@ -822,6 +829,7 @@
 				<width>720</width>
 				<height>95</height>
 				<itemgap>25</itemgap>
+				<usecontrolcoords>false</usecontrolcoords>
 				<orientation>horizontal</orientation>
 <!-- 					<control type="label">
 						<label>$INFO[ListItem.Label]</label>
@@ -841,6 +849,7 @@
 						<focusedcolor>standard</focusedcolor>
 						<texturefocus></texturefocus>
 						<texturenofocus></texturenofocus>
+						<onclick condition="!String.IsEmpty(Window(Home).Property(TopMenuVisible))">ClearProperty(TopMenuVisible,Home)</onclick>
 						<onclick>ActivateWindow(TVChannels)</onclick>
 						<visible>Skin.HasSetting(ShowHomeButtonLiveTV)</visible>
 					</control>
@@ -852,6 +861,7 @@
 						<focusedcolor>standard</focusedcolor>
 						<texturefocus></texturefocus>
 						<texturenofocus></texturenofocus>
+						<onclick condition="!String.IsEmpty(Window(Home).Property(TopMenuVisible))">ClearProperty(TopMenuVisible,Home)</onclick>
 						<onclick>ActivateWindow(RadioChannels)</onclick>
 						<visible>Skin.HasSetting(ShowHomeButtonRadio)</visible>
 					</control>
@@ -863,6 +873,7 @@
 						<focusedcolor>standard</focusedcolor>
 						<texturefocus></texturefocus>
 						<texturenofocus></texturenofocus>
+						<onclick condition="!String.IsEmpty(Window(Home).Property(TopMenuVisible))">ClearProperty(TopMenuVisible,Home)</onclick>
 						<onclick>ActivateWindow(Videos,MovieTitles,Return)</onclick>
 						<visible>Library.HasContent(Movies)</visible>
 						<visible>!Skin.HasSetting(HideHomeButtonMovies)</visible>
@@ -875,6 +886,7 @@
 						<focusedcolor>standard</focusedcolor>
 						<texturefocus></texturefocus>
 						<texturenofocus></texturenofocus>
+						<onclick condition="!String.IsEmpty(Window(Home).Property(TopMenuVisible))">ClearProperty(TopMenuVisible,Home)</onclick>
 						<onclick>ActivateWindow(Videos,TVShowTitles,Return)</onclick>
 						<visible>Library.HasContent(TVShows)</visible>
 						<visible>!Skin.HasSetting(HideHomeButtonTVShows)</visible>
@@ -887,6 +899,7 @@
 						<focusedcolor>standard</focusedcolor>
 						<texturefocus></texturefocus>
 						<texturenofocus></texturenofocus>
+						<onclick condition="!String.IsEmpty(Window(Home).Property(TopMenuVisible))">ClearProperty(TopMenuVisible,Home)</onclick>
 						<onclick>ActivateWindow(Videos,Root,Return)</onclick>
 						<visible>!Skin.HasSetting(HideHomeButtonVideo)</visible>
 					</control>
@@ -898,6 +911,7 @@
 						<focusedcolor>standard</focusedcolor>
 						<texturefocus></texturefocus>
 						<texturenofocus></texturenofocus>
+						<onclick condition="!String.IsEmpty(Window(Home).Property(TopMenuVisible))">ClearProperty(TopMenuVisible,Home)</onclick>
 						<onclick>ActivateWindow(Music)</onclick>
 						<visible>!Skin.HasSetting(HideHomeButtonMusic)</visible>
 					</control>
@@ -909,6 +923,7 @@
 						<focusedcolor>standard</focusedcolor>
 						<texturefocus></texturefocus>
 						<texturenofocus></texturenofocus>
+						<onclick condition="!String.IsEmpty(Window(Home).Property(TopMenuVisible))">ClearProperty(TopMenuVisible,Home)</onclick>
 						<onclick>ActivateWindow(Pictures)</onclick>
 						<visible>!Skin.HasSetting(HideHomeButtonPictures)</visible>
 					</control>
@@ -920,6 +935,7 @@
 						<focusedcolor>standard</focusedcolor>
 						<texturefocus></texturefocus>
 						<texturenofocus></texturenofocus>
+						<onclick condition="!String.IsEmpty(Window(Home).Property(TopMenuVisible))">ClearProperty(TopMenuVisible,Home)</onclick>
 						<onclick>ActivateWindow(Programs,Addons,return)</onclick>
 						<visible>!Skin.HasSetting(HideHomeButtonPrograms)</visible>
 					</control>
@@ -931,6 +947,7 @@
 						<focusedcolor>standard</focusedcolor>
 						<texturefocus></texturefocus>
 						<texturenofocus></texturenofocus>
+						<onclick condition="!String.IsEmpty(Window(Home).Property(TopMenuVisible))">ClearProperty(TopMenuVisible,Home)</onclick>
 						<onclick>ActivateWindow(Settings,return)</onclick>
 					</control>
 

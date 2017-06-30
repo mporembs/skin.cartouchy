@@ -73,8 +73,7 @@
 			<param name="panel-posy">0</param>
 			<param name="panel-height">480</param>
 		</include>
-				<include>TopMenu</include>
-
+		<include>TopMenu</include>
 		<include>ScrollOffsetLabel</include>
 	</controls>
 </window>

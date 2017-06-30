@@ -3,9 +3,9 @@
 	<defaultcontrol always="true">50</defaultcontrol>
 	<views>50,500,550</views>
 	<onunload>ClearProperty(PopupMenuVisible,Home)</onunload>
-	<controls>
+<!-- 	<onunload>ClearProperty(TopMenuVisible,Home)</onunload>
+ -->	<controls>
 		<include>CommonBackground</include>
-		<include>SideMenu</include>
 		<include>Header</include>
 		<include>CommonNowPlaying</include>
 		<include>Footer</include>
@@ -52,5 +52,6 @@
 			<param name="panel-height">560</param>
 		</include>
 		<include>ScrollOffsetLabel</include>
+		<include>TopMenu</include>
 	</controls>
 </window>

@@ -180,6 +180,7 @@
 				</item>
 			</content>
 		</control>
+		<include>TopMenu</include>
 <!-- 		<control type="textbox">
 			<description>Settings Description</description>
 			<posx>250</posx>

@@ -168,7 +168,7 @@
 			</include>
 			<control type="panel" id="9002">
 				<include>Window_OpenClose_Animation</include>
-				<posx>30</posx>
+				<posx>Po30</posx>
 				<posy>53r</posy>
 				<animation effect="fade" start="100" end="0" time="300" condition="Window.Next(Home)">WindowClose</animation>
 				<animation effect="fade" end="100" start="0" time="300" condition="Window.Previous(Home)">WindowOpen</animation>
@@ -268,5 +268,6 @@
 			<param name="group-posx">273</param>
 			<param name="panel-width">470</param>
 		</include>
+		<include>TopMenu</include>
 	</controls>	
 </window>
