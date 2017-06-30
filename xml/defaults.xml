@@ -5,8 +5,8 @@
 		<posy>0</posy>
 		<width>300</width>
 		<height>42</height>
-		<texturefocus>list_focus.png</texturefocus>
-		<texturenofocus border="40,0,40,5">list_nofocus.png</texturenofocus>
+<!-- 		<texturefocus>list_focus.png</texturefocus>
+		<texturenofocus border="40,0,40,5">list_nofocus.png</texturenofocus> -->
 		<font>font20</font>
 		<textcolor>white</textcolor>
 		<disabledcolor>grey2</disabledcolor>
@@ -19,8 +19,8 @@
 		<posy>0</posy>
 		<width>300</width>
 		<height>42</height>
-		<texturefocus>list_focus.png</texturefocus>
-		<texturenofocus border="40,0,40,5">list_nofocus.png</texturenofocus>
+<!-- 		<texturefocus>list_focus.png</texturefocus>
+		<texturenofocus border="40,0,40,5">list_nofocus.png</texturenofocus> -->
 		<font>font20</font>
 		<textcolor>white</textcolor>
 		<disabledcolor>grey2</disabledcolor>
@@ -50,8 +50,8 @@
 	<default type="mover">
 		<posx>0</posx>
 		<posy>0</posy>
-		<texturefocus>list_focus.png</texturefocus>
-		<texturenofocus border="40,0,40,5">list_nofocus.png</texturenofocus>
+<!-- 		<texturefocus>list_focus.png</texturefocus>
+		<texturenofocus border="40,0,40,5">list_nofocus.png</texturenofocus> -->
 	</default>
 	<default type="progress">
 		<posx>0</posx>
@@ -76,8 +76,8 @@
 		<textureradiooffnofocus>radiobutton_off.png</textureradiooffnofocus>
 		<textureradioondisabled colordiffuse="40FFFFFF">radiobutton_on.png</textureradioondisabled>
 		<textureradiooffdisabled colordiffuse="40FFFFFF">radiobutton_off.png</textureradiooffdisabled>
-		<texturefocus>list_focus.png</texturefocus>
-		<texturenofocus border="40,0,40,5">list_nofocus.png</texturenofocus>
+<!-- 		<texturefocus>list_focus.png</texturefocus>
+		<texturenofocus border="40,0,40,5">list_nofocus.png</texturenofocus> -->
 		<label>215</label>
 		<font>font20</font>
 		<textcolor>white</textcolor>
@@ -89,8 +89,8 @@
 	<default type="resize">
 		<posx>0</posx>
 		<posy>0</posy>
-		<texturefocus>list_focus.png</texturefocus>
-		<texturenofocus border="40,0,40,5">list_nofocus.png</texturenofocus>
+<!-- 		<texturefocus>list_focus.png</texturefocus>
+		<texturenofocus border="40,0,40,5">list_nofocus.png</texturenofocus> -->
 	</default>
 	<default type="slider">
 		<controloffsetx>75</controloffsetx>
@@ -104,8 +104,8 @@
 		<height>35</height>
 		<textoffsetx>20</textoffsetx>
 		<aligny>center</aligny>
-		<texturefocus>list_focus.png</texturefocus>
-		<texturenofocus border="40,0,40,5">list_nofocus.png</texturenofocus>
+<!-- 		<texturefocus>list_focus.png</texturefocus>
+		<texturenofocus border="40,0,40,5">list_nofocus.png</texturenofocus> -->
 		<sliderwidth>350</sliderwidth>
 		<sliderheight>40</sliderheight>
 		<texturesliderbar>slider.png</texturesliderbar>
@@ -145,8 +145,8 @@
 		<height>21</height>
 		<spinwidth>34</spinwidth>
 		<spinheight>22</spinheight>
-		<texturefocus>list_focus.png</texturefocus>
-		<texturenofocus border="40,0,40,5">list_nofocus.png</texturenofocus>
+<!-- 		<texturefocus>list_focus.png</texturefocus>
+		<texturenofocus border="40,0,40,5">list_nofocus.png</texturenofocus> -->
 		<textureup>arrow_up.png</textureup>
 		<texturedown>arrow_down.png</texturedown>
 		<textureupfocus colordiffuse="blue">arrow_up.png</textureupfocus>

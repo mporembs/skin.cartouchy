@@ -5,11 +5,12 @@
 	<onunload>ClearProperty(PopupMenuVisible,Home)</onunload>
 	<controls>
 		<include>CommonBackground</include>
-	<include>Header</include>
+		<include>Header</include>
 		<include>CommonNowPlaying</include>
 		<include>Footer</include>
 		<control type="group">
 			<include>Window_OpenClose_Animation_Zoom</include>
+			<include>PopupMenuShift</include>
 			<include content="Thumbnail" condition="String.IsEqual(Skin.AspectRatio,16:9)"> <!-- view id = 50 -->
 				<param name="panel-width" value="1530"/>
 				<param name="layout-width" value="306"/>

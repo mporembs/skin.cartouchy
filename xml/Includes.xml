@@ -113,6 +113,7 @@
 
 	<include name="CommonBackground">
 		<control type="image">
+			<include>PopupMenuShift</include>
 			<posx>0</posx>
 			<posy>0</posy>
 			<aspectratio>scale</aspectratio>
@@ -122,6 +123,7 @@
 			<visible>!Skin.HasSetting(UseCustomBackground)</visible>
 		</control>
 		<control type="image">
+			<include>PopupMenuShift</include>
 			<posx>0</posx>
 			<posy>0</posy>
 			<aspectratio>scale</aspectratio>
@@ -131,6 +133,7 @@
 			<visible>Skin.HasSetting(UseCustomBackground)</visible>
 		</control>
 		<control type="image">
+			<include>PopupMenuShift</include>
 			<posx>0</posx>
 			<posy>0</posy>
 			<include>ScreenWidth</include>
@@ -172,13 +175,15 @@
 				<visible>Player.HasMedia</visible>
 			</control> -->
 		<control type="videowindow">
+			<include>PopupMenuShift</include>
 			<posx>0</posx>
 			<posy>0</posy>
 			<include>ScreenWidth</include>
-			<height>960</height>
+			<height>480</height>
 			<visible>!Skin.HasSetting(HideVideoBackground) + Player.HasVideo + !Window.IsVisible(TVChannels) + !Window.IsVisible(RadioChannels) + !Window.IsVisible(TVGuide) + !Window.IsVisible(RadioGuide) + !Window.IsVisible(TVSearch) + !Window.IsVisible(RadioSearch) + !Window.IsVisible(TVTimers) + !Window.IsVisible(RadioTimers) + !Window.IsVisible(TVTimerRules) + !Window.IsVisible(RadioTimerRules) + !Window.IsVisible(TVRecordings) + !Window.IsVisible(RadioRecordings)</visible>
 		</control>
 		<control type="visualisation">
+			<include>PopupMenuShift</include>
 			<posx>0</posx>
 			<posy>0</posy>
 			<include>ScreenWidth</include>
@@ -186,6 +191,7 @@
 			<visible>!Skin.HasSetting(HideVizBackground) + Player.HasAudio</visible>
 		</control>
 		<control type="image">
+			<include>PopupMenuShift</include>
 			<posx>0</posx>
 			<posy>0</posy>
 			<include>ScreenWidth</include>
@@ -198,6 +204,7 @@
 	</include>
 	<include name="Header">
 		<control type="group">
+			<include>PopupMenuShift</include>
 			<include>VisibleFadeEffect</include>
 			<control type="image">
 				<posx>0</posx>
@@ -257,6 +264,7 @@
 	</include>
 	<include name="Footer">
 		<control type="image">
+			<include>PopupMenuShift</include>
 			<posx>0</posx>
 			<posy>60r</posy>
 			<include>ScreenWidth</include>
@@ -372,6 +380,7 @@
 			<onclick>ParentDir</onclick>
 		</control>
 		<control type="image">
+			<include>PopupMenuShift</include>
 			<description>Back Button Image</description>
 			<posx>30</posx>
 			<posy>50r</posy>
@@ -431,7 +440,8 @@
 		<animation effect="slide" start="0,0" end="297,0" time="0" condition="String.IsEqual(Container(9002).NumItems,3)">conditional</animation>
 		<animation effect="slide" start="0,0" end="357,0" time="0" condition="String.IsEqual(Container(9002).NumItems,2)">conditional</animation>
 		<animation effect="slide" start="0,0" end="417,0" time="0" condition="String.IsEqual(Container(9002).NumItems,1)">conditional</animation>
-	<posx>500r</posx>
+		<include>PopupMenuShift</include>
+		<posx>500r</posx>
 		<posy>60r</posy>
 		<width>800</width>
 		<height>60</height>
@@ -468,14 +478,11 @@
 		<width>235</width>
 		<textoffsetx>10</textoffsetx>
 		<textwidth>205</textwidth>
-		<textcolor>white</textcolor>
+		<textcolor>primary</textcolor>
 		<align>left</align>
 		<aligny>center</aligny>
-		<font>font16L</font>
-<!-- 		<texturefocus>list_focus.png</texturefocus>
-		<texturenofocus border="40,0,40,5">list_nofocus.png</texturenofocus>
-		<pulseonselect>false</pulseonselect>
- -->	</include>
+		<font>font16</font>
+ 	</include>
 	<include name="ButtonInfoDialogsCommonValues">
 		<height>60</height>
 		<width>158</width>
@@ -488,6 +495,7 @@
 	</include>
 	<include name="CommonNowPlaying">
 		<control type="group">
+			<include>PopupMenuShift</include>
 			<posx>0</posx>
 			<posy>0</posy>
 			<include>VisibleFadeEffect</include>
@@ -753,16 +761,23 @@
 	</include>
 		<include name="TopMenu">
 		<control type="group">
+			<include>PopupMenuShift</include>
 			<visible>!String.IsEmpty(Window(Home).Property(TopMenuVisible))</visible>
 			<posx>0</posx>
 			<posy>0</posy>
 			<width>800</width>
 			<height>225</height>
-<!-- 			<animation effect="slide" start="0,-30" end="0,-225" time="600" tween="Back" easing="In">WindowOpen</animation>
-			<animation effect="slide" end="0,-30" start="0,-225" time="600" tween="Back" easing="Out">WindowClose</animation>
- -->
-<!-- 			<animation effect="slide" start="0,-30" end="0,-225" time="600" tween="Back" easing="In">Hidden</animation>
- -->			<animation effect="slide" end="0,-30" start="0,-225" time="600" tween="Back" easing="Out">VisibleChange</animation>
+			<animation effect="slide" end="0,-30" start="0,-225" time="600" tween="Back" easing="Out">VisibleChange</animation>
+			 <control type="button">
+				<description>Hidden button to close the sort when its focused</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<include>ScreenWidth</include>
+				<height>480</height>
+				<texturenofocus>-</texturenofocus>
+				<texturefocus>-</texturefocus>
+				<onclick>ClearProperty(TopMenuVisible,Home)</onclick>
+			</control>
 			<control type="image">
 				<description>Menu Panel</description>
 				<posx>0</posx>
@@ -1160,10 +1175,8 @@
 	<include name="PopupMenu">
 		<control type="group">
 			<visible>!String.IsEmpty(Window(Home).Property(PopupMenuVisible))</visible>
-				<animation effect="slide" start="235,0" time="350" tween="sine" easing="inout">Visible</animation>
-				<animation effect="slide" start="0,0" end="235,0" time="350" tween="sine" easing="inout">Hidden</animation>
-<!-- 			<include>VisibleFadeEffect</include>
- -->			
+				<animation effect="slide" start="235,0" time="350" tween="back" easing="out">Visible</animation>
+				<animation effect="slide" start="0,0" end="235,0" time="350" tween="back" easing="in">Hidden</animation>
 			<control type="button">
 				<description>Hidden button to close the sort when its focused</description>
 				<posx>0</posx>
@@ -1183,7 +1196,7 @@
 					<posy>$PARAM[panel-posy]</posy>
 					<width>350</width>
 					<height>$PARAM[panel-height]</height>
-					<texture colordiffuse="focus">dialog_back.png</texture>
+					<texture>texture-lime.png</texture>
 				</control>
 				<control type="grouplist">
 					<posx>0</posx>
@@ -1295,8 +1308,8 @@
 			<description>Sort asc</description>
 			<include>MenuButtonCommonValues</include>
 			<alttexturefocus>list_focus.png</alttexturefocus>
-			<alttexturenofocus border="40,0,40,5">list_nofocus.png</alttexturenofocus>
-			<label>31051</label>
+<!-- 			<alttexturenofocus border="40,0,40,5">list_nofocus.png</alttexturenofocus>
+ -->			<label>31051</label>
 			<altlabel>31050</altlabel>
 			<usealttexture>Container.SortDirection(Ascending)</usealttexture>
 		</control>
@@ -1309,8 +1322,8 @@
 			<description>Update Library</description>
 			<include>MenuButtonCommonValues</include>
 			<alttexturefocus>list_focus.png</alttexturefocus>
-			<alttexturenofocus border="40,0,40,5">list_nofocus.png</alttexturenofocus>
-			<label>653</label>
+<!-- 			<alttexturenofocus border="40,0,40,5">list_nofocus.png</alttexturenofocus>
+ -->			<label>653</label>
 			<altlabel>13353</altlabel>
 			<usealttexture>library.isscanningmusic</usealttexture> 
 		</control>
@@ -1545,8 +1558,8 @@
 			<description>Sort asc</description>
 			<include>MenuButtonCommonValues</include>
 			<alttexturefocus>list_focus.png</alttexturefocus>
-			<alttexturenofocus border="40,0,40,5">list_nofocus.png</alttexturenofocus>
-			<label>31051</label>
+<!-- 			<alttexturenofocus border="40,0,40,5">list_nofocus.png</alttexturenofocus>
+ -->			<label>31051</label>
 			<altlabel>31050</altlabel>
 			<usealttexture>Container.SortDirection(Ascending)</usealttexture>
 		</control>
@@ -1565,8 +1578,8 @@
 			<description>Update Library</description>
 			<include>MenuButtonCommonValues</include>
 			<alttexturefocus>list_focus.png</alttexturefocus>
-			<alttexturenofocus border="40,0,40,5">list_nofocus.png</alttexturenofocus>
-			<label>653</label>
+<!-- 			<alttexturenofocus border="40,0,40,5">list_nofocus.png</alttexturenofocus>
+ -->			<label>653</label>
 			<altlabel>13353</altlabel>
 			<usealttexture>library.isscanningvideo</usealttexture> 
 		</control>
@@ -1698,4 +1711,7 @@
 		<animation effect="fade" time="300">Visible</animation>
 		<animation effect="fade" time="300">Hidden</animation>
 	</include>
+	<include name="PopupMenuShift">
+		<animation effect="slide" start="0,0" end="-235,0" time="350" delay="30" tween="back" easing="out" condition="!String.IsEmpty(Window(Home).Property(PopupMenuVisible))">Conditional</animation>
+ 	</include>
 </includes>

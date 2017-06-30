@@ -14,7 +14,7 @@
 			<pagecontrol>60</pagecontrol>
 			<scrolltime>0</scrolltime>
 			<preloaditems>2</preloaditems>
-			<itemlayout height="60" width="$PARAM[panel-width]" condition="!Window.IsVisible(EventLog)">
+			<itemlayout height="80" width="$PARAM[panel-width]" condition="!Window.IsVisible(EventLog)">
 <!-- 				<control type="image">
 					<posx>0</posx>
 					<posy>0</posy>
@@ -42,27 +42,25 @@
 				</control> -->
 				<control type="label">
 					<posx>0</posx>
-					<posy>0</posy>
+					<posy>15</posy>
 					<width>$PARAM[label-width]</width>
-					<height>60</height>
-					<font>font18</font>
+					<height>25</height>
+					<font>font22</font>
 					<selectedcolor>selected</selectedcolor>
 					<align>left</align>
 					<aligny>center</aligny>
 					<label>$INFO[ListItem.Label]</label>
 				</control>
 				<control type="label">
-					<posx>$PARAM[label2-posx]</posx>
-					<posy>2</posy>
+					<posx>0</posx>
+					<posy>40</posy>
 					<width>$PARAM[label-width]</width>
-					<height>30</height>
+					<height>15</height>
 					<font>font12</font>
 					<selectedcolor>selected</selectedcolor>
-					<align>right</align>
+					<align>left</align>
 					<aligny>center</aligny>
 					<label>$INFO[ListItem.Label2]</label>
-					<animation effect="slide" start="0" end ="100,0" time="0" condition="![Container.Content(Movies) | Container.Content(Episodes) | Container.Content(MusicVideos)]">Conditional</animation>
-					<animation effect="slide" start="0" end ="-40,0" time="0" condition="Container.Content(TVShows)">Conditional</animation>
 					<visible>!Window.IsVisible(AddonBrowser)</visible>
 				</control>
 			<!-- 	<control type="image">
@@ -155,7 +153,7 @@
 					<visible>Window.IsVisible(AddonBrowser) + String.IsEqual(ListItem.Label2,$LOCALIZE[305])</visible>
 				</control>
 			</itemlayout>
-			<focusedlayout height="60" width="$PARAM[panel-width]" condition="!Window.IsVisible(EventLog)">
+			<focusedlayout height="80" width="$PARAM[panel-width]" condition="!Window.IsVisible(EventLog)">
 				<!-- <control type="image">
 					<posx>0</posx>
 					<posy>0</posy>
@@ -184,27 +182,25 @@
 				</control> -->
 				<control type="label">
 					<posx>0</posx>
-					<posy>0</posy>
+					<posy>15</posy>
 					<width>$PARAM[label-width]</width>
-					<height>60</height>
-					<font>font18</font>
-					<selectedcolor>selected</selectedcolor>
+					<height>25</height>
+					<font>font22</font>
+					<textcolor>focus</textcolor>
 					<align>left</align>
 					<aligny>center</aligny>
 					<label>$INFO[ListItem.Label]</label>
 				</control>
 				<control type="label">
-					<posx>$PARAM[label2-posx]</posx>
-					<posy>2</posy>
+					<posx>0</posx>
+					<posy>40</posy>
 					<width>$PARAM[label-width]</width>
-					<height>30</height>
+					<height>15</height>
 					<font>font12</font>
-					<selectedcolor>selected</selectedcolor>
-					<align>right</align>
+					<textcolor>focus</textcolor>
+					<align>left</align>
 					<aligny>center</aligny>
 					<label>$INFO[ListItem.Label2]</label>
-					<animation effect="slide" start="0" end ="100,0" time="0" condition="![Container.Content(Movies) | Container.Content(Episodes) | Container.Content(MusicVideos)]">Conditional</animation>
-					<animation effect="slide" start="0" end ="-40,0" time="0" condition="Container.Content(TVShows)">Conditional</animation>
 					<visible>!Window.IsVisible(AddonBrowser)</visible>
 				</control>
 				<!-- <control type="image">
