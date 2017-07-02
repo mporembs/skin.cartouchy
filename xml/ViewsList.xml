@@ -45,8 +45,8 @@
 					<posy>15</posy>
 					<width>$PARAM[label-width]</width>
 					<height>25</height>
-					<font>font22</font>
-					<selectedcolor>selected</selectedcolor>
+					<font>font22B</font>
+					<textcolor>grey</textcolor>
 					<align>left</align>
 					<aligny>center</aligny>
 					<label>$INFO[ListItem.Label]</label>
@@ -56,8 +56,8 @@
 					<posy>40</posy>
 					<width>$PARAM[label-width]</width>
 					<height>15</height>
-					<font>font12</font>
-					<selectedcolor>selected</selectedcolor>
+					<font>font14</font>
+					<textcolor>grey</textcolor>
 					<align>left</align>
 					<aligny>center</aligny>
 					<label>$INFO[ListItem.Label2]</label>
@@ -185,7 +185,7 @@
 					<posy>15</posy>
 					<width>$PARAM[label-width]</width>
 					<height>25</height>
-					<font>font22</font>
+					<font>font22B</font>
 					<textcolor>focus</textcolor>
 					<align>left</align>
 					<aligny>center</aligny>
@@ -196,7 +196,7 @@
 					<posy>40</posy>
 					<width>$PARAM[label-width]</width>
 					<height>15</height>
-					<font>font12</font>
+					<font>font14</font>
 					<textcolor>focus</textcolor>
 					<align>left</align>
 					<aligny>center</aligny>

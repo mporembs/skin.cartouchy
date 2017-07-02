@@ -26,7 +26,7 @@
 				<posy>300</posy>
 				<width>220</width>
 				<height>70</height>
-				<font>font16H</font>
+				<font>font18H</font>
 				<textcolor>white</textcolor>					
 				<align>left</align>
 				<aligny>center</aligny>
@@ -34,10 +34,10 @@
 			</control>
 			<control type="label">
 				<posx>30</posx>
-				<posy>330</posy>
+				<posy>325</posy>
 				<width>220</width>
 				<height>70</height>
-				<font>font16</font>
+				<font>font18L</font>
 				<textcolor>grey</textcolor>
 				<align>left</align>
 				<aligny>center</aligny>
@@ -63,7 +63,7 @@
 						<posy>2</posy>
 						<width>$PARAM[label-width]</width>
 						<height>24</height>
-						<font>font14-L</font>
+						<font>font14L</font>
 						<textcolor>standard</textcolor>
 						<selectedcolor>selected</selectedcolor>
 						<align>left</align>
@@ -157,7 +157,7 @@
 						<posy>2</posy>
 						<width>$PARAM[label-width]</width>
 						<height>24</height>
-						<font>font14-L</font>
+						<font>font14	L</font>
 						<selectedcolor>selected</selectedcolor>
 						<align>left</align>
 						<aligny>center</aligny>

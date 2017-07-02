@@ -48,15 +48,15 @@
 					<posy>129</posy>
 					<width>150</width>
 					<height>30</height>
-					<texture>texture-aqua.png</texture>
+					<texture>texture-darkpurple.png</texture>
 				</control>
-				<control type="textbox">
-					<posx>20</posx>
+				<control type="label">
+					<posx>25</posx>
 					<posy>136</posy>
-					<width>140</width>
+					<width>130</width>
 					<height>18</height>
 					<font>font12B</font>
-					<textcolor>primary</textcolor>
+					<textcolor>standard</textcolor>
 					<align>center</align>
 					<label>$INFO[ListItem.Label]</label>
 				</control>

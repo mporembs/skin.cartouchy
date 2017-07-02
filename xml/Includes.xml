@@ -770,12 +770,15 @@
 			<animation effect="slide" end="0,-30" start="0,-225" time="600" tween="Back" easing="Out">VisibleChange</animation>
 			 <control type="button">
 				<description>Hidden button to close the sort when its focused</description>
+				<visible>!String.IsEmpty(Window(Home).Property(TopMenuVisible))</visible>
+				<animation effect="fade" delay="0" time="250">Visible</animation>
+				<animation effect="fade" delay="0" time="250">Hidden</animation>
 				<posx>0</posx>
 				<posy>0</posy>
 				<include>ScreenWidth</include>
-				<height>480</height>
-				<texturenofocus>-</texturenofocus>
-				<texturefocus>-</texturefocus>
+				<height>800</height>
+				<texturenofocus>texture-diable.png</texturenofocus>
+				<texturefocus>texture-diable.png</texturefocus>
 				<onclick>ClearProperty(TopMenuVisible,Home)</onclick>
 			</control>
 			<control type="image">

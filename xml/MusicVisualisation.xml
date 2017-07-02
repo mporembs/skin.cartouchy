@@ -6,6 +6,7 @@
 	<onunload>ClearProperty(PopupMenuVisible,Home)</onunload>
 	<controls>
 		<control type="multiimage">
+			<include>PopupMenuShift</include>
 		    <posx>0</posx>
 		    <posy>0</posy>
 		    <width>800</width>

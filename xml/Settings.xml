@@ -133,7 +133,7 @@
 				<item id="2">
 					<label>14202</label>
 					<label2>31409</label2>
-					<onclick>ActivateWindow(LibrarySettings)</onclick>
+					<onclick>ActivateWindow(MediaSettings)</onclick>
 					<icon>icon_settings_library.png</icon>
 				</item>
 				<item id="3">
