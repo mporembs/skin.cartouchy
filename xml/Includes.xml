@@ -377,7 +377,7 @@
 			<texturenofocus>-</texturenofocus>
 			<texturefocus>-</texturefocus>
 			<onclick condition="Window.IsVisible(MusicOSD) | Window.IsVisible(VideoOSD)">Dialog.Close(all,true)</onclick>
-			<onclick>ParentDir</onclick>
+			<onclick>back</onclick>
 		</control>
 		<control type="image">
 			<include>PopupMenuShift</include>
